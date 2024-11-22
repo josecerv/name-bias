@@ -1,0 +1,312 @@
+---
+title: "Name Bias Pilot (N=200)"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(ggplot2)
+library(grid)
+library(extrafont)
+library(readxl)
+library(nnet)
+library(systemfit)
+library(aod)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+
+## Pull directly from Qualtrics API
+qual_data <- fetch_survey(surveyID='SV_3k5GruA7i11Kdb8',
+                   label = T,
+                   convert = F,
+                   start_date = "2024-11-13",
+                   force_request = T)
+
+# Read the Excel file
+professors_data <- read_excel("Nameselect_1022_humancheck.xlsx")
+```
+
+
+```{r}
+# Create a lookup table for citizenship based on First_name
+citizenship_lookup <- professors_data %>%
+  mutate(region = case_when(
+    Citizenship %in% c("China", "South_Korea", "Thailand") ~ "Eastern",
+    Citizenship %in% c("Germany", "Italy", "United_Kingdom") ~ "Western",
+    TRUE ~ NA_character_
+  )) %>%
+  select(First_name, region)
+
+# Define categories based on first names
+women <- professors_data$First_name[professors_data$Gender == "Female"]  
+admin <- professors_data$First_name[professors_data$Binary_HaveRole == "Yes"]  
+sciences <- professors_data$First_name[professors_data$Field_category == "Sciences"]  
+public_univ <- professors_data$First_name[professors_data$`Private/public` == "public"]  
+
+# Create the analysis dataset
+d0 <- qual_data |> 
+    filter(!is.na(`choice-7`), !is.na(workerId), Finished==1) |> 
+    mutate(
+    gender_feedback = as.numeric(grepl("% are women", feedbackItem1) |
+                  grepl("% are women", feedbackItem2) |
+                  grepl("% are women", feedbackItem3)),
+    admin_shown = as.numeric(grepl("% hold an administrative position", feedbackItem1) |
+                  grepl("% hold an administrative position", feedbackItem2) |
+                  grepl("% hold an administrative position", feedbackItem3)),
+    sciences_shown = as.numeric(grepl("% work in the Sciences", feedbackItem1) |
+                grepl("% work in the Sciences", feedbackItem2) |
+                grepl("% work in the Sciences", feedbackItem3)),
+    public_shown = as.numeric(grepl("% earned their PhDs at public universities", feedbackItem1) |
+                 grepl("% earned their PhDs at public universities", feedbackItem2) |
+                 grepl("% earned their PhDs at public universities", feedbackItem3)),
+    female_pick = case_when(`choice-7` %in% women ~ 1,
+                           TRUE ~ 0),
+    admin_pick = case_when(`choice-7` %in% admin ~ 1,
+                           TRUE ~ 0),
+    sciences_pick = case_when(`choice-7` %in% sciences ~ 1,
+                           TRUE ~ 0),
+    public_pick = case_when(`choice-7` %in% public_univ ~ 1,
+                           TRUE ~ 0),
+    citizenship = sapply(`choice-7`, function(x) 
+      citizenship_lookup$region[citizenship_lookup$First_name == x]),
+    gender_region = case_when(
+      female_pick == 1 & citizenship == "Eastern" ~ "Female_Eastern",
+      female_pick == 1 & citizenship == "Western" ~ "Female_Western",
+      female_pick == 0 & citizenship == "Eastern" ~ "Male_Eastern",
+      female_pick == 0 & citizenship == "Western" ~ "Male_Western"),
+    female_eastern = (female_pick == 1 & citizenship == "Eastern") * 1,
+    female_western = (female_pick == 1 & citizenship == "Western") * 1,
+    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+    race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |> 
+  select(gender_feedback:citizenship, gender, base_gender, `choice-1`:`choice-7`,gender_region:female_western, race, age, gender_code, race_code)
+```
+\newpage
+
+## Multinomial Logit
+
+
+```{r echo=FALSE, results='markup'}
+# Run multinomial model
+multinom_model <- multinom(gender_region ~ gender_feedback, data=d0, ref="Female_Eastern")
+
+# Extract coefficients and standard errors
+coef_table <- summary(multinom_model)$coefficients
+se_table <- summary(multinom_model)$standard.errors
+
+# Calculate z-scores and p-values
+z_scores <- coef_table / se_table
+p_values <- 2 * (1 - pnorm(abs(z_scores)))
+
+# Create a nicely formatted results table
+results <- data.frame(
+  Comparison = c("Female_Western vs Female_Eastern",
+                "Male_Eastern vs Female_Eastern",
+                "Male_Western vs Female_Eastern"),
+  Coefficient = coef_table[, "gender_feedback"],
+  SE = se_table[, "gender_feedback"],
+  Z_score = z_scores[, "gender_feedback"],
+  P_value = p_values[, "gender_feedback"]
+)
+
+# Format the results
+results$Coefficient <- round(results$Coefficient, 3)
+results$SE <- round(results$SE, 3)
+results$Z_score <- round(results$Z_score, 3)
+results$P_value <- round(results$P_value, 4)
+
+# Add significance stars
+results$Significance <- ifelse(results$P_value < 0.001, "***",
+                      ifelse(results$P_value < 0.01, "**",
+                      ifelse(results$P_value < 0.05, "*",
+                      ifelse(results$P_value < 0.1, "†", ""))))
+
+# Print the formatted results
+cat("Multinomial Logit Results (Reference Category: Female_Eastern)\n")
+cat("================================================================\n")
+print(results, row.names=FALSE)
+# cat("\nSignificance codes: *** p<0.001, ** p<0.01, * p<0.05, † p<0.1\n")
+# 
+# # Add model fit statistics
+# cat("\nModel Fit Statistics:\n")
+# cat("AIC:", AIC(multinom_model), "\n")
+# cat("Residual Deviance:", multinom_model$deviance, "\n")
+
+
+# Seemingly unrelated regression
+sur_formula <- list(
+  eastern = female_eastern ~ gender_feedback,
+  western = female_western ~ gender_feedback
+)
+```
+
+\newpage
+
+## SUR, followed by Wald Test
+
+
+```{r echo=FALSE, results='markup'}
+sur_model <- systemfit(sur_formula, method="SUR", data=d0)
+summary(sur_model)
+
+# Wald test to compare coefficients
+# Testing whether the effect of gender_feedback is different for Eastern vs Western women
+linearHypothesis(sur_model, 
+                 "eastern_gender_feedback - western_gender_feedback = 0")
+
+
+```
+
+
+\newpage
+
+## Figure
+
+
+```{r}
+# Create data for Eastern women
+eastern_data <- d0 |> 
+  group_by(gender_feedback) |> 
+  summarise(
+    freq = mean(female_pick * (citizenship == "Eastern")),
+    se = (sd(female_pick * (citizenship == "Eastern")) / sqrt(n()))
+  ) |>
+  mutate(
+    Region = "Eastern",
+    Feedback = if_else(gender_feedback == 1, "Feedback provided", "No feedback")
+  )
+
+# Create data for Western women
+western_data <- d0 |> 
+  group_by(gender_feedback) |> 
+  summarise(
+    freq = mean(female_pick * (citizenship == "Western")),
+    se = (sd(female_pick * (citizenship == "Western")) / sqrt(n()))
+  ) |>
+  mutate(
+    Region = "Western",
+    Feedback = if_else(gender_feedback == 1, "Feedback provided", "No feedback")
+  )
+
+# Combine data
+plot_data <- bind_rows(eastern_data, western_data) |>
+  mutate(
+    Region = factor(Region, levels = c("Eastern Women", "Western Women")),
+    Feedback = factor(Feedback, levels = c("No feedback", "Feedback provided"))
+  )
+
+# Create plot
+p1 <- ggplot(plot_data, aes(x = Region, y = freq * 100, fill = Feedback)) +
+  geom_bar(stat = "identity", 
+           position = position_dodge(width = 0.9), 
+           width = 0.8) +
+  geom_text(aes(label = sprintf("%.1f%%", freq * 100)),
+            position = position_dodge(width = 0.9),
+            vjust = 4,
+            color = "white",
+            size = 5) +
+  geom_errorbar(aes(ymin = (freq - se) * 100, 
+                    ymax = (freq + se) * 100),
+                position = position_dodge(width = 0.9),
+                width = 0.2) +
+  scale_fill_manual(values = c(
+    "No feedback" = "#011F5B",     # Navy blue
+    "Feedback provided" = "#990000" # Dark red
+  )) +
+  scale_y_continuous(limits = c(0, 40)) +  # Adjust as needed
+  labs(y = "Percentage of Women Selected") +
+  theme_bw() +
+  theme(
+    panel.grid = element_blank(),  # Removes all grid lines
+    panel.border = element_blank(), # Removes the border
+    axis.line = element_line(color = "black"), # Adds axis lines
+    plot.background = element_rect(fill = "white"),
+    panel.background = element_rect(fill = "white"),
+    legend.position = "top",
+    legend.title = element_blank(),
+    axis.title.x = element_blank()
+  )
+
+ggsave("name-bias-pilot.png", p1, width = 8, height = 6)
+```
