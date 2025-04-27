@@ -1,0 +1,751 @@
+"gender_feedback","admin_shown","sciences_shown","public_shown","female_pick","admin_pick","sciences_pick","public_pick","citizenship","gender","base_gender","choice1","choice2","choice3","choice4","choice5","choice6","choice7","gender_region","female_eastern","female_western","race","age","gender_code","race_code"
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Dora","Ning","Ky-chun","Lino","Banjerd","Kwang-je","Luis","Male_Western",0,0,"Asian / Pacific Islander",32,0,0
+1,1,1,0,0,0,0,1,"Eastern","Man",2,"Lionello","Kobchitt","Arun","Kwang-je","Canfa","Catriona","Xuetao","Male_Eastern",0,0,"White / Caucasian",31,1,1
+1,0,1,1,0,0,0,1,"Western","Woman",0,"Weilie","Roberto","Arun","Job-Gunter","Sandu","Lino","Ian","Male_Western",0,0,"Asian / Pacific Islander",31,0,0
+1,1,1,0,1,0,0,1,"Eastern","Man",0,"Canfa","Sung-chul","Ciro","Shenggen","Xinyuan","Pichaet","Pasuk","Female_Eastern",1,0,"White / Caucasian",45,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",1,"Kitti","Udo","In-young","Ghillean","Ditmar","Ky-chun","Longjin","Male_Eastern",0,0,"White / Caucasian",41,0,1
+1,1,1,0,0,0,0,1,"Western","Man",1,"Krasae","Bok-ryeo","Sandu","Kil-nam","Choong-soo","Arun","Engelbert","Male_Western",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",0,"Shenggen","Xuetao","Alastair","Shaiwatna","Banjerd","Ludger","Jinghua","Male_Eastern",0,0,"White / Caucasian",44,0,1
+1,0,1,1,0,0,0,1,"Western","Man",2,"Ning","Ping","Shenggen","Arun","Niyada","Sung-chul","Gernulf","Male_Western",0,0,"Black or African American",34,1,0
+0,1,1,1,1,0,0,0,"Western","Man",1,"Dino","Xuhua","Russell","Sung-chul","Ghillean","Li","Catharine","Female_Western",0,1,"White / Caucasian",41,1,1
+0,1,1,1,1,0,1,1,"Eastern","Man",1,"Bok-ryeo","Jong-sei","Nidhi","Luis","Xuetao","Jan","Krisana","Female_Eastern",1,0,"White / Caucasian",28,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",0,"Longjin","Ian","Yong-pil","Udo","Demetrio","Xuhua","Ditmar","Male_Western",0,0,"Asian / Pacific Islander",45,0,0
+1,1,1,0,0,0,1,1,"Western","Woman",0,"Engelbert","Sung-chul","Kwang-je","Ferdinando","Ghillean","Shaiwatna","Luis","Male_Western",0,0,"White / Caucasian",63,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Shenggen","Junliang","Krasae","Choong-soo","Jong-sei","Kobchitt","Arun","Male_Western",0,0,"White / Caucasian",24,0,1
+0,1,1,1,1,0,0,1,"Eastern","Woman",1,"Luis","Baek-in","Canfa","Mandy","Jong-sei","Nidhi","Kesree","Female_Eastern",1,0,"White / Caucasian",41,0,1
+1,0,1,1,0,0,0,1,"Western","Woman",2,"Isabel","Nidhi","Xinyuan","Yong-pil","Miaoqing","In-jin","Demetrio","Male_Western",0,0,"White / Caucasian",55,0,1
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Ghillean","Xiaoyi","Longjin","Shaiwatna","Arun","Roberto","Kitti","Male_Eastern",0,0,"White / Caucasian",42,1,1
+1,0,1,1,0,0,1,1,"Western","Woman",1,"Yong-pil","Canfa","Sandu","Baek-in","Choong-soo","Dong","Ciro","Male_Western",0,0,"White / Caucasian",42,0,1
+1,0,1,1,0,0,0,1,"Eastern","Man",2,"Ping","Renato","Melanie","Demetrio","Wedig","Renata","Shenggen","Male_Eastern",0,0,"White / Caucasian",26,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",0,"Luis","Somran","Pichaet","Shaiwatna","Engelbert","Weilie","Lionello","Male_Western",0,0,"White / Caucasian",48,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Ethel","In-jin","Xinyuan","Lionello","Wedig","Gerardo","Nidhi","Male_Eastern",0,0,"White / Caucasian",46,0,1
+1,1,1,0,0,0,1,0,"Eastern","Man",1,"Kyongae","Ciro","Shaiwatna","Shenggen","Sandu","Engelbert","Xuhua","Male_Eastern",0,0,"White / Caucasian",44,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Ping","Lionello","Pasuk","Ditmar","Job-Gunter","Raymond","Nidhi","Male_Eastern",0,0,"White / Caucasian",65,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",0,"Engelbert","Choong-soo","Xinyuan","Udo","Sujin","Garry","Luis","Male_Western",0,0,"White / Caucasian",57,0,1
+1,0,1,1,1,0,0,1,"Western","Woman",2,"Roberto","Catriona","Kwang-je","Allen","Miaoqing","Somsak","Eugenia","Female_Western",0,1,"White / Caucasian",48,0,1
+1,1,0,1,1,0,0,0,"Eastern","Non-binary",2,"In-jin","Miaoqing","Baek-in","Arun","Ludger","Mandy","Choon-mie","Female_Eastern",1,0,"Black or African American",32,0,0
+0,1,1,1,0,0,0,1,"Western","Man",1,"Heike","Raymond","Somsak","Nidhi","Kitti","Claus-Peter","Roberto","Male_Western",0,0,"White / Caucasian",23,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",0,"Krasae","Jong-sei","Shenggen","Engelbert","Raymond","Job-Gunter","Ping","Male_Eastern",0,0,"White / Caucasian",69,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Beatrix","Niyada","Demetrio","Allen","Udo","Kil-nam","Weilie","Male_Eastern",0,0,"White / Caucasian",46,0,1
+1,1,1,0,0,0,0,1,"Western","Man",1,"Junliang","Baek-in","Kwang-je","In-jin","Yinhe","Jong-sei","Engelbert","Male_Western",0,0,"Asian / Pacific Islander",36,1,0
+1,1,1,0,0,0,1,1,"Western","Woman",3,"Shareen","Ludger","Udo","Li","Longjin","Mariassunta","Alastair","Male_Western",0,0,"Asian / Pacific Islander",27,0,0
+1,1,0,1,0,0,0,1,"Western","Woman",3,"Krasae","Alastair","In-jin","Heike","Ailsa","Pilai","Job-Gunter","Male_Western",0,0,"White / Caucasian",48,0,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"Maria","Banjerd","Sandu","Raymond","Renato","Luis","Somsak","Male_Eastern",0,0,"White / Caucasian",38,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",2,"Sung-chul","Shareen","Shaiwatna","Jinghua","Xiaoyi","Sujin","Ditmar","Male_Western",0,0,"Black or African American",38,0,0
+1,1,1,0,1,0,0,1,"Western","Man",1,"Alastair","Dino","Udo","Demetrio","Ethel","Canfa","Rachel","Female_Western",0,1,"White / Caucasian",72,1,1
+1,1,1,0,0,0,0,1,"Eastern","Man",1,"Dino","Job-Gunter","Ning","Krasae","Weilie","Jinghua","Canfa","Male_Eastern",0,0,"White / Caucasian",74,1,1
+0,1,1,1,0,0,1,1,"Western","Man",0,"Sung-chul","Job-Gunter","Ciro","Nidhi","Renato","Gontard","Ghillean","Male_Western",0,0,"White / Caucasian",36,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Ping","Bong-ho","Kwang-je","Sung-hee","Luis","Roberto","Alastair","Male_Western",0,0,"White / Caucasian",47,0,1
+1,1,1,0,0,0,0,1,"Eastern","Man",1,"Sung-chul","Ping","Dino","Jong-sei","Sujin","Dorothy","Nidhi","Male_Eastern",0,0,"White / Caucasian",44,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Ning","Jean","Xuhua","Jong-sei","Banjerd","Dino","Russell","Male_Western",0,0,"White / Caucasian",28,0,1
+0,1,1,1,1,0,0,0,"Western","Woman",1,"Sung-hee","Wedig","Kwang-je","Ciro","Jong-sei","Alastair","Catharine","Female_Western",0,1,"White / Caucasian",73,0,1
+1,1,1,0,1,0,1,1,"Western","Man",0,"Xinyuan","Sung-chul","Sujin","Renato","Job-Gunter","Garry","Shareen","Female_Western",0,1,"White / Caucasian",35,1,1
+1,0,1,1,0,0,0,1,"Eastern","Man",1,"Luis","Yinhe","Shaiwatna","Sandu","Xinyuan","Krasae","Somsak","Male_Eastern",0,0,"White / Caucasian",65,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Gontard","Anthea","Dino","Xinyuan","Ping","Kwang-je","Longjin","Male_Eastern",0,0,"White / Caucasian",39,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",0,"Ludger","Alastair","Baek-in","Shenggen","Sung-chul","Renato","Kil-nam","Male_Eastern",0,0,"White / Caucasian",52,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Kwang-je","Sujin","Sandu","Zhizhen","Alma","Ping","Banjerd","Male_Eastern",0,0,"White / Caucasian",44,1,1
+1,0,1,1,0,0,1,0,"Eastern","Woman",2,"Yunhui","Sujin","Russell","Engelbert","Beatrix","Ghillean","Longjin","Male_Eastern",0,0,"White / Caucasian",61,0,1
+1,1,1,0,0,0,1,1,"Western","Woman",2,"In-jin","In-ho","Kesree","Ky-chun","Canfa","Kitti","Ghillean","Male_Western",0,0,"Asian / Pacific Islander",38,0,0
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"Canfa","Willis","Kobchitt","Gernulf","Xinyuan","Arun","Shenggen","Male_Eastern",0,0,"White / Caucasian",33,0,1
+1,1,1,0,0,0,0,0,"Western","Woman",3,"Junliang","Jean","Choon-mie","Ciro","Gernulf","Greta","Lino","Male_Western",0,0,"White / Caucasian",42,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",2,"Li","Anthea","Engelbert","Xinyuan","Luis","Shenggen","Saksri","Male_Eastern",0,0,"Black or African American",42,0,0
+0,1,1,1,0,0,1,1,"Eastern","Non-binary",0,"Kwang-je","Ferdinando","Xinyuan","Arun","Luis","Jong-sei","Sujin","Male_Eastern",0,0,"White / Caucasian",40,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Xuetao","Somran","Jinghua","Udo","Kitti","Ailsa","Krasae","Male_Eastern",0,0,"White / Caucasian",44,0,1
+0,0,0,0,0,0,1,1,"Western","Man",2,"Trude","Raymond","Demetrio","Banjerd","Shenggen","Kesree","Alastair","Male_Western",0,0,"White / Caucasian",27,1,1
+1,1,0,1,0,0,0,1,"Western","Man",1,"Choong-soo","Raymond","Xinyuan","Gernulf","Rachel","Ping","Udo","Male_Western",0,0,"Asian / Pacific Islander",71,1,0
+1,1,1,0,0,0,1,1,"Western","Woman",0,"Gerardo","Kitti","Junliang","Engelbert","Sandu","Renato","Russell","Male_Western",0,0,"White / Caucasian",40,0,1
+1,0,1,1,1,0,1,1,"Eastern","Woman",1,"Baek-in","Somran","Junliang","Mariassunta","Dino","Xuhua","Arunrat","Female_Eastern",1,0,"White / Caucasian",60,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Gernulf","Krasae","Arun","Nidhi","Ning","Shareen","Sujin","Male_Eastern",0,0,"White / Caucasian",57,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",0,"Ghillean","Gernulf","Raymond","Jan","Renato","Sujin","Ferdinando","Male_Western",0,0,"White / Caucasian",68,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",2,"In-jin","Thida","Yinhe","Xinyuan","Gerardo","Sandu","Kwang-je","Male_Eastern",0,0,"White / Caucasian",61,0,1
+0,1,1,1,1,0,0,1,"Western","Man",1,"Shareen","Jong-sei","Luis","Wedig","Banjerd","Longjin","Eugenia","Female_Western",0,1,"White / Caucasian",58,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Krasae","Xuhua","Shareen","Junliang","Sandu","Choong-soo","Xuetao","Male_Eastern",0,0,"White / Caucasian",45,1,1
+0,0,0,0,0,0,1,1,"Eastern","Woman",1,"Engelbert","Hong-nam","Roberto","Canfa","Gernulf","Alastair","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,0,0,"Eastern","Man",3,"Dorothy","Gerardo","Ping","Kobchitt","Krasae","Isabel","Yong-pil","Male_Eastern",0,0,"Black or African American",28,1,0
+0,1,1,1,0,0,1,1,"Western","Man",3,"Shareen","Gontard","In-young","Thida","Gerardo","Jong-sei","Ghillean","Male_Western",0,0,"White / Caucasian",38,1,1
+0,1,1,1,1,0,1,1,"Eastern","Woman",2,"Engelbert","Dora","Sung-hee","Saksri","Arun","Jinghua","Krisana","Female_Eastern",1,0,"Black or African American",23,0,0
+1,0,1,1,1,0,0,1,"Western","Woman",1,"Alastair","Krasae","Job-Gunter","Xinyuan","Anty","Engelbert","Greta","Female_Western",0,1,"White / Caucasian",23,0,1
+1,0,1,1,0,0,0,1,"Western","Woman",0,"Ian","Bong-ho","Ciro","Luis","Junliang","Claus-Peter","Job-Gunter","Male_Western",0,0,"White / Caucasian",58,0,1
+0,1,1,1,1,0,0,1,"Western","Man",1,"Banjerd","Mariassunta","Sujin","Sandu","Weilie","Gerardo","Jean","Female_Western",0,1,"White / Caucasian",29,1,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Pasuk","Luis","Claus-Peter","Ciro","Alastair","Xinyuan","Engelbert","Male_Western",0,0,"White / Caucasian",43,1,1
+1,1,1,0,1,0,0,1,"Western","Man",0,"Sandu","Junliang","Banjerd","Ferdinando","Shenggen","Claus-Peter","Ailsa","Female_Western",0,1,"White / Caucasian",51,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",3,"Kobchitt","Melanie","Yinhe","Krasae","Lionello","Job-Gunter","Renato","Male_Western",0,0,"White / Caucasian",62,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",4,"Zhizhen","Stefania","Bethan","Russell","Krasae","Pilai","Shenggen","Male_Eastern",0,0,"Hispanic / Latinx",37,1,0
+1,1,0,1,0,0,1,0,"Western","Woman",1,"Ciro","Sung-chul","Rachel","Xuhua","Jinghua","Weilie","Allen","Male_Western",0,0,"Asian / Pacific Islander",29,0,0
+1,1,0,1,0,0,0,1,"Eastern","Woman",1,"Longjin","Weilie","Engelbert","Garry","Kil-nam","Mariassunta","Canfa","Male_Eastern",0,0,"Hispanic / Latinx",46,0,0
+1,0,1,1,0,0,1,0,"Eastern","Woman",0,"Jong-sei","Garry","Udo","Banjerd","Lino","Jinghua","Longjin","Male_Eastern",0,0,"White / Caucasian",35,0,1
+0,1,1,1,0,0,0,1,"Western","Man",2,"Kwang-je","Anthea","Nidhi","Demetrio","Isabel","Ferdinando","Lionello","Male_Western",0,0,"White / Caucasian",38,1,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",1,"Shenggen","Ethel","In-jin","Ditmar","Lionello","Ping","Xuetao","Male_Eastern",0,0,"White / Caucasian",59,0,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"Allen","Canfa","Job-Gunter","Zhizhen","Xuetao","Kitti","Shenggen","Male_Eastern",0,0,"White / Caucasian",52,0,1
+0,1,1,1,0,0,0,1,"Western","Man",0,"Jan","Lionello","Arun","Sandu","Xuetao","Canfa","Roberto","Male_Western",0,0,"White / Caucasian",49,1,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",0,"Krasae","Yong-pil","Shenggen","Demetrio","Saksri","Lionello","Nidhi","Male_Eastern",0,0,"White / Caucasian",68,0,1
+1,1,1,0,0,0,0,1,"Western","Man",0,"Shaiwatna","Russell","Sung-chul","Jinghua","Dino","Choong-soo","Jan","Male_Western",0,0,"White / Caucasian",41,1,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",3,"Kobchitt","Arun","Rachel","Dino","Dong","Xinyuan","In-jin","Male_Eastern",0,0,"Black or African American",38,0,0
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Krisana","Junliang","Krasae","Gernulf","Alastair","Jong-sei","Pichaet","Male_Eastern",0,0,"Black or African American",75,1,0
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Mandy","Choong-soo","Xuetao","Alastair","Weilie","Dino","Pichaet","Male_Eastern",0,0,"Black or African American",41,1,0
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Gontard","Weilie","Kil-nam","Shaiwatna","Bethan","Sung-chul","Alastair","Male_Western",0,0,"Asian / Pacific Islander",37,0,0
+1,1,1,0,0,0,1,0,"Eastern","Woman",1,"Krasae","Nidhi","Ghillean","Mariassunta","Dino","Xinyuan","Xuhua","Male_Eastern",0,0,"Black or African American",55,0,0
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Kitti","Demetrio","Arunrat","Job-Gunter","Shaiwatna","Jan","Beatrix","Female_Western",0,1,"White / Caucasian",59,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Shaiwatna","Ning","Yong-pil","Hong-nam","Jong-sei","Jinghua","Xinyuan","Male_Eastern",0,0,"White / Caucasian",53,1,1
+1,1,1,0,0,0,1,1,"Western","Woman",1,"Alma","Sung-chul","Krasae","Claus-Peter","Choong-soo","Engelbert","Dino","Male_Western",0,0,"White / Caucasian",54,0,1
+1,1,1,0,1,0,0,1,"Western","Man",0,"Ferdinando","Luis","Pichaet","Gontard","Sandu","Canfa","Ana","Female_Western",0,1,"White / Caucasian",37,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",0,"Willis","Bong-ho","Banjerd","Allen","Gernulf","Xinyuan","Somsak","Male_Eastern",0,0,"White / Caucasian",32,1,1
+1,1,1,0,0,0,0,1,"Eastern","Man",0,"Kwang-je","Ciro","Choong-soo","Pichaet","Sujin","Udo","Canfa","Male_Eastern",0,0,"White / Caucasian",52,1,1
+1,0,1,1,0,0,0,1,"Western","Man",2,"Jan","Sujin","Krisana","Ferdinando","Mandy","Arun","Engelbert","Male_Western",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,0,1,"Western","Man",2,"Xuhua","Jong-sei","Anthea","Xuetao","Weilie","Kyongae","Gerardo","Male_Western",0,0,"White / Caucasian",35,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Yong-pil","Mariassunta","Luis","Anthea","Allen","Xinyuan","Ping","Male_Eastern",0,0,"White / Caucasian",51,1,1
+0,1,1,1,1,0,0,1,"Western","Woman",0,"Gernulf","Shenggen","Krasae","Job-Gunter","Lionello","Dino","Rachel","Female_Western",0,1,"White / Caucasian",45,0,1
+1,1,0,1,0,0,1,1,"Eastern","Man",2,"Ludger","Arun","Krisana","Li","Jan","Ky-chun","Somran","Male_Eastern",0,0,"White / Caucasian",37,1,1
+0,1,1,1,0,0,0,0,"Eastern","Man",0,"Dino","Garry","Somsak","Gontard","Somran","Ciro","In-jin","Male_Eastern",0,0,"White / Caucasian",45,1,1
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Dino","Canfa","Lucetta","Yong-pil","Shenggen","Engelbert","Catriona","Female_Western",0,1,"White / Caucasian",58,0,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",2,"Krasae","Dino","Raymond","Alma","Sujin","Melanie","Sung-chul","Male_Eastern",0,0,"White / Caucasian",47,0,1
+0,1,1,1,0,0,0,1,"Western","Man",0,"Krasae","Luis","Xinyuan","Sung-chul","Bong-ho","Shenggen","Ian","Male_Western",0,0,"White / Caucasian",51,1,1
+1,1,1,0,1,0,1,1,"Western","Woman",2,"Garry","Engelbert","Li","Xinyuan","Dora","Nidhi","Shareen","Female_Western",0,1,"White / Caucasian",69,0,1
+0,1,1,1,0,0,1,0,"Western","Woman",3,"Engelbert","Isabel","Rachel","Xinyuan","Wedig","Kobchitt","Allen","Male_Western",0,0,"White / Caucasian",46,0,1
+1,0,1,1,0,0,1,1,"Eastern","Man",1,"Dino","Luis","Jinghua","Shaiwatna","Ailsa","Engelbert","Kwang-je","Male_Eastern",0,0,"White / Caucasian",43,1,1
+1,0,1,1,1,0,0,1,"Western","Man",1,"Jan","Banjerd","Renato","Garry","Gontard","Bettine","Eugenia","Female_Western",0,1,"White / Caucasian",53,1,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",0,"Jong-sei","Renato","Gernulf","Shenggen","Ludger","Wedig","Krasae","Male_Eastern",0,0,"White / Caucasian",37,0,1
+1,1,1,0,0,0,0,1,"Western","Man",1,"Nidhi","Pasuk","Russell","Claus-Peter","Gernulf","Shenggen","Raymond","Male_Western",0,0,"White / Caucasian",33,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Gontard","Somsak","Anthea","Arun","Xinyuan","Saksri","Jan","Male_Western",0,0,"White / Caucasian",68,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Lionello","Ghillean","Ditmar","Baek-in","Eugenia","Bettine","Job-Gunter","Male_Western",0,0,"White / Caucasian",37,0,1
+1,1,1,0,1,0,1,1,"Western","Woman",1,"Sujin","Krasae","Shenggen","Pasuk","Xuetao","Arun","Stefania","Female_Western",0,1,"White / Caucasian",53,0,1
+1,1,1,0,0,0,1,1,"Western","Man",1,"Longjin","Jinghua","Eugenia","Sujin","Jong-sei","Sung-chul","Alastair","Male_Western",0,0,"White / Caucasian",39,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",1,"Xinyuan","Kwang-je","Dorothy","Dino","Shenggen","Pichaet","Jong-sei","Male_Eastern",0,0,"White / Caucasian",52,0,1
+0,1,1,1,0,0,0,1,"Western","Man",0,"Shenggen","Sujin","Nidhi","Dino","Bong-ho","Krasae","Gerardo","Male_Western",0,0,"White / Caucasian",56,1,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",1,"Xinyuan","Dino","Engelbert","Roberto","Yong-pil","Pilai","Somran","Male_Eastern",0,0,"White / Caucasian",60,0,1
+1,1,0,1,0,0,0,1,"Eastern","Woman",1,"Engelbert","Yong-pil","Arun","Shenggen","Mariassunta","Weilie","Kil-nam","Male_Eastern",0,0,"Asian / Pacific Islander",34,0,0
+1,0,1,1,0,0,0,1,"Western","Man",1,"Lino","Claus-Peter","Xuetao","Ailsa","Sujin","Yong-pil","Lionello","Male_Western",0,0,"White / Caucasian",48,1,1
+1,0,1,1,0,0,0,1,"Eastern","Man",4,"Krisana","Catriona","Shaiwatna","Li","Mechtild","Allen","Bong-ho","Male_Eastern",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",2,"Sandu","Xinyuan","Yinhe","Thida","Ping","Dino","Jong-sei","Male_Eastern",0,0,"Asian / Pacific Islander",40,1,0
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Nidhi","Somsak","Russell","Anthea","Ciro","In-jin","Xuetao","Male_Eastern",0,0,"White / Caucasian",40,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",0,"Ping","Jinghua","Gontard","Krasae","Gernulf","Pichaet","Alastair","Male_Western",0,0,"Asian / Pacific Islander",24,0,0
+0,1,1,1,0,0,0,1,"Eastern","Man",0,"Kwang-je","Sung-chul","Somran","Weilie","Jan","Arun","Baek-in","Male_Eastern",0,0,"White / Caucasian",41,1,1
+1,1,0,1,1,0,0,1,"Western","Man",1,"Shaiwatna","Luis","Krisana","Engelbert","Ghillean","Ferdinando","Eugenia","Female_Western",0,1,"Hispanic / Latinx",33,1,0
+0,1,1,1,0,0,1,1,"Eastern","Woman",2,"Bethan","Willis","Renato","Raymond","Renata","Longjin","Jinghua","Male_Eastern",0,0,"White / Caucasian",58,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Krasae","Krisana","Alastair","Choong-soo","Lionello","Shareen","Arun","Male_Western",0,0,"White / Caucasian",41,0,1
+1,1,1,0,0,0,1,0,"Eastern","Woman",1,"Demetrio","Kitti","Chumsri","Ciro","Junliang","Gerardo","Jong-sei","Male_Eastern",0,0,"White / Caucasian",75,0,1
+1,0,1,1,1,0,0,1,"Western","Woman",0,"Job-Gunter","Alastair","In-jin","Xuetao","Arun","Banjerd","Mechtild","Female_Western",0,1,"Black or African American",69,0,0
+0,1,1,1,0,0,1,0,"Eastern","Woman",0,"Gerardo","Xuetao","Pichaet","Yong-pil","Jinghua","Kil-nam","Sung-chul","Male_Eastern",0,0,"White / Caucasian",61,0,1
+0,1,1,1,0,0,1,0,"Eastern","Man",2,"Anthea","Luis","Kitti","Roberto","Sandu","Greta","Longjin","Male_Eastern",0,0,"White / Caucasian",45,1,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",1,"Jinghua","Bong-ho","Sujin","Ghillean","Trude","Choong-soo","In-jin","Male_Eastern",0,0,"White / Caucasian",27,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Somsak","Yong-pil","Engelbert","Job-Gunter","Renato","Kobchitt","Ghillean","Male_Western",0,0,"White / Caucasian",66,0,1
+1,1,1,0,0,0,1,1,"Western","Man",1,"Dong","Kwang-je","Udo","Jong-sei","Engelbert","Banjerd","Alastair","Male_Western",0,0,"White / Caucasian",58,1,1
+1,1,1,0,1,0,1,1,"Eastern","Woman",0,"Engelbert","Choong-soo","Xuetao","Sandu","Gerardo","Longjin","Yunhui","Female_Eastern",1,0,"White / Caucasian",37,0,1
+1,1,0,1,0,0,1,1,"Eastern","Man",2,"Kil-nam","Russell","Shaiwatna","Jean","Dino","Dora","Kitti","Male_Eastern",0,0,"Black or African American",38,1,0
+0,1,1,1,0,0,1,0,"Eastern","Man",3,"Ditmar","Stefania","Choong-soo","Anthea","Heike","Willis","Longjin","Male_Eastern",0,0,"Hispanic / Latinx",36,1,0
+1,1,0,1,0,0,1,1,"Western","Woman",0,"Ghillean","Somran","Ciro","Alastair","Jong-sei","Gernulf","Ferdinando","Male_Western",0,0,"White / Caucasian",68,0,1
+1,1,1,0,0,0,0,0,"Eastern","Man",1,"Ning","Yong-pil","Garry","Choong-soo","Russell","Shaiwatna","Junliang","Male_Eastern",0,0,"White / Caucasian",70,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Miaoqing","Engelbert","Krasae","Gernulf","Roberto","Job-Gunter","Arun","Male_Western",0,0,"White / Caucasian",44,0,1
+1,1,1,0,0,0,1,1,"Western","Man",2,"Raymond","Canfa","Sung-chul","Junliang","Xiaoyi","Sung-hee","Sandu","Male_Western",0,0,"Asian / Pacific Islander",29,1,0
+1,1,1,0,0,0,1,0,"Eastern","Man",1,"Kwang-je","Ana","Somran","Baek-in","Junliang","Alastair","Sung-chul","Male_Eastern",0,0,"White / Caucasian",38,1,1
+0,1,1,1,1,0,0,1,"Eastern","Man",2,"Gernulf","Bong-ho","Raymond","Bok-ryeo","Somsak","Isabel","Kesree","Female_Eastern",1,0,"White / Caucasian",47,1,1
+1,0,1,1,1,0,0,1,"Western","Woman",0,"Saksri","Engelbert","Xuetao","Shenggen","Ciro","Weilie","Lucetta","Female_Western",0,1,"White / Caucasian",44,0,1
+1,1,0,1,0,0,0,1,"Western","Woman",2,"Baek-in","Dino","Shenggen","Xuetao","Heike","Xiaoyi","Roberto","Male_Western",0,0,"White / Caucasian",25,0,1
+1,1,1,0,0,0,1,1,"Western","Man",1,"Luis","Allen","Dino","In-jin","Jan","Ethel","Russell","Male_Western",0,0,"White / Caucasian",33,1,1
+0,1,1,1,1,0,0,1,"Eastern","Man",1,"Baek-in","Roberto","Isabel","Luis","Jong-sei","Ping","Niyada","Female_Eastern",1,0,"White / Caucasian",36,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Jong-sei","Sujin","Xinyuan","Junliang","Yunhui","Kwang-je","Sung-chul","Male_Eastern",0,0,"White / Caucasian",54,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",2,"Sung-chul","Dong","Wedig","Thida","Yong-pil","Jan","Jong-sei","Male_Eastern",0,0,"Asian / Pacific Islander",30,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",3,"Gontard","Isabel","Lionello","Mariassunta","Dino","Yeong-hui","Demetrio","Male_Western",0,0,"White / Caucasian",45,0,1
+1,1,1,0,0,0,0,1,"Western","Man",2,"Alastair","Roberto","Xinyuan","Sung-chul","Mechtild","Hong-nam","Udo","Male_Western",0,0,"Hispanic / Latinx",34,1,0
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Gontard","Kyongae","Dino","Kobchitt","Banjerd","Sandu","Pichaet","Male_Eastern",0,0,"Asian / Pacific Islander",32,1,0
+0,1,1,1,0,0,1,1,"Western","Man",1,"Yunhui","Banjerd","Dino","Jinghua","Choong-soo","Longjin","Ghillean","Male_Western",0,0,"White / Caucasian",42,1,1
+1,1,0,1,0,0,1,1,"Western","Man",1,"Sujin","Arun","Dorothy","Sung-chul","Somsak","In-jin","Luis","Male_Western",0,0,"White / Caucasian",33,1,1
+1,1,1,0,0,0,0,1,"Western","Woman",2,"Sung-hee","Alastair","Banjerd","Yong-pil","Garry","Bettine","Ditmar","Male_Western",0,0,"White / Caucasian",32,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Arun","Sujin","Dino","Russell","Mariassunta","Shaiwatna","Yong-pil","Male_Eastern",0,0,"White / Caucasian",43,0,1
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Jan","Kwang-je","Dino","Sandu","Maria","Xuetao","Kitti","Male_Eastern",0,0,"Hispanic / Latinx",56,1,0
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Krasae","Xinyuan","Xiaoyi","Banjerd","Shenggen","Ditmar","Xuetao","Male_Eastern",0,0,"White / Caucasian",44,0,1
+1,1,1,0,0,0,0,1,"Western","Non-binary",2,"Hong-nam","Krasae","Wedig","Luis","Kitti","Niyada","Garry","Male_Western",0,0,"White / Caucasian",57,0,1
+1,0,1,1,0,0,1,1,"Eastern","Man",1,"Ludger","Dino","Kil-nam","Raymond","Ditmar","Greta","Jinghua","Male_Eastern",0,0,"Black or African American",42,1,0
+1,1,1,0,1,0,0,0,"Eastern","Man",2,"Alastair","Beatrix","Arunrat","Canfa","Weilie","Sujin","Bok-ryeo","Female_Eastern",1,0,"Hispanic / Latinx",37,1,0
+1,0,1,1,1,0,1,1,"Eastern","Man",1,"Ailsa","Allen","Ping","Canfa","Sujin","Shenggen","Yunhui","Female_Eastern",1,0,"White / Caucasian",65,1,1
+0,1,1,1,1,0,0,1,"Eastern","Woman",2,"Krasae","Sucheng","Canfa","Kil-nam","Demetrio","Anthea","Kobchitt","Female_Eastern",1,0,"White / Caucasian",46,0,1
+1,1,1,0,0,0,1,1,"Western","Man",2,"Sandu","Kobchitt","Rachel","Krasae","Alastair","Xinyuan","Ghillean","Male_Western",0,0,"White / Caucasian",29,1,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Yinhe","Canfa","Arun","Dino","Alastair","Xinyuan","In-jin","Male_Eastern",0,0,"White / Caucasian",33,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Ky-chun","Arun","Job-Gunter","Catharine","Dino","Choong-soo","Ana","Female_Western",0,1,"Black or African American",39,0,0
+0,1,1,1,1,0,0,1,"Western","Man",1,"Xinyuan","Garry","Renato","Krisana","Krasae","In-jin","Melanie","Female_Western",0,1,"White / Caucasian",66,1,1
+1,1,1,0,1,0,1,1,"Eastern","Man",1,"Sung-chul","Shaiwatna","Gontard","Roberto","Krasae","Dorothy","Krisana","Female_Eastern",1,0,"Black or African American",34,1,0
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"In-jin","Roberto","Yinhe","Krasae","Ludger","Xinyuan","Banjerd","Male_Eastern",0,0,"White / Caucasian",74,0,1
+1,1,1,0,0,0,1,1,"Western","Woman",1,"Pasuk","Xinyuan","Yong-pil","Sujin","Udo","Jinghua","Ghillean","Male_Western",0,0,"White / Caucasian",38,0,1
+1,1,1,0,0,0,1,1,"Eastern","Man",2,"Mandy","Russell","Renata","Raymond","Roberto","Xuetao","Kwang-je","Male_Eastern",0,0,"Asian / Pacific Islander",36,1,0
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Sujin","Shenggen","Junliang","Arunrat","Job-Gunter","Alastair","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",55,0,1
+1,1,1,0,1,0,0,1,"Western","Woman",0,"Sandu","Gerardo","Engelbert","Shenggen","Gontard","Jong-sei","Ailsa","Female_Western",0,1,"White / Caucasian",34,0,1
+1,0,1,1,1,0,1,0,"Eastern","Woman",1,"Roberto","Ghillean","Arun","Xinyuan","Heike","Raymond","Wenying","Female_Eastern",1,0,"White / Caucasian",39,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",0,"Ditmar","Krasae","Jan","Nidhi","Choong-soo","Weilie","Kwang-je","Male_Eastern",0,0,"Black or African American",54,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Dino","Kil-nam","Alastair","Xinyuan","Catriona","Ghillean","Ditmar","Male_Western",0,0,"White / Caucasian",44,0,1
+0,1,1,1,1,0,1,1,"Western","Woman",0,"Somran","Kitti","Engelbert","Xinyuan","Arun","Gontard","Shareen","Female_Western",0,1,"White / Caucasian",50,0,1
+1,1,0,1,0,0,0,0,"Eastern","Man",0,"Gernulf","Sandu","Ping","Ky-chun","Job-Gunter","Raymond","Krasae","Male_Eastern",0,0,"White / Caucasian",71,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Demetrio","Catriona","Banjerd","Xiaoyi","Xuetao","Russell","Shenggen","Male_Eastern",0,0,"White / Caucasian",52,0,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",1,"Xuhua","Catharine","Lino","Xinyuan","Luis","Engelbert","In-jin","Male_Eastern",0,0,"Asian / Pacific Islander",44,0,0
+1,1,1,0,0,0,1,1,"Western","Man",2,"Ian","Ping","Weilie","Beatrix","Lucetta","Kil-nam","Dino","Male_Western",0,0,"White / Caucasian",36,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",0,"Demetrio","Job-Gunter","Xuetao","Choong-soo","Nidhi","Raymond","Jong-sei","Male_Eastern",0,0,"White / Caucasian",35,0,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",1,"Greta","Ludger","Engelbert","Canfa","Choong-soo","Xuetao","Krasae","Male_Eastern",0,0,"White / Caucasian",36,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"In-ho","Dino","Roberto","Weilie","Xuhua","Arun","Kil-nam","Male_Eastern",0,0,"White / Caucasian",64,0,1
+0,1,1,1,0,0,0,0,"Western","Woman",0,"Russell","Jinghua","Udo","Lionello","Sandu","Sung-chul","Lino","Male_Western",0,0,"White / Caucasian",63,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Roberto","Xuetao","Pilai","Willis","Arun","Sandu","Udo","Male_Western",0,0,"White / Caucasian",45,0,1
+1,1,0,1,0,0,0,1,"Eastern","Woman",1,"Kitti","Bethan","Renato","Ghillean","Choong-soo","In-jin","Nidhi","Male_Eastern",0,0,"Black or African American",47,0,0
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Jean","Ditmar","Krasae","Pichaet","Shenggen","Melanie","Nidhi","Male_Eastern",0,0,"White / Caucasian",45,1,1
+0,1,1,1,0,0,0,1,"Eastern","Another gender not listed here:",0,"Canfa","Dino","Krasae","Ciro","Somran","Ditmar","Nidhi","Male_Eastern",0,0,"American Indian or Alaskan Native",40,0,0
+1,1,1,0,0,0,1,0,"Eastern","Woman",1,"Jinghua","Engelbert","Yong-pil","Choong-soo","Gernulf","Hwa-jin","Longjin","Male_Eastern",0,0,"White / Caucasian",40,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Engelbert","Augusta","Sung-chul","Dorothy","Alastair","Krasae","Bong-ho","Male_Eastern",0,0,"Black or African American",36,1,0
+1,0,1,1,0,0,1,0,"Western","Man",0,"Ping","Saksri","In-jin","Jan","Bong-ho","Gerardo","Allen","Male_Western",0,0,"Asian / Pacific Islander",40,1,0
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Engelbert","Kitti","Xuetao","Sung-chul","Ghillean","Mariassunta","Ky-chun","Male_Eastern",0,0,"White / Caucasian",40,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",1,"Alastair","Job-Gunter","Roberto","Xuetao","Krisana","Gernulf","Engelbert","Male_Western",0,0,"White / Caucasian",54,0,1
+0,1,1,1,0,0,1,1,"Western","Man",3,"Heike","Xuetao","Shaiwatna","Runglawan","Mandy","Shenggen","Ferdinando","Male_Western",0,0,"White / Caucasian",49,1,1
+0,1,1,1,0,0,1,0,"Western","Woman",0,"Shaiwatna","Dino","Alastair","Xuetao","Renato","Gontard","Allen","Male_Western",0,0,"Black or African American",37,0,0
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Ian","Somsak","Saksri","Sandu","Heike","Weilie","Kitti","Male_Eastern",0,0,"White / Caucasian",40,1,1
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Junliang","Jong-sei","Longjin","Roberto","Ning","Jinghua","Ailsa","Female_Western",0,1,"White / Caucasian",28,0,1
+1,1,1,0,1,0,1,1,"Western","Man",1,"Ghillean","Pilai","Sandu","Dino","In-jin","Jinghua","Maria","Female_Western",0,1,"White / Caucasian",28,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Niyada","Choon-mie","Pichaet","In-jin","Somran","Yong-pil","Xuetao","Male_Eastern",0,0,"White / Caucasian",37,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Claus-Peter","Dino","Ana","Krasae","Yong-pil","Xuhua","Mariassunta","Female_Western",0,1,"Black or African American",63,0,0
+1,1,1,0,0,0,0,1,"Eastern","Woman",2,"Alastair","Engelbert","Ferdinando","Thida","Miaoqing","Krasae","Ping","Male_Eastern",0,0,"Asian / Pacific Islander",31,0,0
+0,1,1,1,1,0,1,1,"Western","Man",1,"Kil-nam","Kitti","Demetrio","Gontard","Renata","Lionello","Dorothy","Female_Western",0,1,"White / Caucasian",50,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Arun","Melanie","Kitti","Saksri","Weilie","Mariassunta","Canfa","Male_Eastern",0,0,"White / Caucasian",39,1,1
+1,0,1,1,1,0,0,1,"Western","Man",1,"Krasae","Ghillean","Li","Jong-sei","Yong-pil","Lionello","Mariassunta","Female_Western",0,1,"White / Caucasian",37,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",2,"Krasae","Xuetao","Ian","Ailsa","Pichaet","Zhizhen","Jong-sei","Male_Eastern",0,0,"Black or African American",65,0,0
+1,0,1,1,1,0,0,0,"Eastern","Woman",0,"Udo","Kitti","Ping","Sandu","Gernulf","Ditmar","In-ho","Female_Eastern",1,0,"White / Caucasian",49,0,1
+0,1,1,1,1,0,1,1,"Eastern","Man",1,"Xinyuan","Heike","Jong-sei","Alastair","Somsak","Xuhua","Zhizhen","Female_Eastern",1,0,"White / Caucasian",77,1,1
+1,0,1,1,1,0,0,1,"Western","Woman",0,"Engelbert","Xuetao","Kwang-je","Demetrio","Jinghua","Gernulf","Trude","Female_Western",0,1,"White / Caucasian",31,0,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Ferdinando","Xinyuan","Bong-ho","Choong-soo","Weilie","Miaoqing","Jong-sei","Male_Eastern",0,0,"White / Caucasian",56,1,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",1,"Somsak","Choong-soo","Shenggen","Xuetao","Weilie","Rachel","Xinyuan","Male_Eastern",0,0,"Asian / Pacific Islander",47,0,0
+1,1,1,0,1,0,0,1,"Western","Man",1,"Xuetao","Shenggen","Pilai","Kitti","Sandu","Engelbert","Heike","Female_Western",0,1,"White / Caucasian",63,1,1
+1,0,1,1,0,0,0,1,"Eastern","Man",2,"Anthea","Demetrio","Jan","Udo","Kitti","Stefania","Baek-in","Male_Eastern",0,0,"White / Caucasian",33,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Thida","Alastair","Jinghua","Claus-Peter","Xuetao","Engelbert","Shenggen","Male_Eastern",0,0,"White / Caucasian",65,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Roberto","Junliang","Krisana","Ludger","Yong-pil","Alastair","Ailsa","Female_Western",0,1,"White / Caucasian",49,0,1
+0,1,1,1,0,0,1,0,"Western","Woman",0,"Willis","Junliang","Sujin","Jan","Nidhi","Wedig","Allen","Male_Western",0,0,"White / Caucasian",64,0,1
+1,0,1,1,1,0,0,1,"Eastern","Woman",2,"Xinyuan","Claus-Peter","Hong-nam","Jong-sei","Shareen","Baek-in","Niyada","Female_Eastern",1,0,"White / Caucasian",26,0,1
+1,1,0,1,1,0,1,1,"Western","Man",0,"Alastair","Xinyuan","Kitti","Engelbert","Sandu","Arun","Shareen","Female_Western",0,1,"Hispanic / Latinx",32,1,0
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Sandu","Ailsa","Xinyuan","Ghillean","Dino","Kobchitt","Pichaet","Male_Eastern",0,0,"White / Caucasian",41,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Ludger","Demetrio","Dorothy","Canfa","Sung-chul","Ghillean","Arun","Male_Western",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,1,0,"Eastern","Man",2,"Dino","Ferdinando","Kyongae","Sandu","Dorothy","Xuetao","Jong-sei","Male_Eastern",0,0,"White / Caucasian",38,1,1
+0,1,1,1,0,0,0,0,"Eastern","Man",2,"Dorothy","In-jin","Weilie","Junliang","Claus-Peter","Alma","Krasae","Male_Eastern",0,0,"White / Caucasian",35,1,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",0,"Russell","Ferdinando","Somsak","Kwang-je","Dino","Gernulf","Sujin","Male_Eastern",0,0,"White / Caucasian",33,0,1
+1,0,1,1,0,0,0,1,"Eastern","Man",0,"Shaiwatna","Jong-sei","Dino","Willis","Xuhua","Job-Gunter","Banjerd","Male_Eastern",0,0,"White / Caucasian",47,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",0,"Sung-chul","Gerardo","Xuetao","Russell","Weilie","Yong-pil","Bong-ho","Male_Eastern",0,0,"White / Caucasian",43,1,1
+1,1,1,0,1,0,0,1,"Western","Woman",2,"Gontard","Dino","Mechtild","Krasae","Ning","Bong-ho","Alma","Female_Western",0,1,"White / Caucasian",69,0,1
+1,0,1,1,1,0,0,1,"Western","Woman",2,"Russell","Renata","Luis","Hwa-jin","Arun","Gerardo","Rachel","Female_Western",0,1,"White / Caucasian",43,0,1
+1,0,1,1,0,0,0,0,"Eastern","Woman",1,"In-ho","Alastair","Demetrio","Sung-chul","Xuetao","Ludger","Choong-soo","Male_Eastern",0,0,"Asian / Pacific Islander",30,0,0
+0,1,1,1,0,0,0,1,"Western","Man",1,"Wedig","Ky-chun","Catharine","Ping","Luis","Bong-ho","Willis","Male_Western",0,0,"White / Caucasian",49,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Lucetta","Dong","Nidhi","Ky-chun","Claus-Peter","Junliang","Weilie","Male_Eastern",0,0,"Black or African American",31,1,0
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Arun","Sujin","Catharine","Choong-soo","Udo","Bong-ho","Kitti","Male_Eastern",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Canfa","Allen","Dorothy","Xinyuan","Xuetao","Hong-nam","Renato","Male_Western",0,0,"White / Caucasian",26,0,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",2,"Dorothy","Roberto","Mariassunta","Dino","Pichaet","Lionello","Junliang","Male_Eastern",0,0,"Black or African American",57,0,0
+0,1,1,1,0,0,0,1,"Western","Man",3,"Ciro","Lucetta","Sujin","Dong","Jong-sei","Krisana","Roberto","Male_Western",0,0,"Asian / Pacific Islander",41,1,0
+1,0,1,1,1,0,0,1,"Western","Man",1,"Xinyuan","Willis","Saksri","Gernulf","Isabel","Job-Gunter","Mandy","Female_Western",0,1,"White / Caucasian",29,1,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",3,"In-young","Gerardo","Kitti","Eugenia","Engelbert","Beatrix","Pichaet","Male_Eastern",0,0,"White / Caucasian",52,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Engelbert","Xuetao","Dino","Alastair","Shenggen","Krisana","Krasae","Male_Eastern",0,0,"Asian / Pacific Islander",71,0,0
+0,1,1,1,0,0,0,0,"Eastern","Man",3,"Dorothy","Li","Garry","Beatrix","Shenggen","Dino","Krasae","Male_Eastern",0,0,"White / Caucasian",68,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Gernulf","Job-Gunter","Krasae","Udo","Bok-ryeo","Canfa","Weilie","Male_Eastern",0,0,"White / Caucasian",66,1,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Choong-soo","Ghillean","Krasae","Saksri","Claus-Peter","Zhizhen","Ciro","Male_Western",0,0,"Hispanic / Latinx",53,1,0
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Nidhi","Eugenia","Alastair","Xinyuan","Arun","Zhizhen","Dino","Male_Western",0,0,"Hispanic / Latinx",39,0,0
+1,0,1,1,0,0,0,1,"Western","Woman",1,"Garry","Shenggen","Luis","Kesree","Xuhua","Udo","Gernulf","Male_Western",0,0,"Black or African American",33,0,0
+1,1,0,1,0,0,0,1,"Western","Woman",3,"Roberto","Xinyuan","Hwa-jin","Pasuk","Catriona","Kitti","Gontard","Male_Western",0,0,"White / Caucasian",47,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",3,"Jong-sei","Ditmar","Yeong-hui","Gontard","Greta","Xiaoyi","Lionello","Male_Western",0,0,"White / Caucasian",46,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Xinyuan","Yong-pil","Sung-chul","Canfa","Shareen","Sandu","Bong-ho","Male_Eastern",0,0,"White / Caucasian",27,1,1
+1,1,1,0,1,0,0,1,"Western","Woman",0,"Kitti","Gontard","Willis","Nidhi","Job-Gunter","Banjerd","Dora","Female_Western",0,1,"White / Caucasian",33,0,1
+1,0,1,1,0,0,1,1,"Eastern","Man",2,"Udo","Sung-hee","Garry","Ferdinando","Catriona","Ditmar","Kitti","Male_Eastern",0,0,"White / Caucasian",46,1,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Krasae","Shaiwatna","Engelbert","Raymond","Jan","Lucetta","Alastair","Male_Western",0,0,"White / Caucasian",41,1,1
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Ethel","Willis","Jinghua","Ferdinando","Lino","Wedig","Somran","Male_Eastern",0,0,"Hispanic / Latinx",39,1,0
+1,1,1,0,1,0,1,0,"Eastern","Woman",1,"Jean","Ian","Longjin","Luis","Krasae","Sandu","Ning","Female_Eastern",1,0,"Black or African American",61,0,0
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Kesree","Anthea","Luis","Arun","Job-Gunter","Allen","Kil-nam","Male_Eastern",0,0,"White / Caucasian",44,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Luis","Jan","Xuhua","Raymond","Weilie","Dorothy","Renato","Male_Western",0,0,"White / Caucasian",43,0,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Wedig","Somran","Rachel","Kwang-je","Xinyuan","Jinghua","Ghillean","Male_Western",0,0,"White / Caucasian",31,1,1
+1,1,1,0,0,0,0,1,"Western","Man",4,"Hwa-jin","Xiaoyi","Bettine","Willis","Ghillean","Augusta","Lionello","Male_Western",0,0,"White / Caucasian",45,1,1
+1,0,1,1,0,0,1,1,"Eastern","Man",2,"Eugenia","Dorothy","Xuhua","Udo","Bong-ho","Renato","Kitti","Male_Eastern",0,0,"White / Caucasian",40,1,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",2,"Gernulf","Xinyuan","Raymond","Kobchitt","Lucetta","Ludger","In-jin","Male_Eastern",0,0,"White / Caucasian",77,0,1
+1,1,1,0,0,0,1,0,"Eastern","Man",1,"Krasae","Wedig","Sujin","Allen","Anthea","Dino","Xuhua","Male_Eastern",0,0,"Black or African American",36,1,0
+1,1,1,0,1,0,0,1,"Western","Man",0,"Nidhi","Junliang","Ciro","Sujin","Kil-nam","Xuhua","Melanie","Female_Western",0,1,"White / Caucasian",39,1,1
+0,1,1,1,1,0,0,1,"Western","Man",0,"Lionello","Gontard","Kitti","Alastair","Demetrio","Arun","Anthea","Female_Western",0,1,"White / Caucasian",33,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Kyongae","Choong-soo","Krasae","Thida","Xuetao","Raymond","Dino","Male_Western",0,0,"White / Caucasian",30,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",0,"Banjerd","Bong-ho","Arun","Job-Gunter","Dino","Ditmar","Kil-nam","Male_Eastern",0,0,"White / Caucasian",34,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",2,"Kobchitt","Canfa","Arun","Xinyuan","Rachel","Dino","Wedig","Male_Western",0,0,"Black or African American",49,0,0
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Luis","Lino","Gerardo","Thida","Willis","Bok-ryeo","Ghillean","Male_Western",0,0,"White / Caucasian",44,0,1
+0,1,1,1,1,0,0,0,"Eastern","Man",1,"Greta","Kitti","Wedig","Ky-chun","Roberto","Somsak","Li","Female_Eastern",1,0,"White / Caucasian",44,1,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",2,"Dorothy","Luis","Claus-Peter","Sandu","Zhizhen","Jong-sei","Xuetao","Male_Eastern",0,0,"Hispanic / Latinx",40,0,0
+1,0,1,1,0,0,0,1,"Western","Man",1,"Krasae","Greta","Kwang-je","Gernulf","Banjerd","Weilie","Arun","Male_Western",0,0,"White / Caucasian",63,1,1
+1,0,1,1,0,0,1,1,"Eastern","Man",0,"Jan","Gernulf","Dino","Lionello","Allen","Xuhua","Kwang-je","Male_Eastern",0,0,"White / Caucasian",28,1,1
+1,1,1,0,1,0,1,0,"Eastern","Man",3,"Ghillean","Renata","In-jin","Sucheng","Dino","Catriona","Chumsri","Female_Eastern",1,0,"White / Caucasian",38,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",0,"Gontard","Sujin","Lionello","Udo","Saksri","Demetrio","Canfa","Male_Eastern",0,0,"Black or African American",65,0,0
+1,0,1,1,1,0,0,1,"Western","Woman",0,"Alastair","Claus-Peter","Kitti","Luis","Ditmar","Roberto","Melanie","Female_Western",0,1,"American Indian or Alaskan Native",44,0,0
+1,0,1,1,1,0,1,1,"Western","Woman",2,"Arun","Sung-chul","Kitti","In-young","Sandu","Ning","Shareen","Female_Western",0,1,"White / Caucasian",62,0,1
+1,0,1,1,1,0,1,0,"Eastern","Woman",0,"Ditmar","Demetrio","Lionello","Ghillean","Willis","Ky-chun","Ning","Female_Eastern",1,0,"White / Caucasian",44,0,1
+1,1,1,0,1,0,0,1,"Western","Man",2,"Bettine","Ping","Allen","Yunhui","Willis","Claus-Peter","Alma","Female_Western",0,1,"White / Caucasian",38,1,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",3,"Anthea","Arun","Krasae","Renata","Raymond","Thida","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",34,0,1
+0,1,1,1,1,0,0,1,"Western","Man",1,"Choong-soo","Garry","Krisana","Sung-chul","Canfa","Krasae","Anthea","Female_Western",0,1,"White / Caucasian",38,1,1
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Allen","Wenying","Longjin","Shenggen","Xuhua","Yong-pil","Sujin","Male_Eastern",0,0,"White / Caucasian",61,1,1
+1,0,1,1,0,0,0,0,"Western","Man",1,"Alastair","Jong-sei","Ky-chun","Renato","Weilie","Renata","Lino","Male_Western",0,0,"White / Caucasian",36,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Banjerd","Runglawan","Jong-sei","Shenggen","Raymond","Xuetao","Bong-ho","Male_Eastern",0,0,"White / Caucasian",42,0,1
+1,0,1,1,0,0,0,1,"Western","Man",2,"Garry","Ciro","Allen","Kobchitt","Sung-chul","Stefania","Gerardo","Male_Western",0,0,"White / Caucasian",57,1,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",2,"Thida","Kitti","Demetrio","Somsak","Ailsa","Udo","Nidhi","Male_Eastern",0,0,"White / Caucasian",71,0,1
+0,1,1,1,1,0,1,1,"Western","Man",1,"Longjin","Canfa","Alastair","Miaoqing","Shaiwatna","Xuetao","Shareen","Female_Western",0,1,"White / Caucasian",61,1,1
+1,0,1,1,0,0,0,0,"Eastern","Man",2,"Shaiwatna","Anthea","Longjin","Udo","Xuhua","Ning","Choong-soo","Male_Eastern",0,0,"White / Caucasian",44,1,1
+0,1,1,1,0,0,1,1,"Western","Man",2,"Alastair","Yeong-hui","Shenggen","Engelbert","Claus-Peter","Lucetta","Ciro","Male_Western",0,0,"Hispanic / Latinx",26,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Krasae","Xinyuan","Alastair","Shareen","Yunhui","Sujin","Gernulf","Male_Western",0,0,"Black or African American",36,0,0
+0,1,1,1,1,0,0,1,"Western","Man",0,"Jinghua","Shenggen","Junliang","Demetrio","Russell","Sujin","Bettine","Female_Western",0,1,"White / Caucasian",51,1,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Allen","Xinyuan","Lionello","In-jin","Krasae","Pasuk","Demetrio","Male_Western",0,0,"White / Caucasian",56,1,1
+1,0,1,1,1,0,0,1,"Western","Man",1,"Kyongae","Banjerd","Xinyuan","Xuetao","Demetrio","Krasae","Isabel","Female_Western",0,1,"Black or African American",39,1,0
+1,1,1,0,1,0,0,1,"Western","Man",0,"Udo","Xinyuan","Job-Gunter","In-jin","Canfa","Shenggen","Lucetta","Female_Western",0,1,"White / Caucasian",56,1,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",1,"Dora","Somsak","Russell","Bong-ho","Ghillean","Choong-soo","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",44,0,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Roberto","Dorothy","Kitti","Ky-chun","Garry","In-jin","Gerardo","Male_Western",0,0,"White / Caucasian",77,1,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Jong-sei","Dino","Isabel","Job-Gunter","Ping","Alastair","Luis","Male_Western",0,0,"White / Caucasian",39,1,1
+1,1,0,1,0,0,0,1,"Western","Man",1,"Sandu","Alastair","Lionello","Niyada","Engelbert","Renato","Gontard","Male_Western",0,0,"White / Caucasian",67,1,1
+1,0,1,1,1,0,0,1,"Western","Man",2,"Arunrat","Sujin","Mandy","Alastair","Ferdinando","Lino","Beatrix","Female_Western",0,1,"Hispanic / Latinx",41,1,0
+0,1,1,1,0,0,0,1,"Western","Man",1,"Jan","Raymond","Udo","Somsak","Krasae","Dong","Roberto","Male_Western",0,0,"White / Caucasian",52,1,1
+1,0,1,1,0,0,0,0,"Eastern","Woman",1,"Alastair","Xuetao","Longjin","Pilai","Ditmar","Arun","In-jin","Male_Eastern",0,0,"White / Caucasian",29,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Gernulf","Xinyuan","Kil-nam","Xuhua","Krisana","Krasae","Kwang-je","Male_Eastern",0,0,"Asian / Pacific Islander",33,1,0
+1,1,1,0,0,0,1,1,"Eastern","Woman",2,"Sandu","Engelbert","Krisana","Ailsa","Ping","Roberto","Xinyuan","Male_Eastern",0,0,"White / Caucasian",66,0,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Canfa","Ludger","Shenggen","Miaoqing","Dino","Xinyuan","Ailsa","Female_Western",0,1,"White / Caucasian",42,1,1
+0,1,1,1,1,0,0,1,"Western","Woman",2,"Jong-sei","Rachel","Xuetao","Shenggen","Zhizhen","Renato","Anty","Female_Western",0,1,"Black or African American",46,0,0
+1,1,1,0,0,0,1,0,"Western","Man",1,"Gontard","Claus-Peter","Krisana","Ping","Ghillean","Demetrio","Allen","Male_Western",0,0,"White / Caucasian",47,1,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Ciro","Kyongae","Xuetao","Jong-sei","Dino","Ping","Job-Gunter","Male_Western",0,0,"White / Caucasian",46,1,1
+0,1,1,1,0,0,0,1,"Western","Man",3,"Augusta","Xuetao","Ping","Runglawan","Longjin","Dorothy","Demetrio","Male_Western",0,0,"White / Caucasian",49,1,1
+1,0,1,1,1,0,0,1,"Western","Man",2,"Bok-ryeo","Krasae","Anthea","Ferdinando","Gernulf","Kitti","Anty","Female_Western",0,1,"White / Caucasian",68,1,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",3,"Kyongae","Jong-sei","Ferdinando","Mariassunta","Rachel","Garry","Canfa","Male_Eastern",0,0,"White / Caucasian",33,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Russell","Allen","Pasuk","Somran","Weilie","Catharine","Kitti","Male_Eastern",0,0,"Black or African American",34,1,0
+1,0,1,1,1,0,0,1,"Western","Woman",2,"Bethan","Hong-nam","Shenggen","Saksri","Arun","Demetrio","Renata","Female_Western",0,1,"White / Caucasian",54,0,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",1,"Longjin","Pichaet","Luis","Arun","Alma","Weilie","Jong-sei","Male_Eastern",0,0,"Asian / Pacific Islander",51,0,0
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Arun","Longjin","Jong-sei","Canfa","Ana","Job-Gunter","Kwang-je","Male_Eastern",0,0,"White / Caucasian",38,0,1
+1,1,1,0,0,0,0,1,"Western","Man",2,"Roberto","Krasae","Russell","Dong","Gerardo","Niyada","Ian","Male_Western",0,0,"White / Caucasian",58,1,1
+1,1,0,1,0,0,1,1,"Eastern","Woman",1,"Choong-soo","Shenggen","Alastair","Krasae","Job-Gunter","Bethan","Kwang-je","Male_Eastern",0,0,"Asian / Pacific Islander",35,0,0
+0,0,0,0,0,0,1,1,"Western","Woman",1,"Jong-sei","Ghillean","Ning","Jinghua","Nidhi","Shenggen","Alastair","Male_Western",0,0,"White / Caucasian",47,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",1,"Kyongae","Xuetao","Banjerd","Sandu","Bong-ho","Luis","Renato","Male_Western",0,0,"Hispanic / Latinx",37,0,0
+1,1,1,0,1,0,1,1,"Eastern","Woman",0,"Raymond","Xuetao","Allen","Gontard","Kil-nam","Yong-pil","Krisana","Female_Eastern",1,0,"White / Caucasian",46,0,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Jong-sei","Alma","Ghillean","Alastair","Engelbert","Kwang-je","Sandu","Male_Western",0,0,"White / Caucasian",69,1,1
+1,1,0,1,0,0,0,1,"Eastern","Man",0,"Raymond","Claus-Peter","Ian","Job-Gunter","Udo","Renato","Banjerd","Male_Eastern",0,0,"White / Caucasian",44,1,1
+0,1,1,1,0,0,1,1,"Western","Man",0,"Demetrio","Ian","Yong-pil","Xuhua","Kitti","Somsak","Sandu","Male_Western",0,0,"American Indian or Alaskan Native",33,1,0
+0,1,1,1,0,0,0,1,"Western","Man",2,"Kyongae","Raymond","Roberto","Shenggen","In-jin","Maria","Job-Gunter","Male_Western",0,0,"White / Caucasian",32,1,1
+1,1,1,0,0,0,0,0,"Western","Man",2,"Hei-sook","Dora","Choong-soo","Kil-nam","Roberto","Baek-in","Claus-Peter","Male_Western",0,0,"Asian / Pacific Islander",21,1,0
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Maria","Jong-sei","Canfa","Yong-pil","Russell","Sandu","Mechtild","Female_Western",0,1,"White / Caucasian",34,0,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",2,"Chumsri","Sandu","Kwang-je","Sung-hee","Engelbert","Junliang","Shenggen","Male_Eastern",0,0,"Hispanic / Latinx",41,0,0
+0,1,1,1,0,0,1,0,"Eastern","Woman",3,"Sujin","Xinyuan","Anty","Bok-ryeo","Greta","Ditmar","Sung-chul","Male_Eastern",0,0,"Asian / Pacific Islander",63,0,0
+0,1,1,1,0,0,1,1,"Western","Woman",0,"Sung-chul","Ghillean","Udo","Krasae","Wedig","Sujin","Alastair","Male_Western",0,0,"White / Caucasian",56,0,1
+1,1,1,0,0,0,1,1,"Eastern","Man",3,"Greta","Xuhua","Weilie","Kil-nam","Krisana","Stefania","Sujin","Male_Eastern",0,0,"Hispanic / Latinx",36,1,0
+0,1,1,1,0,0,1,1,"Western","Man",1,"Sujin","Xuetao","Runglawan","Krasae","Xinyuan","Jan","Ghillean","Male_Western",0,0,"Hispanic / Latinx",40,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Shenggen","Ferdinando","Lino","Ditmar","Arun","Ana","Engelbert","Male_Western",0,0,"White / Caucasian",51,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",4,"Xuhua","Bettine","Choon-mie","Jean","Weilie","Krisana","Udo","Male_Western",0,0,"White / Caucasian",73,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Engelbert","Xuhua","Ciro","Alastair","Rachel","Kwang-je","Xuetao","Male_Eastern",0,0,"White / Caucasian",51,0,1
+1,0,1,1,0,0,0,0,"Eastern","Man",2,"Roberto","Catriona","Kobchitt","Jong-sei","Canfa","Raymond","In-jin","Male_Eastern",0,0,"White / Caucasian",34,1,1
+0,1,1,1,1,0,1,1,"Eastern","Woman",1,"Shenggen","Xiaoyi","Krasae","Sujin","Xinyuan","Allen","Arunrat","Female_Eastern",1,0,"White / Caucasian",29,0,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",2,"Engelbert","Krasae","Xuetao","Rachel","Isabel","Bong-ho","Shaiwatna","Male_Eastern",0,0,"Hispanic / Latinx",48,0,0
+1,1,0,1,0,0,1,1,"Eastern","Man",2,"Jan","Ethel","Kwang-je","Yeong-hui","Krasae","Ciro","Xinyuan","Male_Eastern",0,0,"White / Caucasian",40,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Krasae","Sung-chul","Mandy","Raymond","Sucheng","Ping","Nidhi","Male_Eastern",0,0,"Hispanic / Latinx",48,1,0
+1,0,1,1,1,0,1,1,"Eastern","Woman",2,"Ghillean","Udo","Sung-hee","Jong-sei","Kobchitt","Weilie","Zhizhen","Female_Eastern",1,0,"White / Caucasian",41,0,1
+0,1,1,1,0,0,1,0,"Western","Man",0,"Willis","Shenggen","Canfa","Ian","Engelbert","Luis","Allen","Male_Western",0,0,"White / Caucasian",55,1,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Russell","Sujin","Jan","Wenying","Krasae","Alastair","Alma","Female_Western",0,1,"White / Caucasian",48,0,1
+0,1,1,1,1,0,0,0,"Eastern","Man",0,"Russell","Somran","Pichaet","Dino","Banjerd","Willis","In-ho","Female_Eastern",1,0,"Hispanic / Latinx",32,1,0
+1,0,1,1,0,0,0,1,"Western","Woman",1,"Xuetao","Rachel","Job-Gunter","Banjerd","Engelbert","Jong-sei","Arun","Male_Western",0,0,"White / Caucasian",45,0,1
+1,1,0,1,1,0,0,1,"Eastern","Man",0,"Willis","Nidhi","Garry","Lionello","Roberto","Ditmar","Pasuk","Female_Eastern",1,0,"White / Caucasian",35,1,1
+0,1,1,1,1,0,0,1,"Western","Man",1,"In-jin","Catharine","Udo","Gontard","Canfa","Ditmar","Isabel","Female_Western",0,1,"White / Caucasian",41,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",2,"Ky-chun","Shenggen","Krasae","Heike","Lucetta","Wedig","Longjin","Male_Eastern",0,0,"Black or African American",34,0,0
+1,0,1,1,0,0,0,1,"Western","Woman",2,"Baek-in","Canfa","Xinyuan","Kwang-je","Rachel","Melanie","Engelbert","Male_Western",0,0,"White / Caucasian",39,0,1
+1,0,1,1,1,0,1,1,"Western","Woman",0,"Russell","Dino","Canfa","Ghillean","Jong-sei","Shenggen","Dorothy","Female_Western",0,1,"White / Caucasian",43,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",2,"Shenggen","Yeong-hui","Pasuk","Luis","Alastair","Nidhi","Choong-soo","Male_Eastern",0,0,"White / Caucasian",61,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",1,"Arun","Krasae","Choon-mie","Ghillean","Choong-soo","Gerardo","Gernulf","Male_Western",0,0,"Asian / Pacific Islander",43,0,0
+1,1,0,1,1,0,0,1,"Western","Woman",1,"Xuetao","Xinyuan","Junliang","Sung-hee","Engelbert","Jong-sei","Mandy","Female_Western",0,1,"White / Caucasian",41,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Shaiwatna","Miaoqing","Xuetao","Kil-nam","Weilie","Canfa","Kwang-je","Male_Eastern",0,0,"White / Caucasian",48,0,1
+1,1,1,0,0,0,0,1,"Eastern","Man",0,"Sujin","Gontard","Engelbert","Xinyuan","Nidhi","Shenggen","Xuetao","Male_Eastern",0,0,"Black or African American",41,1,0
+0,1,1,1,0,0,0,0,"Eastern","Woman",3,"Ghillean","Dora","Russell","Xinyuan","Rachel","Ana","Ky-chun","Male_Eastern",0,0,"White / Caucasian",30,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Roberto","Anthea","Gernulf","Xinyuan","Arun","Dong","Demetrio","Male_Western",0,0,"White / Caucasian",58,0,1
+1,1,1,0,0,0,1,1,"Western","Woman",1,"Udo","Shenggen","Raymond","Gernulf","Banjerd","Jean","Ghillean","Male_Western",0,0,"White / Caucasian",70,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Arun","Engelbert","Ciro","Krasae","Raymond","Jean","Ditmar","Male_Western",0,0,"White / Caucasian",39,0,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Dino","Allen","Willis","Canfa","Xiaoyi","Job-Gunter","Gontard","Male_Western",0,0,"White / Caucasian",23,1,1
+1,1,1,0,0,0,1,0,"Western","Woman",0,"Gernulf","Canfa","Jong-sei","Banjerd","Demetrio","Udo","Allen","Male_Western",0,0,"Black or African American",53,0,0
+1,1,0,1,0,0,0,1,"Eastern","Man",1,"Choong-soo","Rachel","Canfa","Sandu","Banjerd","Ludger","Ping","Male_Eastern",0,0,"White / Caucasian",50,1,1
+1,1,1,0,0,0,0,1,"Western","Man",1,"Ana","Somsak","Nidhi","Ping","In-jin","Lionello","Ludger","Male_Western",0,0,"Asian / Pacific Islander",60,1,0
+1,1,1,0,0,0,0,1,"Western","Woman",0,"Krasae","Kwang-je","Somsak","Bong-ho","Garry","Willis","Jan","Male_Western",0,0,"Black or African American",61,0,0
+1,1,0,1,0,0,1,1,"Eastern","Woman",1,"Xiaoyi","Kwang-je","Engelbert","Alastair","Ky-chun","Wedig","Jinghua","Male_Eastern",0,0,"White / Caucasian",38,0,1
+0,1,1,1,0,0,0,0,"Western","Man",3,"Krisana","Allen","Greta","Russell","Garry","Renata","Claus-Peter","Male_Western",0,0,"White / Caucasian",53,1,1
+1,0,1,1,0,0,0,1,"Eastern","Man",0,"Krasae","Xuhua","Gerardo","Ferdinando","Raymond","Ky-chun","Ping","Male_Eastern",0,0,"Black or African American",38,1,0
+1,1,1,0,1,0,0,1,"Eastern","Woman",1,"Yong-pil","Ana","Krasae","Weilie","Alastair","Xuetao","Thida","Female_Eastern",1,0,"White / Caucasian",48,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Jan","Somran","Renato","Lionello","Wenying","Thida","Pichaet","Male_Eastern",0,0,"White / Caucasian",56,1,1
+0,1,1,1,1,0,1,1,"Western","Woman",0,"Allen","Krasae","Kitti","Shenggen","Demetrio","Udo","Dorothy","Female_Western",0,1,"White / Caucasian",55,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Bong-ho","Miaoqing","Canfa","Rachel","Gontard","Dino","Kil-nam","Male_Eastern",0,0,"White / Caucasian",37,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Ferdinando","Allen","In-young","Gerardo","Jong-sei","Longjin","Sujin","Male_Eastern",0,0,"White / Caucasian",67,1,1
+1,0,1,1,0,0,0,1,"Eastern","Man",0,"Gernulf","Udo","Ky-chun","Krasae","Kitti","Jinghua","Ping","Male_Eastern",0,0,"White / Caucasian",51,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Jong-sei","Engelbert","Arun","Krasae","Xinyuan","Pilai","Raymond","Male_Western",0,0,"White / Caucasian",59,0,1
+0,1,1,1,1,0,0,1,"Western","Man",0,"Ferdinando","Sandu","Xuetao","Ciro","Baek-in","Alastair","Bethan","Female_Western",0,1,"White / Caucasian",32,1,1
+1,1,1,0,1,0,1,1,"Eastern","Man",4,"Kil-nam","Bettine","Hei-sook","Alma","Pilai","Shaiwatna","Zhizhen","Female_Eastern",1,0,"White / Caucasian",63,1,1
+1,1,1,0,0,0,1,1,"Western","Man",2,"Krasae","Gernulf","Ning","Jong-sei","Pilai","Ping","Alastair","Male_Western",0,0,"White / Caucasian",19,1,1
+1,1,1,0,1,0,1,1,"Eastern","Man",2,"Ferdinando","Kobchitt","Kwang-je","Engelbert","Anthea","Allen","Sung-hee","Female_Eastern",1,0,"White / Caucasian",46,1,1
+0,1,1,1,0,0,1,1,"Western","Man",2,"Ping","Shaiwatna","Alastair","Dora","Choong-soo","Hei-sook","Dino","Male_Western",0,0,"Black or African American",31,1,0
+1,1,1,0,0,0,1,1,"Western","Man",1,"Job-Gunter","Lionello","Banjerd","Melanie","Udo","Claus-Peter","Ghillean","Male_Western",0,0,"White / Caucasian",39,1,1
+1,1,1,0,0,0,0,1,"Western","Man",3,"In-jin","Sujin","Bok-ryeo","Ana","Catriona","Udo","Arun","Male_Western",0,0,"White / Caucasian",45,1,1
+1,1,0,1,0,0,0,1,"Western","Woman",1,"Lionello","Demetrio","Kobchitt","Choong-soo","Krasae","Junliang","Arun","Male_Western",0,0,"White / Caucasian",45,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Choong-soo","Shenggen","In-jin","Arun","Sucheng","In-ho","Xuetao","Male_Eastern",0,0,"White / Caucasian",39,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Banjerd","Jong-sei","Gernulf","Ana","Sandu","Claus-Peter","Jinghua","Male_Eastern",0,0,"White / Caucasian",26,0,1
+1,1,1,0,0,0,1,0,"Eastern","Man",1,"Xinyuan","Luis","Kwang-je","Ciro","Pasuk","Wedig","Sung-chul","Male_Eastern",0,0,"White / Caucasian",44,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",1,"Lino","Saksri","Alma","Sujin","Nidhi","Allen","Xuhua","Male_Eastern",0,0,"Hispanic / Latinx",30,0,0
+0,1,1,1,1,0,0,1,"Western","Man",1,"Arun","Gontard","Dino","Kwang-je","Shareen","Roberto","Heike","Female_Western",0,1,"White / Caucasian",71,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",1,"Lionello","Pasuk","Xuetao","Sandu","Garry","Saksri","Jong-sei","Male_Eastern",0,0,"White / Caucasian",24,0,1
+0,1,1,1,0,0,0,0,"Eastern","Man",2,"Miaoqing","Ludger","Banjerd","Somsak","Greta","Canfa","In-jin","Male_Eastern",0,0,"White / Caucasian",59,1,1
+1,1,0,1,0,0,0,1,"Western","Man",1,"Jong-sei","Sandu","Arun","Choon-mie","Canfa","Ping","Ludger","Male_Western",0,0,"White / Caucasian",53,1,1
+0,1,1,1,0,0,0,1,"Western","Man",3,"Wenying","Jinghua","Catharine","Allen","Ethel","Saksri","Gontard","Male_Western",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Yeong-hui","Xiaoyi","Weilie","Raymond","Arun","Ping","Engelbert","Male_Western",0,0,"Asian / Pacific Islander",34,0,0
+1,0,1,1,0,0,1,1,"Western","Woman",1,"Saksri","Ailsa","Renato","Jan","Ferdinando","Job-Gunter","Russell","Male_Western",0,0,"White / Caucasian",44,0,1
+1,1,1,0,0,0,1,1,"Western","Woman",1,"Xiaoyi","Kwang-je","Xuetao","Canfa","Shenggen","Pichaet","Sandu","Male_Western",0,0,"White / Caucasian",70,0,1
+1,1,1,0,0,0,0,1,"Western","Man",0,"Ciro","Demetrio","Pichaet","Xuhua","Ian","Somsak","Gerardo","Male_Western",0,0,"White / Caucasian",69,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Canfa","Heike","Kwang-je","Ditmar","Gerardo","Ky-chun","Russell","Male_Western",0,0,"White / Caucasian",44,0,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",2,"Mandy","Jinghua","Shenggen","Xiaoyi","Saksri","In-jin","Canfa","Male_Eastern",0,0,"Hispanic / Latinx",35,0,0
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Stefania","Banjerd","Trude","Weilie","Nidhi","Saksri","Ghillean","Male_Western",0,0,"White / Caucasian",33,0,1
+1,1,1,0,0,0,0,0,"Eastern","Man",2,"Pilai","Ludger","Kyongae","Willis","Arun","Dino","Krasae","Male_Eastern",0,0,"White / Caucasian",50,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",2,"Rachel","Wedig","Xuhua","Krasae","Yunhui","Alastair","Sung-chul","Male_Eastern",0,0,"White / Caucasian",50,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Choong-soo","Xinyuan","Yong-pil","Ditmar","Thida","Rachel","Nidhi","Male_Eastern",0,0,"Black or African American",46,0,0
+1,0,1,1,1,0,1,1,"Western","Woman",0,"Banjerd","Shaiwatna","Garry","Ludger","Willis","Bong-ho","Shareen","Female_Western",0,1,"Hispanic / Latinx",35,0,0
+1,1,1,0,0,0,0,0,"Eastern","Woman",2,"In-young","Ludger","Greta","Engelbert","Xinyuan","Alastair","Krasae","Male_Eastern",0,0,"White / Caucasian",54,0,1
+0,1,1,1,0,0,0,1,"Western","Man",0,"Shaiwatna","Arun","Engelbert","Kil-nam","Jong-sei","Lionello","Wedig","Male_Western",0,0,"White / Caucasian",71,1,1
+0,1,1,1,0,0,0,0,"Western","Woman",1,"Ky-chun","Jan","Niyada","Kwang-je","Shaiwatna","Xinyuan","Claus-Peter","Male_Western",0,0,"White / Caucasian",52,0,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",1,"Willis","Raymond","Engelbert","Demetrio","Ping","Wenying","Xinyuan","Male_Eastern",0,0,"White / Caucasian",58,0,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Hei-sook","Xuetao","Ferdinando","Somsak","Krasae","Choong-soo","Ana","Female_Western",0,1,"White / Caucasian",39,1,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",2,"Job-Gunter","In-ho","Arun","In-jin","Sucheng","Allen","Canfa","Male_Eastern",0,0,"Asian / Pacific Islander",56,0,0
+0,1,1,1,0,0,1,1,"Western","Man",2,"Ana","Claus-Peter","Ping","Jan","Shenggen","Xiaoyi","Russell","Male_Western",0,0,"White / Caucasian",30,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Kwang-je","Engelbert","Weilie","Nidhi","Lucetta","Lionello","Kil-nam","Male_Eastern",0,0,"Hispanic / Latinx",31,1,0
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"Longjin","Krasae","Ky-chun","Runglawan","Ian","Engelbert","Shenggen","Male_Eastern",0,0,"White / Caucasian",60,0,1
+1,0,1,1,0,0,0,0,"Eastern","Man",1,"Somsak","Yong-pil","In-jin","Roberto","Mechtild","Garry","Choong-soo","Male_Eastern",0,0,"White / Caucasian",52,1,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",1,"Somsak","Alastair","Kitti","Russell","Catriona","Demetrio","Choong-soo","Male_Eastern",0,0,"Asian / Pacific Islander",33,0,0
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Shenggen","Engelbert","Renato","Yong-pil","Ian","Krisana","Ping","Male_Eastern",0,0,"White / Caucasian",43,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",3,"Rachel","Thida","Pichaet","Engelbert","Ning","Arun","Job-Gunter","Male_Western",0,0,"White / Caucasian",39,0,1
+1,0,1,1,0,0,0,1,"Eastern","Man",1,"Ghillean","Alastair","Arun","Sung-chul","Gernulf","Kobchitt","Xuetao","Male_Eastern",0,0,"White / Caucasian",46,1,1
+1,1,1,0,0,0,0,1,"Western","Woman",4,"Mandy","Xiaoyi","Niyada","Saksri","Xuetao","Sung-hee","Lionello","Male_Western",0,0,"White / Caucasian",36,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Yinhe","Xinyuan","Kil-nam","Jong-sei","Banjerd","Baek-in","Roberto","Male_Western",0,0,"White / Caucasian",37,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Alastair","Isabel","Gernulf","Gerardo","Renato","Krasae","Xinyuan","Male_Eastern",0,0,"Hispanic / Latinx",35,0,0
+1,1,0,1,0,0,1,1,"Western","Man",2,"Job-Gunter","Anthea","In-young","Engelbert","Krasae","Xinyuan","Sandu","Male_Western",0,0,"Hispanic / Latinx",30,1,0
+0,1,1,1,0,0,0,1,"Western","Man",1,"In-jin","Demetrio","Somsak","Anthea","Gerardo","Raymond","Arun","Male_Western",0,0,"White / Caucasian",41,1,1
+1,0,1,1,0,0,1,0,"Eastern","Man",0,"Alastair","Lionello","Shaiwatna","Shenggen","Yong-pil","Kil-nam","Jong-sei","Male_Eastern",0,0,"White / Caucasian",62,1,1
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Xiaoyi","Krasae","Ky-chun","Melanie","Engelbert","Kil-nam","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",61,1,1
+0,1,1,1,0,0,0,0,"Western","Woman",1,"Alastair","Gontard","Gernulf","Anthea","Engelbert","Ping","Lino","Male_Western",0,0,"White / Caucasian",58,0,1
+1,0,1,1,1,0,0,1,"Western","Man",0,"Demetrio","Kitti","Russell","Wedig","Lionello","Sujin","Beatrix","Female_Western",0,1,"White / Caucasian",38,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Garry","Renato","Job-Gunter","Jong-sei","Banjerd","Yeong-hui","Shenggen","Male_Eastern",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Eugenia","Xuhua","Kil-nam","Garry","Shaiwatna","Junliang","Weilie","Male_Eastern",0,0,"White / Caucasian",42,1,1
+1,1,0,1,0,0,1,1,"Eastern","Man",2,"In-jin","Beatrix","Yong-pil","Allen","Weilie","Anty","Jinghua","Male_Eastern",0,0,"Asian / Pacific Islander",51,1,0
+0,1,1,1,1,0,0,1,"Western","Woman",2,"Xuetao","Xinyuan","Zhizhen","Canfa","Runglawan","Russell","Heike","Female_Western",0,1,"White / Caucasian",34,0,1
+1,1,1,0,0,0,0,1,"Western","Another gender not listed here:",2,"Demetrio","Renato","Roberto","Heike","Ky-chun","In-young","Gernulf","Male_Western",0,0,"White / Caucasian",33,0,1
+1,1,1,0,0,0,0,1,"Western","Man",2,"Kwang-je","Xuhua","Dorothy","Kyongae","Kitti","Shenggen","Ludger","Male_Western",0,0,"White / Caucasian",46,1,1
+0,1,1,1,0,0,0,0,"Western","Woman",0,"Pichaet","Junliang","Choong-soo","Xinyuan","Sujin","Jan","Lino","Male_Western",0,0,"White / Caucasian",44,0,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",2,"Krasae","Miaoqing","Job-Gunter","Ky-chun","Beatrix","Demetrio","Kitti","Male_Eastern",0,0,"White / Caucasian",65,0,1
+0,1,1,1,1,0,1,0,"Eastern","Woman",2,"Xiaoyi","Krasae","Hong-nam","Kwang-je","Ghillean","Xuhua","Chumsri","Female_Eastern",1,0,"White / Caucasian",64,0,1
+1,0,1,1,1,0,0,1,"Eastern","Man",1,"Eugenia","Arun","Engelbert","Garry","Jong-sei","Xuhua","Niyada","Female_Eastern",1,0,"White / Caucasian",44,1,1
+1,1,1,0,0,0,0,1,"Western","Man",0,"Alastair","Canfa","Junliang","Ky-chun","Somran","Saksri","Jan","Male_Western",0,0,"White / Caucasian",39,1,1
+1,0,1,1,0,0,0,1,"Western","Man",1,"Krisana","Shaiwatna","Sung-chul","Gontard","Krasae","Saksri","Lionello","Male_Western",0,0,"White / Caucasian",30,1,1
+1,0,1,1,1,0,0,0,"Eastern","Woman",1,"Mariassunta","Russell","Alastair","Jong-sei","Dino","Sung-chul","Hei-sook","Female_Eastern",1,0,"White / Caucasian",52,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",0,"Arun","Krasae","Dino","Alastair","Jong-sei","Banjerd","Gernulf","Male_Western",0,0,"White / Caucasian",64,0,1
+0,1,1,1,0,0,0,0,"Western","Man",0,"Jinghua","Longjin","Shenggen","Sujin","Ghillean","Demetrio","Lino","Male_Western",0,0,"White / Caucasian",43,1,1
+0,1,1,1,1,0,0,1,"Western","Man",0,"Roberto","Jong-sei","Longjin","Sujin","Saksri","Engelbert","Catriona","Female_Western",0,1,"Black or African American",40,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Kitti","Willis","Canfa","Jinghua","Lucetta","Shenggen","Demetrio","Male_Western",0,0,"White / Caucasian",47,0,1
+0,1,1,1,1,0,0,1,"Eastern","Man",0,"Alastair","Shaiwatna","Ciro","Canfa","Lionello","Xuetao","Pasuk","Female_Eastern",1,0,"Hispanic / Latinx",56,1,0
+1,0,1,1,0,0,1,1,"Eastern","Woman",1,"Renata","Krasae","Jan","Ky-chun","Roberto","Russell","Shaiwatna","Male_Eastern",0,0,"Hispanic / Latinx",46,0,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Jinghua","Greta","Ferdinando","Nidhi","Canfa","Gernulf","Job-Gunter","Male_Western",0,0,"White / Caucasian",55,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Alastair","Arun","Xuetao","Pilai","Xinyuan","Engelbert","Somran","Male_Eastern",0,0,"Hispanic / Latinx",33,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",0,"Raymond","Ditmar","Longjin","Baek-in","Ciro","Wedig","Renato","Male_Western",0,0,"White / Caucasian",67,0,1
+1,1,1,0,0,0,0,1,"Eastern","Man",2,"Kitti","In-jin","In-young","Luis","Engelbert","Yunhui","Canfa","Male_Eastern",0,0,"White / Caucasian",68,1,1
+1,1,1,0,0,0,0,1,"Western","Woman",3,"Dorothy","Xinyuan","Miaoqing","Thida","Pichaet","Jinghua","Gernulf","Male_Western",0,0,"White / Caucasian",41,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Engelbert","Xuetao","Dino","Chumsri","Pichaet","Melanie","Ferdinando","Male_Western",0,0,"White / Caucasian",47,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Shenggen","Kitti","Ludger","Xinyuan","Dorothy","Canfa","Dino","Male_Western",0,0,"White / Caucasian",60,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Gernulf","Anty","Arunrat","Kitti","Jong-sei","Xuetao","Luis","Male_Western",0,0,"Asian / Pacific Islander",43,0,0
+1,0,1,1,0,0,0,0,"Eastern","Woman",0,"Arun","Jong-sei","Weilie","Jinghua","Dino","Junliang","In-jin","Male_Eastern",0,0,"Black or African American",50,0,0
+1,1,1,0,0,0,1,1,"Eastern","Man",2,"In-young","Anthea","Demetrio","Nidhi","Ping","Jinghua","Kitti","Male_Eastern",0,0,"White / Caucasian",28,1,1
+0,1,1,1,1,0,0,1,"Western","Woman",0,"Demetrio","Ditmar","Arun","Xinyuan","Yong-pil","Gernulf","Lucetta","Female_Western",0,1,"White / Caucasian",45,0,1
+1,0,1,1,0,0,0,1,"Western","Woman",0,"Renato","Sujin","Krasae","Jan","Xinyuan","Xuetao","Roberto","Male_Western",0,0,"White / Caucasian",43,0,1
+1,1,1,0,1,0,0,0,"Western","Woman",2,"Stefania","Kwang-je","Luis","Greta","Gerardo","Xuetao","Catharine","Female_Western",0,1,"White / Caucasian",51,0,1
+1,0,1,1,0,0,1,1,"Eastern","Man",3,"Shareen","Xuhua","Shaiwatna","Alma","Kyongae","Kil-nam","Xinyuan","Male_Eastern",0,0,"White / Caucasian",42,1,1
+0,1,1,1,0,0,0,0,"Eastern","Man",2,"Raymond","Xinyuan","Jong-sei","Kyongae","Thida","Sandu","Krasae","Male_Eastern",0,0,"White / Caucasian",73,1,1
+0,0,0,0,1,0,0,1,"Eastern","Woman",1,"Ping","Sung-chul","Bok-ryeo","Xinyuan","Ghillean","Renato","Kesree","Female_Eastern",1,0,"White / Caucasian",27,0,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",1,"Alastair","Shareen","Garry","Jong-sei","Dino","Xinyuan","Krasae","Male_Eastern",0,0,"White / Caucasian",29,0,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",1,"Jinghua","Nidhi","Miaoqing","Gernulf","Dino","Xinyuan","Kwang-je","Male_Eastern",0,0,"White / Caucasian",81,0,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",0,"Renato","Alastair","Kitti","Dino","Ian","Xuetao","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",44,0,1
+1,0,1,1,0,0,0,1,"Western","Woman",3,"Anty","Mechtild","Roberto","Somsak","Gerardo","Niyada","Ditmar","Male_Western",0,0,"White / Caucasian",30,0,1
+0,1,1,1,1,0,1,0,"Eastern","Woman",1,"Choon-mie","Kwang-je","Demetrio","Shenggen","Lionello","Ciro","Chumsri","Female_Eastern",1,0,"White / Caucasian",66,0,1
+1,0,1,1,1,0,1,1,"Western","Man",2,"Russell","Renato","Pasuk","Lionello","Dino","Mariassunta","Shareen","Female_Western",0,1,"White / Caucasian",60,1,1
+0,1,1,1,1,0,1,1,"Western","Woman",2,"Thida","Ghillean","Jong-sei","Somsak","Alastair","Maria","Shareen","Female_Western",0,1,"White / Caucasian",60,0,1
+1,1,1,0,1,0,0,1,"Eastern","Man",0,"Banjerd","Xuetao","Alastair","Renato","Ludger","Job-Gunter","Miaoqing","Female_Eastern",1,0,"Black or African American",37,1,0
+1,0,1,1,1,0,0,1,"Western","Woman",1,"Somsak","Sandu","Ludger","Heike","Xuetao","Nidhi","Ailsa","Female_Western",0,1,"White / Caucasian",60,0,1
+0,1,1,1,0,0,0,1,"Western","Man",0,"Xuetao","Engelbert","Jan","Alastair","Kwang-je","Shenggen","Garry","Male_Western",0,0,"White / Caucasian",34,1,1
+0,1,1,1,1,0,0,1,"Eastern","Woman",0,"Xuetao","Banjerd","Gerardo","Engelbert","In-jin","Udo","Kobchitt","Female_Eastern",1,0,"Asian / Pacific Islander",48,0,0
+0,1,1,1,0,0,0,1,"Western","Woman",3,"Udo","Mariassunta","Canfa","Baek-in","Greta","Rachel","Ditmar","Male_Western",0,0,"Black or African American",33,0,0
+1,1,1,0,1,0,0,1,"Western","Woman",2,"Krisana","Krasae","Rachel","Job-Gunter","Sujin","Dino","Heike","Female_Western",0,1,"White / Caucasian",32,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",0,"Xinyuan","Sung-chul","Arun","Xuetao","Pichaet","Engelbert","Garry","Male_Western",0,0,"Asian / Pacific Islander",34,0,0
+0,0,0,0,0,0,1,0,"Eastern","Man",1,"Shenggen","Miaoqing","Alastair","Pichaet","Russell","Shaiwatna","Longjin","Male_Eastern",0,0,"White / Caucasian",26,1,1
+1,1,1,0,0,0,1,0,"Eastern","Woman",3,"Hei-sook","Bong-ho","Roberto","Yunhui","Heike","Udo","Jong-sei","Male_Eastern",0,0,"White / Caucasian",53,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Krasae","Mariassunta","Arun","In-young","Kwang-je","Dino","Ping","Male_Eastern",0,0,"White / Caucasian",60,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Xuhua","Jong-sei","Allen","Isabel","Canfa","Jinghua","Engelbert","Male_Western",0,0,"White / Caucasian",55,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Roberto","In-ho","Raymond","Bong-ho","Sandu","Somsak","Ailsa","Female_Western",0,1,"White / Caucasian",59,0,1
+1,1,1,0,1,0,0,1,"Eastern","Man",0,"Demetrio","Roberto","Canfa","Ky-chun","Gernulf","Allen","Niyada","Female_Eastern",1,0,"White / Caucasian",49,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Engelbert","Luis","Heike","Shenggen","Job-Gunter","Allen","Xuetao","Male_Eastern",0,0,"White / Caucasian",40,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Sung-chul","Xinyuan","Alastair","Canfa","Xuetao","Rachel","Roberto","Male_Western",0,0,"White / Caucasian",39,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",2,"Alastair","Ping","Kesree","Xiaoyi","Nidhi","Krasae","Gontard","Male_Western",0,0,"White / Caucasian",38,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Canfa","Rachel","Engelbert","Krasae","Xinyuan","Thida","Arun","Male_Western",0,0,"White / Caucasian",44,0,1
+1,1,0,1,0,0,0,1,"Western","Woman",1,"Garry","Dino","Niyada","Shaiwatna","Willis","Job-Gunter","Gernulf","Male_Western",0,0,"White / Caucasian",40,0,1
+0,1,1,1,1,0,1,1,"Eastern","Man",0,"Xinyuan","Kwang-je","Alastair","Canfa","Renato","Engelbert","Zhizhen","Female_Eastern",1,0,"White / Caucasian",64,1,1
+1,1,1,0,1,0,1,1,"Western","Woman",0,"Xinyuan","Ciro","Renato","Kwang-je","Roberto","Krasae","Dorothy","Female_Western",0,1,"White / Caucasian",31,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",2,"Engelbert","Mandy","In-jin","Renata","Ciro","Ludger","Kwang-je","Male_Eastern",0,0,"White / Caucasian",35,0,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Canfa","Nidhi","Russell","Ping","Junliang","Greta","Sung-chul","Male_Eastern",0,0,"White / Caucasian",55,1,1
+1,0,1,1,1,0,1,1,"Western","Man",0,"Somsak","Garry","Luis","Longjin","Xuhua","Sandu","Maria","Female_Western",0,1,"White / Caucasian",30,1,1
+0,1,1,1,1,0,0,0,"Eastern","Man",2,"Pilai","Xinyuan","Somran","Krasae","Catriona","Sung-chul","Hei-sook","Female_Eastern",1,0,"White / Caucasian",42,1,1
+1,1,1,0,0,0,0,1,"Eastern","Man",2,"Xiaoyi","Canfa","Saksri","Udo","Kesree","Gontard","Shenggen","Male_Eastern",0,0,"Black or African American",53,1,0
+0,1,1,1,1,0,1,1,"Eastern","Woman",2,"Lionello","Pasuk","Jinghua","Mariassunta","Pichaet","Sujin","Kyongae","Female_Eastern",1,0,"Hispanic / Latinx",33,0,0
+1,1,0,1,0,0,0,1,"Western","Woman",3,"Miaoqing","Krasae","Engelbert","Udo","Lucetta","Anthea","Lionello","Male_Western",0,0,"White / Caucasian",71,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Jinghua","Ludger","Claus-Peter","Lionello","Lucetta","Somran","Udo","Male_Western",0,0,"White / Caucasian",35,0,1
+1,1,1,0,0,0,1,1,"Western","Man",2,"Allen","Mariassunta","In-young","Weilie","Pichaet","Demetrio","Sandu","Male_Western",0,0,"Hispanic / Latinx",34,1,0
+0,1,1,1,0,0,0,1,"Eastern","Man",0,"Xinyuan","Allen","Ludger","Yong-pil","Somsak","Ciro","Shenggen","Male_Eastern",0,0,"White / Caucasian",72,1,1
+1,1,1,0,1,0,1,1,"Western","Woman",0,"Kwang-je","Xuhua","Sandu","Shaiwatna","Ian","Wedig","Dorothy","Female_Western",0,1,"Black or African American",49,0,0
+1,1,0,1,0,0,1,1,"Eastern","Woman",2,"Xiaoyi","Demetrio","Canfa","Kobchitt","In-jin","Jong-sei","Sujin","Male_Eastern",0,0,"White / Caucasian",48,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Choong-soo","Mandy","Krasae","Dino","Somran","Thida","Xinyuan","Male_Eastern",0,0,"Asian / Pacific Islander",44,1,0
+1,1,0,1,1,0,0,1,"Eastern","Woman",1,"Engelbert","Arun","Ping","Kyongae","Canfa","Willis","Niyada","Female_Eastern",1,0,"White / Caucasian",35,0,1
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Weilie","Krisana","Wedig","Choong-soo","Bong-ho","Krasae","Catriona","Female_Western",0,1,"Asian / Pacific Islander",38,0,0
+1,1,1,0,0,0,1,1,"Western","Man",0,"Jan","In-jin","Raymond","Yong-pil","Somran","Engelbert","Alastair","Male_Western",0,0,"White / Caucasian",38,1,1
+0,1,1,1,1,0,1,1,"Eastern","Woman",1,"Xinyuan","Kwang-je","Ping","Canfa","Rachel","Job-Gunter","Sung-hee","Female_Eastern",1,0,"White / Caucasian",54,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",2,"Maria","Udo","Ian","Roberto","Luis","Jean","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",55,0,1
+1,1,0,1,0,0,0,1,"Eastern","Man",2,"In-ho","In-jin","Xinyuan","Sandu","Thida","Raymond","Shenggen","Male_Eastern",0,0,"Asian / Pacific Islander",54,1,0
+0,1,1,1,1,0,1,1,"Eastern","Man",1,"Gernulf","Willis","In-jin","Xinyuan","Lucetta","Arun","Sung-hee","Female_Eastern",1,0,"White / Caucasian",35,1,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",1,"Sung-chul","Longjin","Mariassunta","Roberto","Sujin","Ghillean","Xuhua","Male_Eastern",0,0,"Asian / Pacific Islander",30,0,0
+0,1,1,1,0,0,0,0,"Eastern","Man",0,"Xinyuan","Ping","Sandu","Ciro","Lionello","Ludger","Choong-soo","Male_Eastern",0,0,"White / Caucasian",30,1,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Ian","Job-Gunter","Jan","Russell","Augusta","Gerardo","Catriona","Female_Western",0,1,"White / Caucasian",40,1,1
+1,0,1,1,1,0,0,1,"Western","Woman",0,"Sandu","Krasae","Xuhua","Weilie","Gerardo","Lionello","Jean","Female_Western",0,1,"White / Caucasian",60,0,1
+1,1,1,0,0,0,1,0,"Eastern","Man",1,"Krasae","Hwa-jin","Lionello","Demetrio","Sung-chul","Ciro","Longjin","Male_Eastern",0,0,"Hispanic / Latinx",46,1,0
+0,1,1,1,1,0,0,1,"Western","Woman",0,"Raymond","Somran","Gerardo","Yong-pil","Sujin","Xuetao","Alma","Female_Western",0,1,"White / Caucasian",35,0,1
+1,1,1,0,0,0,1,1,"Western","Woman",1,"Xuetao","Engelbert","Ghillean","Alma","In-jin","Xinyuan","Sandu","Male_Western",0,0,"White / Caucasian",71,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",1,"Canfa","In-jin","Banjerd","Arun","Xinyuan","Yinhe","Job-Gunter","Male_Western",0,0,"Hispanic / Latinx",32,0,0
+1,0,1,1,0,0,0,0,"Eastern","Man",2,"Catharine","Udo","Shaiwatna","Jong-sei","Luis","Eugenia","Saksri","Male_Eastern",0,0,"White / Caucasian",57,1,1
+1,1,0,1,1,0,1,1,"Western","Man",0,"Pichaet","Alastair","Jong-sei","Gontard","Shaiwatna","Xinyuan","Maria","Female_Western",0,1,"White / Caucasian",50,1,1
+1,0,1,1,0,0,0,0,"Eastern","Woman",1,"Raymond","Renato","Shaiwatna","Engelbert","Dorothy","Allen","Saksri","Male_Eastern",0,0,"White / Caucasian",26,0,1
+0,1,1,1,0,0,0,0,"Eastern","Man",3,"Ping","Maria","Mandy","Ian","Isabel","Bong-ho","Junliang","Male_Eastern",0,0,"White / Caucasian",58,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Somran","Xuetao","Ciro","Jong-sei","Li","Alastair","Sandu","Male_Western",0,0,"Hispanic / Latinx",49,0,0
+0,1,1,1,1,0,0,1,"Western","Man",0,"Nidhi","Kitti","Lionello","Xinyuan","Dino","Job-Gunter","Rachel","Female_Western",0,1,"White / Caucasian",39,1,1
+1,1,1,0,0,0,0,1,"Eastern","Another gender not listed here:",2,"Udo","Bok-ryeo","Canfa","Alastair","Yinhe","Longjin","Baek-in","Male_Eastern",0,0,"American Indian or Alaskan Native",24,0,0
+0,1,1,1,0,0,0,1,"Eastern","Woman",0,"Xinyuan","Jong-sei","Alastair","Pichaet","Ghillean","In-jin","Canfa","Male_Eastern",0,0,"White / Caucasian",34,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",3,"Pasuk","Yong-pil","Shenggen","Krasae","Ana","Zhizhen","Choong-soo","Male_Eastern",0,0,"White / Caucasian",70,0,1
+0,1,1,1,1,0,0,1,"Western","Man",1,"Kobchitt","Yong-pil","Choong-soo","Roberto","Luis","Gernulf","Heike","Female_Western",0,1,"Hispanic / Latinx",39,1,0
+1,0,1,1,0,0,1,1,"Western","Woman",2,"Gernulf","Ian","Krasae","Xinyuan","Jean","Ana","Alastair","Male_Western",0,0,"White / Caucasian",45,0,1
+1,1,1,0,0,0,1,1,"Eastern","Man",2,"Pichaet","Anthea","Dora","Shenggen","Arun","Claus-Peter","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",49,1,1
+0,0,0,0,0,0,1,1,"Eastern","Man",2,"Yinhe","Yeong-hui","Shenggen","Xinyuan","Gontard","Ciro","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",39,1,1
+1,1,0,1,0,0,0,0,"Eastern","Man",0,"Ping","Somran","Ditmar","Gontard","Willis","Shenggen","Ky-chun","Male_Eastern",0,0,"White / Caucasian",48,1,1
+0,1,1,1,1,0,0,1,"Eastern","Man",0,"Krasae","Alastair","Jinghua","Longjin","Sujin","Gontard","Thida","Female_Eastern",1,0,"White / Caucasian",31,1,1
+1,1,0,1,1,0,0,1,"Western","Man",1,"Shenggen","Arun","Xuetao","Ludger","Isabel","Raymond","Mandy","Female_Western",0,1,"White / Caucasian",81,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Job-Gunter","Ditmar","Yong-pil","Kitti","Xiaoyi","Arun","Somsak","Male_Eastern",0,0,"White / Caucasian",33,0,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",0,"Shenggen","Gerardo","Lino","Dino","Banjerd","Ditmar","Jong-sei","Male_Eastern",0,0,"Asian / Pacific Islander",34,0,0
+0,1,1,1,0,0,1,1,"Western","Man",2,"Arun","Mandy","Canfa","Yong-pil","Raymond","Yinhe","Ciro","Male_Western",0,0,"White / Caucasian",36,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Ditmar","Alastair","Renato","Ailsa","Saksri","Kobchitt","Jan","Male_Western",0,0,"White / Caucasian",36,0,1
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Xinyuan","Ghillean","Engelbert","Sujin","Greta","Jong-sei","Ailsa","Female_Western",0,1,"White / Caucasian",56,0,1
+0,1,1,1,0,0,0,1,"Western","Man",0,"Demetrio","Sandu","Canfa","In-jin","Gontard","Xuetao","Jan","Male_Western",0,0,"Asian / Pacific Islander",40,1,0
+1,1,1,0,1,0,0,1,"Eastern","Woman",3,"Ping","Rachel","Xinyuan","Dora","Krasae","Isabel","Niyada","Female_Eastern",1,0,"White / Caucasian",32,0,1
+1,1,1,0,1,0,1,1,"Eastern","Woman",1,"Yunhui","Krasae","Xuetao","Engelbert","Alastair","Shenggen","Runglawan","Female_Eastern",1,0,"White / Caucasian",66,0,1
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Somran","Sung-chul","Dino","Alastair","Pilai","Engelbert","Mandy","Female_Western",0,1,"Hispanic / Latinx",31,0,0
+0,1,1,1,1,0,1,1,"Eastern","Woman",2,"Kesree","Yong-pil","Shenggen","Ky-chun","Xuetao","Hei-sook","Yunhui","Female_Eastern",1,0,"Hispanic / Latinx",39,0,0
+0,1,1,1,0,0,0,0,"Western","Man",1,"Hong-nam","Engelbert","Gernulf","Ky-chun","Longjin","Sung-chul","Lino","Male_Western",0,0,"White / Caucasian",35,1,1
+1,0,1,1,0,0,1,0,"Eastern","Man",1,"Gernulf","Nidhi","Canfa","Engelbert","Arun","Greta","Jong-sei","Male_Eastern",0,0,"Hispanic / Latinx",36,1,0
+1,1,1,0,0,0,1,1,"Eastern","Woman",1,"Junliang","Garry","Shareen","Xinyuan","Jong-sei","Xuhua","Kitti","Male_Eastern",0,0,"Asian / Pacific Islander",46,0,0
+1,1,0,1,0,0,1,1,"Western","Woman",1,"Xinyuan","Krasae","Kitti","Ludger","Ciro","Miaoqing","Dino","Male_Western",0,0,"White / Caucasian",33,0,1
+0,1,1,1,0,0,0,0,"Western","Man",2,"Lucetta","Ludger","Russell","Raymond","Shaiwatna","Hong-nam","Claus-Peter","Male_Western",0,0,"White / Caucasian",47,1,1
+0,1,1,1,1,0,1,1,"Western","Woman",0,"Gontard","Xinyuan","Xuetao","Arun","In-jin","Banjerd","Shareen","Female_Western",0,1,"White / Caucasian",57,0,1
+1,0,1,1,1,0,0,1,"Western","Woman",2,"Kyongae","Russell","Xinyuan","Engelbert","Jong-sei","Ailsa","Mechtild","Female_Western",0,1,"Hispanic / Latinx",29,0,0
+1,0,1,1,1,0,0,1,"Western","Man",3,"Mandy","Choon-mie","Udo","Luis","Gernulf","Lucetta","Isabel","Female_Western",0,1,"White / Caucasian",36,1,1
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Rachel","Roberto","Kil-nam","Gernulf","Garry","Banjerd","Somran","Male_Eastern",0,0,"White / Caucasian",26,1,1
+0,1,1,1,1,0,1,1,"Eastern","Man",1,"Ailsa","Sujin","Shaiwatna","Ditmar","Baek-in","Weilie","Kyongae","Female_Eastern",1,0,"White / Caucasian",64,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Bong-ho","Ludger","Yong-pil","Ana","Alastair","Stefania","Sandu","Male_Western",0,0,"Black or African American",45,0,0
+0,1,1,1,1,0,1,1,"Eastern","Man",2,"Isabel","Mandy","Jong-sei","Yong-pil","Saksri","Engelbert","Pilai","Female_Eastern",1,0,"White / Caucasian",69,1,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Kwang-je","Ailsa","Weilie","Ping","Melanie","Krasae","Luis","Male_Western",0,0,"White / Caucasian",46,0,1
+1,0,1,1,0,0,1,1,"Western","Man",1,"Jong-sei","Zhizhen","Xuhua","Xinyuan","Willis","Saksri","Sandu","Male_Western",0,0,"Hispanic / Latinx",41,1,0
+0,1,1,1,1,0,0,1,"Eastern","Man",1,"Sung-chul","Wedig","Lionello","Saksri","Ethel","Canfa","Thida","Female_Eastern",1,0,"White / Caucasian",31,1,1
+1,1,1,0,1,0,0,1,"Western","Non-binary",0,"Baek-in","Saksri","Somran","Canfa","Engelbert","Wedig","Greta","Female_Western",0,1,"White / Caucasian",30,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Anty","Pichaet","Xinyuan","Xuetao","Roberto","Jinghua","Krasae","Male_Eastern",0,0,"White / Caucasian",69,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Alastair","Greta","Ferdinando","Dino","Shenggen","Shaiwatna","Krasae","Male_Eastern",0,0,"White / Caucasian",47,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Ferdinando","Mandy","Xuetao","Ludger","Sung-chul","Sujin","Raymond","Male_Western",0,0,"White / Caucasian",53,0,1
+1,1,1,0,0,0,0,0,"Eastern","Man",1,"Xuhua","Sandu","Xinyuan","Pichaet","Luis","Runglawan","Choong-soo","Male_Eastern",0,0,"White / Caucasian",31,1,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",2,"In-jin","Canfa","Udo","Ailsa","Sucheng","Krasae","Kwang-je","Male_Eastern",0,0,"American Indian or Alaskan Native",34,0,0
+1,1,1,0,0,0,0,0,"Eastern","Man",1,"Shenggen","Sujin","Pichaet","Sucheng","Weilie","Gernulf","Yong-pil","Male_Eastern",0,0,"Black or African American",34,1,0
+1,0,1,1,0,0,0,1,"Western","Woman",1,"Alastair","In-jin","Bok-ryeo","Xinyuan","Kwang-je","Banjerd","Willis","Male_Western",0,0,"White / Caucasian",50,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Weilie","Thida","Demetrio","Alma","Pichaet","Xuhua","Garry","Male_Western",0,0,"Black or African American",45,0,0
+1,0,1,1,1,0,0,1,"Eastern","Man",2,"Shaiwatna","Ailsa","Ping","Eugenia","Pichaet","Bong-ho","Xiaoyi","Female_Eastern",1,0,"Asian / Pacific Islander",48,1,0
+0,1,1,1,0,0,1,1,"Eastern","Man",1,"Raymond","Catriona","Gontard","Lionello","Gerardo","Krasae","Pichaet","Male_Eastern",0,0,"White / Caucasian",50,1,1
+1,0,1,1,0,0,0,1,"Western","Man",2,"Xuetao","Kwang-je","Ghillean","Shareen","Arunrat","Shenggen","Arun","Male_Western",0,0,"White / Caucasian",58,1,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",0,"Krasae","Pichaet","Choong-soo","Ludger","Sandu","Garry","Ky-chun","Male_Eastern",0,0,"Hispanic / Latinx",29,0,0
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Zhizhen","Luis","Sandu","Job-Gunter","Choong-soo","Sung-chul","Canfa","Male_Eastern",0,0,"White / Caucasian",32,1,1
+1,1,0,1,0,0,1,1,"Eastern","Woman",2,"Dino","Willis","Jong-sei","Mandy","Alma","Ping","Sujin","Male_Eastern",0,0,"Asian / Pacific Islander",66,0,0
+1,0,1,1,0,0,1,1,"Eastern","Man",0,"In-jin","Allen","Banjerd","Gontard","Ludger","Luis","Shaiwatna","Male_Eastern",0,0,"Hispanic / Latinx",40,1,0
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Heike","Kil-nam","Nidhi","Sung-chul","In-jin","Russell","Kitti","Male_Eastern",0,0,"Black or African American",61,0,0
+1,0,1,1,1,0,1,1,"Western","Man",1,"Alastair","Jong-sei","Mandy","Sujin","Xinyuan","Krasae","Maria","Female_Western",0,1,"White / Caucasian",35,1,1
+1,0,1,1,0,0,0,0,"Western","Man",0,"Udo","Gontard","Pichaet","Sujin","Ping","In-jin","Claus-Peter","Male_Western",0,0,"White / Caucasian",48,1,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Alastair","Kil-nam","Shenggen","In-jin","Lucetta","Gontard","Bethan","Female_Western",0,1,"White / Caucasian",42,0,1
+1,1,1,0,0,0,0,1,"Western","Another gender not listed here:",1,"Banjerd","Engelbert","Kobchitt","Dino","Somran","Junliang","Renato","Male_Western",0,0,"White / Caucasian",33,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",2,"Beatrix","Jinghua","Ky-chun","Demetrio","Kitti","Chumsri","Jan","Male_Western",0,0,"Hispanic / Latinx",35,0,0
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Engelbert","Ditmar","Bok-ryeo","Canfa","Shenggen","Eugenia","Jan","Male_Western",0,0,"White / Caucasian",37,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Luis","Sung-chul","Hong-nam","Maria","Kwang-je","Pichaet","Ghillean","Male_Western",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Xinyuan","Saksri","Banjerd","Arun","Demetrio","Eugenia","Canfa","Male_Eastern",0,0,"White / Caucasian",26,1,1
+0,1,1,1,1,0,1,1,"Western","Woman",1,"Sung-chul","Heike","Jong-sei","Roberto","Garry","Krasae","Shareen","Female_Western",0,1,"White / Caucasian",49,0,1
+0,1,1,1,0,0,1,0,"Eastern","Woman",3,"Shenggen","Alma","Heike","Shareen","Pichaet","Allen","Xuhua","Male_Eastern",0,0,"White / Caucasian",58,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Xuhua","Anty","Jong-sei","Saksri","Sujin","Kyongae","Alastair","Male_Western",0,0,"White / Caucasian",55,0,1
+1,1,0,1,1,0,0,1,"Western","Man",1,"Garry","Xinyuan","Junliang","Alastair","Sujin","Bok-ryeo","Anthea","Female_Western",0,1,"White / Caucasian",42,1,1
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Bok-ryeo","Xinyuan","Russell","Engelbert","Gerardo","Nidhi","Sujin","Male_Eastern",0,0,"White / Caucasian",33,1,1
+1,1,0,1,1,0,0,0,"Eastern","Woman",1,"Baek-in","Garry","Ian","Dorothy","Weilie","Dino","In-ho","Female_Eastern",1,0,"White / Caucasian",28,0,1
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Kitti","Luis","Alastair","Baek-in","Dong","Gernulf","Bettine","Female_Western",0,1,"White / Caucasian",47,0,1
+1,0,1,1,1,0,1,1,"Western","Woman",2,"Willis","Ludger","Gernulf","Renata","Dino","Li","Dorothy","Female_Western",0,1,"White / Caucasian",39,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Renato","Xinyuan","Engelbert","In-jin","Lionello","Jean","Sujin","Male_Eastern",0,0,"White / Caucasian",37,0,1
+0,1,1,1,1,0,0,1,"Eastern","Man",1,"Arun","Alastair","Xinyuan","Alma","Garry","Gernulf","Miaoqing","Female_Eastern",1,0,"Asian / Pacific Islander",20,1,0
+1,1,1,0,1,0,0,1,"Western","Woman",1,"Dino","Greta","Udo","Longjin","Xuetao","Saksri","Dora","Female_Western",0,1,"White / Caucasian",39,0,1
+0,1,1,1,0,0,0,1,"Eastern","Non-binary",3,"Yeong-hui","Choong-soo","Niyada","Nidhi","Mechtild","Kwang-je","Kil-nam","Male_Eastern",0,0,"White / Caucasian",29,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Jinghua","Bettine","Rachel","Krasae","Yong-pil","Udo","Alastair","Male_Western",0,0,"Asian / Pacific Islander",24,0,0
+1,0,1,1,0,0,0,0,"Eastern","Woman",2,"Mechtild","Willis","Sung-chul","Dong","Dino","Ping","Ky-chun","Male_Eastern",0,0,"White / Caucasian",46,0,1
+1,1,0,1,1,0,1,1,"Eastern","Woman",1,"Ning","Gerardo","Claus-Peter","Sandu","Kitti","Roberto","Kyongae","Female_Eastern",1,0,"White / Caucasian",41,0,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",0,"Arun","Alastair","Longjin","Choong-soo","Ferdinando","Wedig","Bong-ho","Male_Eastern",0,0,"White / Caucasian",74,0,1
+0,1,1,1,0,0,0,0,"Western","Woman",2,"Alastair","Wedig","Ning","Engelbert","Dora","Sandu","Lino","Male_Western",0,0,"White / Caucasian",29,0,1
+0,1,1,1,0,0,1,0,"Western","Woman",1,"Alastair","Xinyuan","Rachel","Ditmar","Russell","Luis","Allen","Male_Western",0,0,"Asian / Pacific Islander",40,0,0
+1,1,0,1,0,0,0,0,"Eastern","Man",3,"Niyada","Alma","Xuhua","Kil-nam","Lionello","Zhizhen","Yong-pil","Male_Eastern",0,0,"White / Caucasian",36,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Jong-sei","Xinyuan","Thida","Krasae","Jinghua","Alastair","Ping","Male_Eastern",0,0,"Asian / Pacific Islander",25,0,0
+0,1,1,1,0,0,1,1,"Western","Non-binary",1,"Gerardo","Kitti","Lionello","In-jin","Ailsa","Xinyuan","Dino","Male_Western",0,0,"Black or African American",23,0,0
+1,1,1,0,0,0,0,0,"Eastern","Woman",3,"Xuetao","In-jin","Raymond","Kyongae","Dorothy","Wenying","Saksri","Male_Eastern",0,0,"White / Caucasian",39,0,1
+1,1,0,1,1,0,1,1,"Eastern","Woman",0,"Xuetao","Ping","Yong-pil","Luis","Gontard","Sandu","Krisana","Female_Eastern",1,0,"White / Caucasian",50,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",1,"Longjin","Xinyuan","Canfa","Krisana","Sandu","Arun","Nidhi","Male_Eastern",0,0,"White / Caucasian",60,1,1
+1,1,1,0,0,0,0,0,"Eastern","Man",1,"Engelbert","Sandu","Dino","Alastair","Isabel","Sujin","In-jin","Male_Eastern",0,0,"Black or African American",78,1,0
+0,1,1,1,1,0,1,1,"Eastern","Man",1,"Bong-ho","Kitti","Somran","Ludger","Kwang-je","Xiaoyi","Runglawan","Female_Eastern",1,0,"White / Caucasian",38,1,1
+1,1,1,0,0,0,1,1,"Western","Man",2,"Anthea","Xuetao","Allen","Shenggen","Miaoqing","In-jin","Dino","Male_Western",0,0,"White / Caucasian",45,1,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",0,"Ciro","Jong-sei","Xinyuan","Sandu","Shenggen","Krasae","Xuetao","Male_Eastern",0,0,"White / Caucasian",24,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Roberto","Gontard","Kitti","Ian","Jinghua","Dorothy","Junliang","Male_Eastern",0,0,"White / Caucasian",40,0,1
+1,0,1,1,1,0,0,1,"Eastern","Man",0,"Claus-Peter","Krasae","Allen","Choong-soo","Gernulf","Kwang-je","Xiaoyi","Female_Eastern",1,0,"Hispanic / Latinx",41,1,0
+1,1,1,0,0,0,1,1,"Eastern","Man",2,"Allen","Yinhe","Jean","Xuetao","Bong-ho","Engelbert","Pichaet","Male_Eastern",0,0,"White / Caucasian",37,1,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Somran","Xinyuan","Shareen","Krasae","Canfa","Roberto","Kwang-je","Male_Eastern",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Choong-soo","Gontard","Engelbert","Somran","Jan","Yunhui","Longjin","Male_Eastern",0,0,"Hispanic / Latinx",32,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Demetrio","Anthea","Xuetao","Kwang-je","Gontard","Raymond","Gernulf","Male_Western",0,0,"Black or African American",35,0,0
+1,1,0,1,0,0,0,1,"Western","Woman",1,"Allen","Ethel","Russell","Luis","Willis","In-jin","Jan","Male_Western",0,0,"Black or African American",53,0,0
+1,0,1,1,1,0,0,1,"Western","Man",0,"Wedig","Ky-chun","Jong-sei","Ping","Xinyuan","Ciro","Anthea","Female_Western",0,1,"White / Caucasian",42,1,1
+1,0,1,1,1,0,0,1,"Western","Woman",2,"Hong-nam","Garry","Bethan","Ping","Xinyuan","Engelbert","Dora","Female_Western",0,1,"Black or African American",46,0,0
+0,1,1,1,1,0,1,0,"Eastern","Man",2,"Heike","Kobchitt","Banjerd","Xinyuan","Engelbert","Lionello","Wenying","Female_Eastern",1,0,"Asian / Pacific Islander",27,1,0
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Jan","Willis","Ky-chun","Ailsa","Trude","Renato","Gernulf","Male_Western",0,0,"White / Caucasian",72,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Junliang","Dino","Sung-hee","Arun","Sujin","Mariassunta","Banjerd","Male_Eastern",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",0,"Sujin","Gerardo","Sung-chul","Saksri","Kil-nam","Xuhua","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",53,1,1
+1,1,1,0,1,0,0,0,"Eastern","Woman",1,"Dorothy","Somsak","Roberto","Demetrio","Weilie","Udo","In-ho","Female_Eastern",1,0,"White / Caucasian",53,0,1
+1,0,1,1,1,0,0,1,"Western","Man",2,"Jong-sei","Eugenia","Jinghua","Garry","In-jin","Hong-nam","Ana","Female_Western",0,1,"Hispanic / Latinx",36,1,0
+0,1,1,1,0,0,0,1,"Western","Man",1,"Canfa","Alastair","Gernulf","Ludger","Sandu","Ning","Wedig","Male_Western",0,0,"White / Caucasian",55,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Xuetao","Ferdinando","Ailsa","Job-Gunter","Dino","Anty","Weilie","Male_Eastern",0,0,"Asian / Pacific Islander",36,1,0
+1,1,0,1,0,0,0,0,"Eastern","Woman",1,"Shareen","Ian","Xinyuan","Allen","Krasae","Jan","Ky-chun","Male_Eastern",0,0,"White / Caucasian",65,0,1
+1,1,1,0,0,0,0,0,"Eastern","Woman",1,"Jong-sei","Engelbert","Bong-ho","Yong-pil","Dong","Shenggen","In-jin","Male_Eastern",0,0,"White / Caucasian",46,0,1
+0,1,1,1,0,0,0,1,"Western","Man",2,"Greta","Maria","Raymond","Alastair","Ferdinando","Roberto","Ludger","Male_Western",0,0,"White / Caucasian",39,1,1
+0,1,1,1,0,0,0,0,"Eastern","Man",1,"Allen","Ian","Chumsri","Ghillean","Choong-soo","Demetrio","Junliang","Male_Eastern",0,0,"Hispanic / Latinx",71,1,0
+0,1,1,1,0,0,0,0,"Eastern","Man",0,"Ciro","Ludger","Willis","Bong-ho","Somsak","Sandu","Krasae","Male_Eastern",0,0,"White / Caucasian",36,1,1
+1,1,0,1,0,0,1,1,"Western","Woman",0,"Kwang-je","Somran","Nidhi","Xuetao","Sung-chul","Dino","Ferdinando","Male_Western",0,0,"White / Caucasian",71,0,1
+1,0,1,1,1,0,0,1,"Western","Woman",1,"Xuetao","Lionello","Weilie","Dorothy","Arun","Shaiwatna","Eugenia","Female_Western",0,1,"White / Caucasian",56,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Gontard","Shaiwatna","Jong-sei","Dorothy","Sung-chul","Canfa","Luis","Male_Western",0,0,"White / Caucasian",58,0,1
+1,0,1,1,0,0,0,1,"Eastern","Man",2,"Dino","Xinyuan","Dorothy","Miaoqing","Nidhi","Jong-sei","Bong-ho","Male_Eastern",0,0,"Hispanic / Latinx",29,1,0
+1,0,1,1,1,0,0,1,"Western","Man",1,"Russell","Kwang-je","Ning","Somran","Xuhua","Ping","Bethan","Female_Western",0,1,"Black or African American",49,1,0
+1,1,1,0,0,0,0,1,"Eastern","Woman",0,"Kwang-je","Dino","Luis","Ghillean","Xuetao","Sung-chul","Weilie","Male_Eastern",0,0,"White / Caucasian",34,0,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Xuetao","Krasae","Sandu","Dino","Thida","Engelbert","Udo","Male_Western",0,0,"White / Caucasian",55,0,1
+1,1,0,1,0,0,0,1,"Western","Woman",2,"Krasae","Canfa","Xiaoyi","Xinyuan","Dorothy","Arun","Gernulf","Male_Western",0,0,"White / Caucasian",68,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Somsak","Canfa","Li","Luis","Hei-sook","Jan","Bong-ho","Male_Eastern",0,0,"Black or African American",28,0,0
+1,0,1,1,0,0,0,1,"Western","Man",1,"Xinyuan","Kobchitt","Sung-chul","In-jin","Engelbert","Ferdinando","Gernulf","Male_Western",0,0,"White / Caucasian",45,1,1
+1,1,1,0,0,0,0,1,"Western","Woman",1,"Kil-nam","Kwang-je","Wenying","Garry","Kitti","Ian","Wedig","Male_Western",0,0,"Asian / Pacific Islander",44,0,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Demetrio","Somsak","Krasae","Ghillean","Gerardo","Chumsri","Garry","Male_Western",0,0,"White / Caucasian",37,0,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Ian","Banjerd","Melanie","Russell","Kitti","Dino","Ferdinando","Male_Western",0,0,"White / Caucasian",31,1,1
+0,0,0,0,0,0,1,0,"Western","Woman",2,"Xinyuan","Yong-pil","Anthea","Demetrio","Krasae","Melanie","Allen","Male_Western",0,0,"White / Caucasian",60,0,1
+1,0,1,1,0,0,0,1,"Western","Woman",1,"Xinyuan","Xuetao","Ping","Rachel","Engelbert","Krasae","Garry","Male_Western",0,0,"White / Caucasian",30,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Hwa-jin","Alastair","Garry","Engelbert","Gerardo","Dino","Xuetao","Male_Eastern",0,0,"Black or African American",31,0,0
+1,0,1,1,0,0,0,1,"Eastern","Woman",1,"Kitti","Choong-soo","Somsak","Udo","Chumsri","Ky-chun","Ping","Male_Eastern",0,0,"White / Caucasian",63,0,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Luis","Chumsri","Choong-soo","Demetrio","Nidhi","Longjin","Udo","Male_Western",0,0,"Black or African American",43,1,0
+1,0,1,1,0,0,1,0,"Eastern","Woman",2,"Nidhi","Pasuk","Catriona","Shenggen","Xuetao","Krasae","Jong-sei","Male_Eastern",0,0,"White / Caucasian",41,0,1
+0,1,1,1,1,0,0,0,"Western","Man",1,"Dong","Luis","Banjerd","Lino","Xuetao","Ghillean","Catharine","Female_Western",0,1,"Hispanic / Latinx",44,1,0
+1,1,1,0,0,0,1,0,"Eastern","Man",2,"Baek-in","In-young","Allen","Somsak","Stefania","Russell","Jong-sei","Male_Eastern",0,0,"White / Caucasian",66,1,1
+0,1,1,1,0,0,0,0,"Eastern","Man",1,"Ferdinando","Sung-chul","Mariassunta","Claus-Peter","Somsak","Ping","Saksri","Male_Eastern",0,0,"White / Caucasian",37,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Xinyuan","Engelbert","Alastair","Jong-sei","Shenggen","Yinhe","Willis","Male_Western",0,0,"White / Caucasian",53,0,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Krasae","Kobchitt","Pichaet","Choong-soo","Weilie","Sandu","Jong-sei","Male_Eastern",0,0,"White / Caucasian",19,1,1
+1,0,1,1,0,0,0,1,"Western","Man",1,"Luis","Shaiwatna","Shenggen","Xiaoyi","Ky-chun","Xuetao","Demetrio","Male_Western",0,0,"White / Caucasian",50,1,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"Garry","Kitti","In-young","Shenggen","Alastair","Wedig","Canfa","Male_Eastern",0,0,"White / Caucasian",40,0,1
+0,1,1,1,0,0,1,1,"Eastern","Non-binary",2,"Ludger","Chumsri","Somsak","Kil-nam","Anthea","Roberto","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",31,0,1
+0,1,1,1,0,0,1,1,"Eastern","Man",0,"Alastair","Yong-pil","Ciro","Sung-chul","Job-Gunter","Jong-sei","Xinyuan","Male_Eastern",0,0,"White / Caucasian",50,1,1
+1,1,0,1,1,0,1,1,"Western","Woman",1,"Heike","Jinghua","Demetrio","Alastair","Jong-sei","Weilie","Shareen","Female_Western",0,1,"White / Caucasian",36,0,1
+1,0,1,1,1,0,0,1,"Western","Woman",1,"Alastair","Arun","Xuetao","Shenggen","Demetrio","Ana","Bethan","Female_Western",0,1,"Black or African American",42,0,0
+0,1,1,1,0,0,1,0,"Eastern","Man",0,"Xinyuan","Somran","Jinghua","Engelbert","Gernulf","Wedig","Jong-sei","Male_Eastern",0,0,"Black or African American",37,1,0
+0,1,1,1,0,0,0,0,"Western","Woman",1,"Kobchitt","Krasae","Demetrio","Job-Gunter","Ian","Gernulf","Claus-Peter","Male_Western",0,0,"White / Caucasian",52,0,1
+0,1,1,1,0,0,1,1,"Western","Woman",3,"Rachel","Dong","Ditmar","Ping","In-jin","Lucetta","Alastair","Male_Western",0,0,"White / Caucasian",48,0,1
+0,1,1,1,0,0,1,1,"Western","Man",2,"Luis","Rachel","Lionello","Weilie","Shenggen","Hwa-jin","Ghillean","Male_Western",0,0,"Hispanic / Latinx",27,1,0
+1,1,0,1,0,0,0,1,"Western","Man",1,"Ludger","Choong-soo","Weilie","Rachel","In-jin","Shaiwatna","Udo","Male_Western",0,0,"White / Caucasian",62,1,1
+1,1,0,1,1,0,1,1,"Eastern","Man",2,"Gerardo","Ghillean","Beatrix","Sung-chul","Udo","Catriona","Krisana","Female_Eastern",1,0,"White / Caucasian",36,1,1
+1,0,1,1,1,0,0,1,"Eastern","Man",0,"Xinyuan","Xuetao","Luis","Bong-ho","Jong-sei","Kil-nam","Thida","Female_Eastern",1,0,"White / Caucasian",86,1,1
+0,1,1,1,0,0,0,0,"Eastern","Man",3,"Junliang","Engelbert","Dorothy","Heike","Xinyuan","Kobchitt","Choong-soo","Male_Eastern",0,0,"Black or African American",37,1,0
+1,1,1,0,1,0,1,1,"Eastern","Woman",2,"Xiaoyi","Trude","Shaiwatna","Raymond","Willis","Kwang-je","Sung-hee","Female_Eastern",1,0,"White / Caucasian",41,0,1
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Isabel","Nidhi","Shenggen","Willis","Xuetao","Raymond","Kitti","Male_Eastern",0,0,"White / Caucasian",41,1,1
+0,1,1,1,0,0,0,1,"Western","Man",3,"Raymond","Ludger","In-jin","Miaoqing","Eugenia","Hei-sook","Gerardo","Male_Western",0,0,"White / Caucasian",27,1,1
+1,0,1,1,0,0,1,1,"Eastern","Woman",1,"Kitti","Luis","Stefania","Russell","Krasae","Udo","Sujin","Male_Eastern",0,0,"White / Caucasian",36,0,1
+1,1,1,0,1,0,1,1,"Western","Woman",3,"Yinhe","Lionello","Jan","Alastair","Catriona","Kyongae","Stefania","Female_Western",0,1,"White / Caucasian",38,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Gerardo","Junliang","Baek-in","Sujin","Trude","In-jin","Ailsa","Female_Western",0,1,"White / Caucasian",32,0,1
+0,0,0,0,0,0,1,0,"Eastern","Man",0,"Krasae","Xinyuan","Ian","Engelbert","Bong-ho","Xuhua","Jong-sei","Male_Eastern",0,0,"White / Caucasian",39,1,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"In-jin","Saksri","Demetrio","Wedig","Willis","Dong","Junliang","Male_Eastern",0,0,"White / Caucasian",66,0,1
+0,1,1,1,0,0,0,0,"Eastern","Woman",1,"Arun","Ping","Krisana","Xinyuan","Jong-sei","Junliang","Krasae","Male_Eastern",0,0,"White / Caucasian",61,0,1
+1,1,1,0,0,0,0,1,"Eastern","Another gender not listed here:",0,"Wedig","Choong-soo","Ian","Allen","Jan","Gernulf","Shenggen","Male_Eastern",0,0,"White / Caucasian",34,0,1
+0,1,1,1,1,0,1,1,"Western","Man",0,"Willis","Ditmar","Wedig","Jan","Ian","Somran","Dorothy","Female_Western",0,1,"White / Caucasian",41,1,1
+1,0,1,1,0,0,1,1,"Eastern","Man",0,"Shenggen","Xuhua","Luis","Sandu","Ciro","Udo","Kwang-je","Male_Eastern",0,0,"White / Caucasian",47,1,1
+1,1,0,1,0,0,1,0,"Eastern","Man",2,"Xinyuan","Sandu","Zhizhen","Xuetao","Pilai","Kwang-je","Sung-chul","Male_Eastern",0,0,"White / Caucasian",33,1,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Krasae","Sujin","Gerardo","Lionello","Wedig","Pasuk","Ghillean","Male_Western",0,0,"American Indian or Alaskan Native",60,1,0
+0,1,1,1,1,0,1,1,"Eastern","Man",0,"Krasae","Gernulf","Sujin","Claus-Peter","Ghillean","Jinghua","Krisana","Female_Eastern",1,0,"White / Caucasian",28,1,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",1,"Dino","Canfa","Demetrio","Junliang","Rachel","Nidhi","Kitti","Male_Eastern",0,0,"White / Caucasian",52,0,1
+1,1,0,1,1,0,1,1,"Eastern","Woman",4,"Ana","Chumsri","Yeong-hui","Shareen","Roberto","Gernulf","Zhizhen","Female_Eastern",1,0,"White / Caucasian",33,0,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Xinyuan","Xuhua","Melanie","Lino","Shaiwatna","Gernulf","Bethan","Female_Western",0,1,"White / Caucasian",39,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",1,"Xinyuan","In-jin","Sujin","Ky-chun","Junliang","Sucheng","Xuhua","Male_Eastern",0,0,"Asian / Pacific Islander",31,1,0
+0,1,1,1,0,0,0,1,"Eastern","Woman",2,"Kobchitt","Xiaoyi","Krasae","Alastair","Arun","Engelbert","Canfa","Male_Eastern",0,0,"Black or African American",22,0,0
+1,1,1,0,1,0,1,1,"Western","Woman",2,"Gerardo","Rachel","Kitti","Krasae","Lino","In-ho","Stefania","Female_Western",0,1,"White / Caucasian",54,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Maria","Alastair","Saksri","Jong-sei","Dong","Demetrio","Shenggen","Male_Eastern",0,0,"White / Caucasian",59,1,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Ditmar","Sandu","Choong-soo","Raymond","Augusta","Engelbert","Ailsa","Female_Western",0,1,"White / Caucasian",32,1,1
+0,1,1,1,0,0,1,0,"Eastern","Man",0,"Dino","Sandu","Shenggen","Arun","Jong-sei","Ferdinando","Sung-chul","Male_Eastern",0,0,"White / Caucasian",30,1,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Sandu","Xuetao","Kwang-je","Maria","Canfa","Ferdinando","Ciro","Male_Western",0,0,"White / Caucasian",37,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Xinyuan","Kitti","Yong-pil","Gerardo","In-jin","Dong","Engelbert","Male_Western",0,0,"White / Caucasian",51,0,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",0,"Allen","Krasae","Udo","Engelbert","Lionello","Xinyuan","Nidhi","Male_Eastern",0,0,"White / Caucasian",70,0,1
+1,1,0,1,0,0,1,0,"Western","Woman",2,"Kitti","Kil-nam","Anthea","Lionello","In-jin","Xiaoyi","Allen","Male_Western",0,0,"White / Caucasian",57,0,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Jinghua","Xuetao","Kil-nam","Engelbert","Kyongae","Yong-pil","Catriona","Female_Western",0,1,"White / Caucasian",32,1,1
+0,1,1,1,1,0,1,1,"Eastern","Woman",1,"Sujin","Xuetao","Canfa","Sandu","Maria","Kwang-je","Yunhui","Female_Eastern",1,0,"White / Caucasian",62,0,1
+1,0,1,1,0,0,0,0,"Western","Man",3,"Trude","Ciro","Lucetta","Wedig","Choon-mie","Jinghua","Claus-Peter","Male_Western",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,1,1,"Western","Man",1,"Garry","Yong-pil","Yinhe","Xinyuan","Weilie","Claus-Peter","Ciro","Male_Western",0,0,"Black or African American",55,1,0
+0,1,1,1,0,0,1,1,"Eastern","Man",2,"Garry","In-young","Kil-nam","Kwang-je","Arun","Renata","Sujin","Male_Eastern",0,0,"White / Caucasian",30,1,1
+1,1,0,1,0,0,0,1,"Western","Man",2,"Kil-nam","Hwa-jin","Bong-ho","Mariassunta","Baek-in","Yong-pil","Arun","Male_Western",0,0,"White / Caucasian",39,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",3,"Krisana","Dino","Jong-sei","Yunhui","Mariassunta","Xuetao","Job-Gunter","Male_Western",0,0,"Asian / Pacific Islander",41,0,0
+1,1,1,0,0,0,1,1,"Western","Woman",3,"Wedig","Kitti","Arunrat","Yunhui","Longjin","Shareen","Ghillean","Male_Western",0,0,"White / Caucasian",43,0,1
+1,1,0,1,1,0,1,1,"Western","Man",2,"Zhizhen","Dino","Gerardo","Choon-mie","Shenggen","Canfa","Shareen","Female_Western",0,1,"White / Caucasian",42,1,1
+1,1,1,0,0,0,1,0,"Eastern","Man",2,"Shenggen","Shaiwatna","Bong-ho","Gerardo","Bettine","Dorothy","Longjin","Male_Eastern",0,0,"White / Caucasian",49,1,1
+0,1,1,1,0,0,1,1,"Eastern","Man",0,"Engelbert","Lionello","Ping","Sung-chul","Ghillean","Garry","Kitti","Male_Eastern",0,0,"White / Caucasian",25,1,1
+1,0,1,1,0,0,0,1,"Western","Man",2,"Shenggen","Anty","In-jin","Canfa","Yong-pil","Kesree","Gerardo","Male_Western",0,0,"White / Caucasian",37,1,1
+0,1,1,1,1,0,1,1,"Eastern","Woman",1,"Wedig","Sung-chul","Canfa","Sujin","Dino","Arunrat","Zhizhen","Female_Eastern",1,0,"White / Caucasian",35,0,1
+1,1,1,0,0,0,0,1,"Western","Woman",1,"Melanie","Jan","Demetrio","Kil-nam","Ping","Pichaet","Willis","Male_Western",0,0,"White / Caucasian",45,0,1
+0,1,1,1,0,0,0,1,"Eastern","Man",3,"Sandu","Alma","Xuhua","Sung-chul","Zhizhen","Thida","Nidhi","Male_Eastern",0,0,"White / Caucasian",60,1,1
+1,1,0,1,0,0,0,1,"Eastern","Woman",1,"Xiaoyi","Ky-chun","Luis","Gerardo","Sujin","Xuetao","Somsak","Male_Eastern",0,0,"Hispanic / Latinx",55,0,0
+1,0,1,1,0,0,0,1,"Eastern","Woman",2,"Xiaoyi","Xinyuan","Russell","Heike","Arun","Pichaet","Shenggen","Male_Eastern",0,0,"White / Caucasian",34,0,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",3,"Longjin","Ferdinando","Stefania","Miaoqing","Beatrix","Sung-chul","Weilie","Male_Eastern",0,0,"Hispanic / Latinx",45,0,0
+1,0,1,1,1,0,0,1,"Eastern","Woman",0,"Raymond","Arun","Claus-Peter","Engelbert","Dino","Somsak","Xiaoyi","Female_Eastern",1,0,"Black or African American",77,0,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Sung-chul","Ciro","Sujin","Willis","Ailsa","Kwang-je","Ditmar","Male_Western",0,0,"Hispanic / Latinx",41,0,0
+0,1,1,1,0,0,1,1,"Western","Man",2,"Pichaet","Xinyuan","Sujin","Ning","Kwang-je","Pilai","Alastair","Male_Western",0,0,"White / Caucasian",51,1,1
+0,1,1,1,0,0,0,1,"Eastern","Man",2,"Renata","Renato","Jan","Arun","Xinyuan","Yinhe","Bong-ho","Male_Eastern",0,0,"White / Caucasian",32,1,1
+1,0,1,1,0,0,0,1,"Western","Woman",1,"Nidhi","Jong-sei","Jinghua","Dorothy","Sujin","Yong-pil","Willis","Male_Western",0,0,"Asian / Pacific Islander",35,0,0
+0,1,1,1,1,0,1,1,"Western","Man",0,"Choong-soo","Krasae","Engelbert","Renato","Xuetao","Raymond","Dorothy","Female_Western",0,1,"White / Caucasian",65,1,1
+0,1,1,1,0,0,1,1,"Eastern","Man",3,"Xuetao","Heike","Sung-chul","Sandu","Shareen","Sucheng","Pichaet","Male_Eastern",0,0,"White / Caucasian",46,1,1
+1,1,1,0,0,0,1,1,"Eastern","Woman",2,"Kobchitt","Shenggen","Ping","Allen","Xiaoyi","Junliang","Kwang-je","Male_Eastern",0,0,"White / Caucasian",44,0,1
+1,1,0,1,0,0,1,1,"Western","Man",0,"Xuetao","Shenggen","Saksri","Alastair","Raymond","Engelbert","Ferdinando","Male_Western",0,0,"White / Caucasian",46,1,1
+1,1,1,0,0,0,1,1,"Eastern","Man",1,"Ghillean","Anthea","Luis","Russell","Renato","Udo","Shaiwatna","Male_Eastern",0,0,"Asian / Pacific Islander",54,1,0
+0,1,1,1,1,0,1,1,"Western","Man",2,"Chumsri","Jan","Ciro","Shaiwatna","Arun","Yunhui","Dorothy","Female_Western",0,1,"White / Caucasian",36,1,1
+0,1,1,1,0,0,0,1,"Western","Woman",2,"Isabel","Xuetao","Russell","Kwang-je","Claus-Peter","Dora","Raymond","Male_Western",0,0,"White / Caucasian",44,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",1,"Canfa","Sandu","Alastair","Zhizhen","Ferdinando","Gerardo","Mechtild","Female_Western",0,1,"White / Caucasian",29,0,1
+1,0,1,1,0,0,1,0,"Eastern","Man",3,"Hong-nam","Ping","Alastair","Dora","Ferdinando","Bethan","Sung-chul","Male_Eastern",0,0,"Asian / Pacific Islander",46,1,0
+1,0,1,1,1,0,0,1,"Eastern","Woman",1,"Xuetao","Canfa","Krasae","Xinyuan","Garry","Zhizhen","Kobchitt","Female_Eastern",1,0,"White / Caucasian",50,0,1
+1,0,1,1,1,0,0,1,"Eastern","Man",0,"Nidhi","Alastair","Pichaet","Jinghua","Ian","Dino","Thida","Female_Eastern",1,0,"White / Caucasian",49,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Shaiwatna","Kil-nam","Xuhua","Kyongae","Willis","Engelbert","Weilie","Male_Eastern",0,0,"Black or African American",58,0,0
+0,1,1,1,0,0,1,1,"Western","Woman",2,"Ailsa","Kwang-je","Xinyuan","Sucheng","Raymond","Ludger","Sandu","Male_Western",0,0,"Asian / Pacific Islander",35,0,0
+1,0,1,1,1,0,0,1,"Eastern","Woman",0,"Sandu","Xinyuan","Xuetao","Kwang-je","Sung-chul","Engelbert","Thida","Female_Eastern",1,0,"White / Caucasian",34,0,1
+1,0,1,1,0,0,0,1,"Eastern","Man",0,"Dino","Wedig","Sandu","Shaiwatna","Choong-soo","Roberto","Nidhi","Male_Eastern",0,0,"White / Caucasian",23,1,1
+1,1,1,0,0,0,0,1,"Western","Woman",2,"In-jin","Banjerd","Thida","Kyongae","Job-Gunter","Shaiwatna","Gernulf","Male_Western",0,0,"White / Caucasian",74,0,1
+0,1,1,1,0,0,1,1,"Eastern","Woman",3,"Renato","Mechtild","Shaiwatna","Catriona","Hwa-jin","Kitti","Pichaet","Male_Eastern",0,0,"White / Caucasian",35,0,1
+0,1,1,1,1,0,0,1,"Western","Woman",0,"Ping","Choong-soo","Arun","Xuhua","Junliang","Krasae","Ailsa","Female_Western",0,1,"Black or African American",35,0,0
+0,1,1,1,0,0,1,1,"Western","Man",1,"Ferdinando","Kil-nam","Yong-pil","Alastair","Rachel","Krasae","Dino","Male_Western",0,0,"White / Caucasian",33,1,1
+1,0,1,1,0,0,0,1,"Eastern","Woman",0,"Ky-chun","Roberto","Jong-sei","Ghillean","In-jin","Kitti","Xuetao","Male_Eastern",0,0,"White / Caucasian",39,0,1
+1,0,1,1,0,0,1,1,"Western","Woman",2,"Ciro","Pasuk","Dong","Arun","Xuhua","Claus-Peter","Russell","Male_Western",0,0,"Black or African American",48,0,0
+1,0,1,1,0,0,0,1,"Western","Man",0,"Ghillean","Lionello","Alastair","Ping","Lino","Renato","Udo","Male_Western",0,0,"White / Caucasian",39,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Sandu","Jong-sei","Arun","Junliang","Xinyuan","Ning","Xuetao","Male_Eastern",0,0,"White / Caucasian",23,0,1
+0,1,1,1,1,0,0,1,"Western","Man",2,"Alastair","Augusta","Choong-soo","Xuetao","Li","Krasae","Rachel","Female_Western",0,1,"White / Caucasian",44,1,1
+1,1,1,0,1,0,0,1,"Western","Man",1,"Rachel","Sandu","Kwang-je","Ludger","Somsak","Sung-chul","Alma","Female_Western",0,1,"White / Caucasian",55,1,1
+1,1,0,1,0,0,0,1,"Eastern","Man",1,"Yeong-hui","Gontard","Bong-ho","Alastair","Pichaet","Jinghua","Banjerd","Male_Eastern",0,0,"White / Caucasian",48,1,1
+0,1,1,1,0,0,1,0,"Western","Woman",0,"Ian","Ludger","Nidhi","Choong-soo","Jong-sei","Garry","Allen","Male_Western",0,0,"White / Caucasian",53,0,1
+1,0,1,1,0,0,0,1,"Western","Man",0,"Shenggen","Lionello","Jong-sei","Ghillean","Weilie","Choong-soo","Wedig","Male_Western",0,0,"Black or African American",25,1,0
+0,1,1,1,0,0,1,1,"Western","Woman",1,"Sucheng","In-jin","Junliang","Alastair","Xuhua","Krasae","Ghillean","Male_Western",0,0,"Asian / Pacific Islander",41,0,0
+1,1,1,0,0,0,1,1,"Eastern","Man",3,"Bettine","Yinhe","Catriona","Udo","Kwang-je","Somsak","Shaiwatna","Male_Eastern",0,0,"White / Caucasian",34,1,1
+0,1,1,1,0,0,0,0,"Western","Woman",0,"Saksri","Ian","Nidhi","Sandu","Alastair","Shenggen","Lino","Male_Western",0,0,"White / Caucasian",73,0,1
+0,1,1,1,0,0,0,0,"Eastern","Man",1,"Ferdinando","Nidhi","Dorothy","Banjerd","Choong-soo","Ditmar","Yong-pil","Male_Eastern",0,0,"Asian / Pacific Islander",34,1,0
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Longjin","Rachel","Xuhua","Choong-soo","Russell","Lionello","Baek-in","Male_Eastern",0,0,"White / Caucasian",40,0,1
+1,1,1,0,0,0,0,1,"Eastern","Woman",1,"Xuetao","Renato","Arun","Jinghua","Trude","Choong-soo","Ping","Male_Eastern",0,0,"Black or African American",40,0,0
+0,1,1,1,0,0,0,1,"Western","Woman",1,"Udo","Arun","Engelbert","Shenggen","Ping","Yeong-hui","Ditmar","Male_Western",0,0,"White / Caucasian",59,0,1
+0,1,1,1,0,0,0,1,"Western","Man",1,"Xinyuan","Pichaet","Xuetao","Ferdinando","Dino","Shareen","Arun","Male_Western",0,0,"Asian / Pacific Islander",48,1,0
+1,0,1,1,0,0,0,1,"Western","Woman",1,"Jean","Willis","Choong-soo","Shenggen","Ian","Bong-ho","Udo","Male_Western",0,0,"Black or African American",43,0,0
+1,0,1,1,1,0,1,1,"Western","Man",1,"Kobchitt","Xinyuan","Canfa","Ludger","Demetrio","Gernulf","Shareen","Female_Western",0,1,"White / Caucasian",51,1,1
+1,1,0,1,1,0,0,1,"Western","Man",2,"In-ho","Xuhua","Pasuk","Ludger","Wedig","Jong-sei","Rachel","Female_Western",0,1,"White / Caucasian",42,1,1
+0,1,1,1,0,0,0,1,"Eastern","Woman",1,"Xinyuan","Krasae","Miaoqing","Willis","Gernulf","Gontard","Canfa","Male_Eastern",0,0,"Black or African American",69,0,0
+0,1,1,1,0,0,1,1,"Eastern","Woman",2,"Choong-soo","Lucetta","Shenggen","Garry","Anthea","Krasae","Jinghua","Male_Eastern",0,0,"White / Caucasian",45,0,1

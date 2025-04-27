@@ -1,0 +1,459 @@
+---
+title: "Gender Name Bias (N=750)"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(ggplot2)
+library(grid)
+library(extrafont)
+library(readxl)
+library(nnet)
+library(systemfit)
+library(aod)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+#write.csv(qual_data, "raw_data.csv")
+## Pull directly from Qualtrics API
+qual_data <- fetch_survey(surveyID='SV_8whRwyQHrL0PdD8',
+                   label = T,
+                   convert = F,
+                   start_date = "2024-11-22",
+                   force_request = T)
+
+# Read the Excel file
+professors_data <- read_excel("Nameselect_1022_humancheck.xlsx")
+```
+
+
+```{r}
+# Create a lookup table for citizenship based on First_name
+citizenship_lookup <- professors_data %>%
+  mutate(region = case_when(
+    Citizenship %in% c("China", "South_Korea", "Thailand") ~ "Eastern",
+    Citizenship %in% c("Germany", "Italy", "United_Kingdom") ~ "Western",
+    TRUE ~ NA_character_
+  )) %>%
+  select(First_name, region)
+
+# Define categories based on first names
+women <- professors_data$First_name[professors_data$Gender == "Female"]  
+admin <- professors_data$First_name[professors_data$Binary_HaveRole == "Yes"]  
+sciences <- professors_data$First_name[professors_data$Field_category == "Sciences"]  
+public_univ <- professors_data$First_name[professors_data$`Private/public` == "public"]  
+
+# failed attention check
+
+failed_d0 <- qual_data |> 
+  filter(is.na(`Q32_Page Submit`) | is.na(workerId))
+
+# left early
+
+left_early_d0 <- qual_data |> 
+  filter(!is.na(`Q32_Page Submit`), !is.na(workerId), is.na(`choice-7`))
+
+# Create the analysis dataset
+d0 <- qual_data |> 
+    filter(!is.na(`choice-7`), !is.na(workerId), Finished==1) |> 
+    mutate(
+    gender_feedback = as.numeric(grepl("% are women", feedbackItem1) |
+                  grepl("% are women", feedbackItem2) |
+                  grepl("% are women", feedbackItem3)),
+    admin_shown = as.numeric(grepl("% hold an administrative position", feedbackItem1) |
+                  grepl("% hold an administrative position", feedbackItem2) |
+                  grepl("% hold an administrative position", feedbackItem3)),
+    sciences_shown = as.numeric(grepl("% work in the Sciences", feedbackItem1) |
+                grepl("% work in the Sciences", feedbackItem2) |
+                grepl("% work in the Sciences", feedbackItem3)),
+    public_shown = as.numeric(grepl("% earned their PhDs at public universities", feedbackItem1) |
+                 grepl("% earned their PhDs at public universities", feedbackItem2) |
+                 grepl("% earned their PhDs at public universities", feedbackItem3)),
+    female_pick = case_when(`choice-7` %in% women ~ 1,
+                           TRUE ~ 0),
+    admin_pick = case_when(`choice-7` %in% admin ~ 1,
+                           TRUE ~ 0),
+    sciences_pick = case_when(`choice-7` %in% sciences ~ 1,
+                           TRUE ~ 0),
+    public_pick = case_when(`choice-7` %in% public_univ ~ 1,
+                           TRUE ~ 0),
+    citizenship = sapply(`choice-7`, function(x) 
+      citizenship_lookup$region[citizenship_lookup$First_name == x]),
+    gender_region = case_when(
+      female_pick == 1 & citizenship == "Eastern" ~ "Female_Eastern",
+      female_pick == 1 & citizenship == "Western" ~ "Female_Western",
+      female_pick == 0 & citizenship == "Eastern" ~ "Male_Eastern",
+      female_pick == 0 & citizenship == "Western" ~ "Male_Western"),
+    female_eastern = (female_pick == 1 & citizenship == "Eastern") * 1,
+    female_western = (female_pick == 1 & citizenship == "Western") * 1,
+    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+    race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |> 
+  select(gender_feedback:citizenship, gender, base_gender, `choice-1`:`choice-7`,gender_region:female_western, race, age, gender_code, race_code)
+```
+
+\newpage
+
+## Demographics
+
+```{r results='markup'}
+## Failed Attention Check
+
+cat('Failed Attention Check Participants:', nrow(failed_d0), '\n')
+    
+## Participants that were randomly assigned but didn't click final DV Attention Check
+
+cat('Participants without DV but condition assignment:', nrow(left_early_d0), '\n')
+
+## Gender
+
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 2)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+
+## Race
+
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
+
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+colnames(race_df) <- c("Percentage", "Race")
+
+print(race_df)
+
+## Age
+
+cat('Mean (age): ', round(mean(d0$age), 2))
+cat('SD (age): ',round(sd(d0$age), 2))
+
+```
+
+\newpage
+
+## Primary Analysis
+
+## SUR, followed by Wald Test
+
+
+```{r echo=FALSE, results='markup'}
+options(scipen = 999)
+# Seemingly unrelated regression
+sur_formula <- list(
+  eastern = female_eastern ~ gender_feedback*race_code,
+  western = female_western ~ gender_feedback*race_code
+)
+
+summary(lm(female_eastern ~ gender_feedback*race_code, data=d0))
+summary(lm(female_western ~ gender_feedback*race_code, data=d0))
+
+sur_model <- systemfit(sur_formula, method="SUR", data=d0)
+summary(sur_model)$coefficients
+
+# Wald test to compare coefficients
+# Testing whether the effect of gender_feedback is different for Eastern vs Western women
+linearHypothesis(sur_model, 
+                 "eastern_gender_feedback - western_gender_feedback = 0")
+
+
+```
+
+\newpage
+
+## Robustness Tests
+
+### Model with demographic controls
+
+```{r echo=FALSE, results='markup'}
+sur_formula_demographics <- list(
+  eastern = female_eastern ~ gender_feedback + gender_code + race_code + age,
+  western = female_western ~ gender_feedback + gender_code + race_code + age
+)
+
+sur_model_demographics <- systemfit(sur_formula_demographics, method="SUR", data=d0)
+#summary(sur_model_demographics)
+linearHypothesis(sur_model_demographics, 
+                 "eastern_gender_feedback - western_gender_feedback = 0")
+
+
+```
+
+\newpage
+
+### Handling dropouts - Assuming male scholar selection
+
+```{r echo=FALSE, results='markup'}
+
+d0_male <- d0
+dropout_data <- left_early_d0 %>%
+  mutate(female_eastern = 0,
+         female_western = 0)
+d0_combined_male <- bind_rows(d0, dropout_data)
+
+sur_model_male <- systemfit(sur_formula, method="SUR", data=d0_combined_male)
+#summary(sur_model_male)
+linearHypothesis(sur_model_male, 
+                 "eastern_gender_feedback - western_gender_feedback = 0")
+
+
+```
+
+
+\newpage
+
+### Handling dropouts - Assuming female Eastern scholar selection
+
+```{r echo=FALSE, results='markup'}
+
+d0_eastern <- d0
+dropout_data_eastern <- left_early_d0 %>%
+  mutate(female_eastern = 1,
+         female_western = 0)
+d0_combined_eastern <- bind_rows(d0, dropout_data_eastern)
+
+sur_model_eastern <- systemfit(sur_formula, method="SUR", data=d0_combined_eastern)
+#summary(sur_model_eastern)
+linearHypothesis(sur_model_eastern, 
+                 "eastern_gender_feedback - western_gender_feedback = 0")
+
+```
+
+\newpage
+
+
+### Handling dropouts - Assuming female Western scholar selection
+
+```{r echo=FALSE, results='markup'}
+
+d0_western <- d0
+dropout_data_western <- left_early_d0 %>%
+  mutate(female_eastern = 0,
+         female_western = 1)
+d0_combined_western <- bind_rows(d0, dropout_data_western)
+
+sur_model_western <- systemfit(sur_formula, method="SUR", data=d0_combined_western)
+#summary(sur_model_western)
+linearHypothesis(sur_model_western, 
+                 "eastern_gender_feedback - western_gender_feedback = 0")
+
+```
+
+\newpage
+
+### Robustness Summary table
+
+
+```{r echo=FALSE, results='markup'}
+# Create a summary table of results
+results_summary <- data.frame(
+  Model = c("Base Model", "With Demographics", "Dropouts as Male", 
+            "Dropouts as Eastern Female", "Dropouts as Western Female"),
+  Eastern_Coef = c(coef(sur_model)[2], 
+                   coef(sur_model_demographics)[2],
+                   coef(sur_model_male)[2],
+                   coef(sur_model_eastern)[2],
+                   coef(sur_model_western)[2]),
+  Western_Coef = c(coef(sur_model)[4],
+                   coef(sur_model_demographics)[4],
+                   coef(sur_model_male)[4],
+                   coef(sur_model_eastern)[4],
+                   coef(sur_model_western)[4]),
+  Wald_p_value = c(linearHypothesis(sur_model, 
+                    "eastern_gender_feedback - western_gender_feedback = 0")$"Pr(>F)"[2],
+                   linearHypothesis(sur_model_demographics, 
+                    "eastern_gender_feedback - western_gender_feedback = 0")$"Pr(>F)"[2],
+                   linearHypothesis(sur_model_male, 
+                    "eastern_gender_feedback - western_gender_feedback = 0")$"Pr(>F)"[2],
+                   linearHypothesis(sur_model_eastern, 
+                    "eastern_gender_feedback - western_gender_feedback = 0")$"Pr(>F)"[2],
+                   linearHypothesis(sur_model_western, 
+                    "eastern_gender_feedback - western_gender_feedback = 0")$"Pr(>F)"[2])
+)
+
+# Print the results table
+kable(results_summary, digits = 3,
+      caption = "Robustness Check Results across Different Model Specifications")
+
+```
+
+```{r}
+# Set seed for reproducibility
+set.seed(42)
+n <- 2000
+
+# Create a dataframe
+data_sim <- data.frame(
+  participant_id = 1:n,
+  western_participant = rep(c(1, 0), each = n/2),
+  gender_feedback = rep(rep(c(0, 1), each = n/4), 2)
+)
+
+# Function to assign probabilities
+assign_probabilities <- function(western_participant, gender_feedback) {
+  if (gender_feedback == 0) {
+    # Control group: Equal probabilities for both regions
+    return(c(WF = 0.1, EF = 0.10))
+  } else {
+    # Treatment group
+    if (western_participant == 1) {
+      # Western participants
+      return(c(WF = 0.50, EF = 0.25))  # Larger increase for WF
+    } else {
+      # Eastern participants
+      return(c(WF = 0.50, EF = 0.32))  # Larger increase for EF
+    }
+  }
+}
+
+# Simulate choices
+data_sim$western_female <- NA
+data_sim$eastern_female <- NA
+
+for (i in 1:nrow(data_sim)) {
+  probs <- assign_probabilities(data_sim$western_participant[i], data_sim$gender_feedback[i])
+  data_sim$western_female[i] <- rbinom(1, 1, probs["WF"])
+  data_sim$eastern_female[i] <- rbinom(1, 1, probs["EF"])
+}
+
+# Load necessary libraries
+library(systemfit)
+library(car)
+
+# Convert variables to factors
+data_sim$gender_feedback <- as.factor(data_sim$gender_feedback)
+data_sim$western_participant <- as.factor(data_sim$western_participant)
+
+### Modeling for RQ1
+
+# Define equations without interaction terms
+eq1_rq1 <- western_female ~ gender_feedback + western_participant
+eq2_rq1 <- eastern_female ~ gender_feedback + western_participant
+
+# Combine into a system
+system_rq1 <- list(westernEq = eq1_rq1, easternEq = eq2_rq1)
+
+# Fit the SUR model
+sur_model_rq1 <- systemfit(system_rq1, method = "SUR", data = data_sim)
+
+# Summary of the model for RQ1
+summary(sur_model_rq1)
+
+# Testing hypothesis for RQ1
+wald_test_rq1 <- linearHypothesis(sur_model_rq1, "westernEq_gender_feedback1 - easternEq_gender_feedback1 = 0")
+print("Wald Test for RQ1:")
+print(wald_test_rq1)
+
+### Modeling for RQ2
+
+# Define equations with interaction terms
+eq1_rq2 <- western_female ~ gender_feedback * western_participant
+eq2_rq2 <- eastern_female ~ gender_feedback * western_participant
+
+# Combine into a system
+system_rq2 <- list(westernEq = eq1_rq2, easternEq = eq2_rq2)
+
+# Fit the SUR model
+sur_model_rq2 <- systemfit(system_rq2, method = "SUR", data = data_sim)
+
+# Summary of the model for RQ2
+summary(sur_model_rq2)
+
+# Testing hypothesis for RQ2
+interaction_test_rq2 <- linearHypothesis(sur_model_rq2, 
+                                         "westernEq_gender_feedback1:western_participant1 - easternEq_gender_feedback1:western_participant1 = 0")
+print("Wald Test for RQ2:")
+print(interaction_test_rq2)
+
+
+```
