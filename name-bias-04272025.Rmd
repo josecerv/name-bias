@@ -1,0 +1,695 @@
+---
+title: "Study 2 (N=1500)"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 3
+    fig_caption: true
+    latex_engine: xelatex
+header-includes:
+  - \renewcommand{\contentsname}{Analysis Sections}
+  - \usepackage{fvextra}
+  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+---
+
+```{r setup, include=FALSE}
+# Clear environment
+rm(list=ls())
+
+# Set chunk options
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+
+# Load Libraries
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(knitr)
+library(rmarkdown)
+library(ggplot2)
+library(grid)
+library(readxl)
+library(tidyverse)
+library(stringr)
+library(fixest) # For feols
+library(lubridate) # For date parsing
+
+# Set options
+options(scipen = 999)
+
+# Helper Functions (Unchanged)
+get_stars <- function(p_value) {
+  if (is.na(p_value)) return("")
+  if (p_value < 0.001) return("***")
+  if (p_value < 0.01) return("**")
+  if (p_value < 0.05) return("*")
+  return("n.s.")
+}
+format_p_caption <- function(p_value){
+    if (is.na(p_value)) return("NA")
+    if (p_value < 0.001) return("p < .001")
+    return(paste0("p = ", format(round(p_value, 3), nsmall = 3)))
+}
+robust_summary <- function(model) {
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+    model_summary <- summary(model)
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+    est <- coef(model)
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+    return(confint)
+}
+```
+
+\newpage
+
+## Data Preparation
+
+```{r read_data_revised, echo=TRUE}
+# Read raw data
+raw_data_file <- "raw_data_study2.csv"
+qual_data <- read.csv(raw_data_file, na.strings = c("", "NA"))
+cat("Raw data loaded from:", raw_data_file, "\n")
+
+# Read scholar metadata
+metadata_file <- "Academic -- dataset.xlsx"
+scholar_metadata_raw <- read_excel(metadata_file)
+cat("Scholar metadata loaded from:", metadata_file, "\n")
+```
+
+```{r data_prep_revised, include=FALSE}
+# --- Data Cleaning and Variable Creation ---
+cat("--- Preparing Analysis Data ---\n")
+
+# Prepare Scholar Lookup Table
+scholar_lookup <- scholar_metadata_raw %>%
+  mutate(
+    Region = case_when(
+      Citizenship %in% c("China", "South_Korea", "Thailand") ~ "Eastern",
+      Citizenship %in% c("Germany", "Italy", "United_Kingdom") ~ "Western",
+      TRUE ~ NA_character_
+    ),
+    Nationality = Citizenship,
+    Gender = as.factor(Gender),
+    First_name = as.character(First_name)
+  ) %>%
+  select(First_name, Gender, Nationality, Region) %>%
+  distinct(First_name, .keep_all = TRUE)
+
+# Initial N
+n_initial_csv <- nrow(qual_data)
+cat("N loaded from CSV:", n_initial_csv, "\n")
+
+# Define column names
+gr_cols <- paste0("Q33_", 1:24)
+prof_cols <- paste0("Professor", 1:24)
+
+# Apply Pre-Analysis Filters (No deduplication, assuming attention checks passed)
+data_passed_attn <- qual_data
+n_after_attn <- nrow(data_passed_attn)
+
+# Separate Dropouts
+data_pre_analysis <- data_passed_attn %>%
+  mutate(choice7 = as.character(choice7))
+# IMPORTANT: Ensure 'EndDate' and 'phone' column names match your raw data
+dropped_after_condition <- data_pre_analysis %>%
+  filter(!is.na(cond) & (is.na(choice7) | choice7 == ""))
+n_dropped_late <- nrow(dropped_after_condition)
+cat("N dropped after condition assignment but before choice7:", n_dropped_late, "\n")
+
+# Create main analysis dataset
+analysis_data_unmerged <- data_pre_analysis %>%
+  filter(!is.na(choice7) & choice7 != "")
+n_unmerged <- nrow(analysis_data_unmerged)
+cat("N before merging scholar info:", n_unmerged, "\n")
+
+# Merge Scholar Info
+analysis_data <- analysis_data_unmerged %>%
+  left_join(scholar_lookup, by = c("choice7" = "First_name"))
+n_analysis <- nrow(analysis_data)
+cat("N for primary analysis (after merge & filtering):", n_analysis, "\n")
+
+# Create Analysis Variables including Incentive FE
+analysis_data <- analysis_data %>%
+  mutate(
+    # Parse survey date (adjust format if needed)
+    survey_date = as.Date(EndDate, format="%Y-%m-%d %H:%M:%S"), # Example format
+    # Create Higher Incentive Indicator
+    higher_incentive = ifelse(
+        (country == "South Korea" & !is.na(Q39)) | survey_date > as.Date("2025-03-27"),
+         1, 0),
+    # DVs
+    western_female = ifelse(!is.na(Gender) & Gender == "Female" & Region == "Western", 1, 0),
+    eastern_female = ifelse(!is.na(Gender) & Gender == "Female" & Region == "Eastern", 1, 0),
+    female_pick = ifelse(western_female == 1 | eastern_female == 1, 1, 0), # Fixed logic
+    # IVs
+    gender_feedback = ifelse(cond == "treat", 1, 0),
+    western_participant = ifelse(country %in% c("Italy", "Germany"), 1, 0),
+    eastern_participant = 1 - western_participant,
+    # Country-Specific DVs & Participant Dummies
+    Chinese_female = ifelse(!is.na(Gender) & Gender == "Female" & Nationality == "China", 1, 0),
+    SouthKorean_female = ifelse(!is.na(Gender) & Gender == "Female" & Nationality == "South_Korea", 1, 0),
+    Italian_female = ifelse(!is.na(Gender) & Gender == "Female" & Nationality == "Italy", 1, 0),
+    German_female = ifelse(!is.na(Gender) & Gender == "Female" & Nationality == "Germany", 1, 0),
+    is_chinese_participant = ifelse(country == "China", 1, 0),
+    is_korean_participant = ifelse(country == "South Korea", 1, 0),
+    is_italian_participant = ifelse(country == "Italy", 1, 0),
+    is_german_participant = ifelse(country == "Germany", 1, 0),
+    # Demographic controls
+    gender_male = ifelse(gender == "Man", 1, 0),
+    race_white = ifelse(race == "White / Caucasian", 1, 0),
+    age = as.numeric(age),
+    ParticipantID = 1:n() 
+  ) %>%
+  # Select final columns needed for analyses
+  select(ParticipantID, western_female, eastern_female, female_pick,
+         gender_feedback, western_participant, eastern_participant, higher_incentive,
+         Chinese_female, SouthKorean_female, Italian_female, German_female,
+         is_chinese_participant, is_korean_participant, is_italian_participant, is_german_participant,
+         gender_male, race, race_white, age,
+         country, cond, # Keep original country and cond if needed for dropout analysis
+         all_of(gr_cols), all_of(prof_cols)) 
+
+# Create dataset for demographic robustness check
+analysis_data_demog_complete <- analysis_data %>%
+  filter(!is.na(gender_male) & !is.na(race_white) & !is.na(age) & !is.na(higher_incentive)) # Also filter NA incentive
+n_demog_complete <- nrow(analysis_data_demog_complete)
+cat("N with complete demographics & incentive info for robustness check:", n_demog_complete, "\n")
+
+# Report summary of incentive variable
+cat("\nHigher Incentive Variable Summary:\n")
+print(table(analysis_data$higher_incentive, useNA = "ifany"))
+```
+
+\newpage
+
+## Demographics of Final Sample (N=`r n_analysis`)
+
+```{r demographics_revised, results='markup', echo=FALSE}
+# --- Demographics Summary ---
+
+cat('Participants dropped after condition assignment but before final choice:', n_dropped_late, '\n')
+
+# --- Gender Distribution ---
+cat('\n--- Gender Distribution ---\n')
+# Print the raw counts including any missing values
+print(table(analysis_data$gender, useNA = "ifany"))
+# Calculate and print proportions, correctly excluding NAs
+gender_table_no_na <- table(analysis_data$gender)
+gender_prop <- round(prop.table(gender_table_no_na) * 100, 1)
+print(gender_prop)
+
+# --- Race Distribution (Overall) ---
+cat('\n--- Race Distribution (Overall) ---\n')
+# Print the raw counts including any missing values
+print(table(analysis_data$race, useNA = "ifany"))
+# Calculate and print proportions, correctly excluding NAs
+race_table_no_na <- table(analysis_data$race)
+race_prop <- round(prop.table(race_table_no_na) * 100, 1)
+print(race_prop)
+
+# --- Race Distribution by Country ---
+cat('\n--- Race Distribution by Country ---\n')
+race_by_country <- analysis_data %>%
+  filter(!is.na(race) & !is.na(country)) %>%
+  group_by(country, race) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  group_by(country) %>%
+  mutate(percentage = round(count / sum(count) * 100, 1)) %>%
+  select(-count) %>%
+  pivot_wider(names_from = race, values_from = percentage, values_fill = 0)
+print(as.data.frame(race_by_country)) # Print as a clean data frame
+
+# --- Age Distribution ---
+cat('\n--- Age Distribution ---\n')
+age_summary <- summary(analysis_data$age)
+age_sd <- sd(analysis_data$age, na.rm = TRUE)
+age_missing <- sum(is.na(analysis_data$age))
+print(age_summary)
+cat('SD (age):', round(age_sd, 2), '\n')
+cat('Missing (age):', age_missing, '\n')
+
+# --- Country Distribution (Overall) ---
+cat('\n--- Country Distribution (Overall) ---\n')
+country_table <- table(analysis_data$country, useNA = "ifany")
+country_prop <- round(prop.table(country_table) * 100, 1)
+print(country_table)
+print(country_prop)
+
+# --- Condition Assignment ---
+cat('\n--- Condition Assignment ---\n')
+cond_table <- table(analysis_data$gender_feedback, useNA = "ifany")
+cond_prop <- round(prop.table(cond_table) * 100, 1)
+print(cond_table)
+print(cond_prop)
+
+```
+
+\newpage
+
+## Primary Analysis (H1 & H2)
+
+### SUR Models
+
+```{r primary_analysis_revised, echo=FALSE, results='markup'}
+robust_summary(lm(western_female ~ gender_feedback, data=analysis_data))
+robust_summary(lm(eastern_female ~ gender_feedback, data=analysis_data))
+# Primary SUR Analysis with Incentive FE
+# Assumes 'analysis_data' with 'higher_incentive' exists
+
+# --- MODIFIED: Add higher_incentive FE ---
+fixed_effects_terms <- "+ factor(higher_incentive)"
+# --- End Modification ---
+
+interaction_term_west <- "gender_feedback:western_participant"
+interaction_term_east <- "gender_feedback:eastern_participant"
+
+# H1 Model & Test
+h1_formula_str <- paste(
+  "list(western = western_female ~ gender_feedback + western_participant", fixed_effects_terms, ",",
+       "eastern = eastern_female ~ gender_feedback + eastern_participant", fixed_effects_terms, ")"
+)
+h1_formula <- eval(parse(text = h1_formula_str))
+model_h1 <- systemfit(h1_formula, method = "SUR", data = analysis_data)
+wald_h1 <- linearHypothesis(model_h1, "western_gender_feedback - eastern_gender_feedback = 0", test = "Chisq")
+cat("\n--- H1 Model Summary (with Incentive FE) & Wald Test Output ---\n")
+print(summary(model_h1))
+print(wald_h1)
+
+# H2 Model & Test
+h2_formula_str <- paste(
+  "list(western = western_female ~ gender_feedback * western_participant", fixed_effects_terms, ",",
+       "eastern = eastern_female ~ gender_feedback * eastern_participant", fixed_effects_terms, ")"
+)
+h2_formula <- eval(parse(text = h2_formula_str))
+model_h2 <- systemfit(h2_formula, method = "SUR", data = analysis_data)
+wald_h2 <- linearHypothesis(model_h2, paste0("western_", interaction_term_west, " - eastern_", interaction_term_east, " = 0"), test = "Chisq")
+cat("\n--- H2 Model Summary (with Incentive FE) & Wald Test Output ---\n")
+print(summary(model_h2))
+print(wald_h2)
+
+# Extract p-values needed later (will error if models failed)
+summary_h2 <- summary(model_h2)
+p_wald_h1 <- wald_h1$"Pr(>Chisq)"[2]
+p_wald_h2_comparison <- wald_h2$"Pr(>Chisq)"[2]
+p_feedback_simple_eastP_westS <- coef(summary_h2$eq[[1]])["gender_feedback", "Pr(>|t|)"]
+p_feedback_simple_eastP_eastS <- coef(summary_h2$eq[[2]])["gender_feedback", "Pr(>|t|)"]
+test_westP_westS <- linearHypothesis(model_h2, "western_gender_feedback + western_gender_feedback:western_participant = 0", test = "Chisq")
+p_feedback_simple_westP_westS <- test_westP_westS$"Pr(>Chisq)"[2]
+test_westP_eastS <- linearHypothesis(model_h2, "eastern_gender_feedback + eastern_gender_feedback:eastern_participant = 0", test = "Chisq")
+p_feedback_simple_westP_eastS <- test_westP_eastS$"Pr(>Chisq)"[2]
+
+```
+
+\newpage
+
+## Secondary Analysis: Country-Specific Effects
+
+```{r country_analysis_revised, echo=FALSE, results='markup'}
+# Country-Specific OLS Analysis (Unchanged, does not use fixed_effects_terms)
+# Assumes 'analysis_data' exists
+
+cat("\n--- Country-Specific Analysis (OLS with Robust SEs) ---\n")
+
+run_country_model <- function(dv_name, participant_dummy_name, data) {
+  formula_str <- paste0(dv_name, " ~ gender_feedback * ", participant_dummy_name)
+  model <- lm(as.formula(formula_str), data = data)
+  cat("\n--- Model for DV:", dv_name, "---\n")
+  robust_summary <- coeftest(model, vcov. = vcovHC(model, type = "HC3"))
+  print(robust_summary)
+}
+
+run_country_model("Chinese_female", "is_chinese_participant", analysis_data)
+run_country_model("SouthKorean_female", "is_korean_participant", analysis_data)
+run_country_model("Italian_female", "is_italian_participant", analysis_data)
+run_country_model("German_female", "is_german_participant", analysis_data)
+
+```
+
+\newpage
+
+## Robustness Checks
+
+### H1 & H2 with Demographic Controls
+
+```{r robustness_demographics_revised, echo=FALSE, results='markup'}
+# Robustness Check: Demographics with Incentive FE
+# Assumes 'analysis_data_demog_complete' exists
+
+cat("--- Robustness Check: H1 & H2 with Demographics & Incentive FE ---\n")
+demographic_controls_simple <- "+ gender_male + race_white + age"
+# --- MODIFIED: Add higher_incentive FE ---
+fixed_effects_terms <- "+ factor(higher_incentive)"
+# --- End Modification ---
+
+cat("N for demographic robustness check:", nrow(analysis_data_demog_complete), "\n") # Use pre-filtered N
+
+# H1 with demographics & Incentive FE
+h1_demog_formula_str_simple <- paste(
+  "list(western = western_female ~ gender_feedback + western_participant", fixed_effects_terms, demographic_controls_simple, ",",
+       "eastern = eastern_female ~ gender_feedback + eastern_participant", fixed_effects_terms, demographic_controls_simple, ")"
+)
+h1_demog_formula_simple <- eval(parse(text = h1_demog_formula_str_simple))
+model_h1_demog_simple <- systemfit(h1_demog_formula_simple, method = "SUR", data = analysis_data_demog_complete) # Use filtered data
+wald_h1_demog_simple <- linearHypothesis(model_h1_demog_simple, "western_gender_feedback - eastern_gender_feedback = 0", test = "Chisq")
+cat("\n--- H1 Model with Demographics & Incentive FE ---\n")
+print(summary(model_h1_demog_simple))
+cat("Wald Test (H1 w/ Demographics & Incentive FE): p-value =", wald_h1_demog_simple$"Pr(>Chisq)"[2], "\n")
+
+
+# H2 with demographics & Incentive FE
+interaction_term_west <- "gender_feedback:western_participant"
+interaction_term_east <- "gender_feedback:eastern_participant"
+h2_demog_formula_str_simple <- paste(
+  "list(western = western_female ~ gender_feedback * western_participant", fixed_effects_terms, demographic_controls_simple, ",",
+       "eastern = eastern_female ~ gender_feedback * eastern_participant", fixed_effects_terms, demographic_controls_simple, ")"
+)
+h2_demog_formula_simple <- eval(parse(text = h2_demog_formula_str_simple))
+model_h2_demog_simple <- systemfit(h2_demog_formula_simple, method = "SUR", data = analysis_data_demog_complete) # Use filtered data
+wald_h2_demog_simple <- linearHypothesis(model_h2_demog_simple, paste0("western_", interaction_term_west, " - eastern_", interaction_term_east, " = 0"), test = "Chisq")
+cat("\n--- H2 Model with Demographics & Incentive FE ---\n")
+print(summary(model_h2_demog_simple))
+cat("Wald Test (H2 w/ Demographics & Incentive FE): p-value =", wald_h2_demog_simple$"Pr(>Chisq)"[2], "\n")
+
+```
+
+### Handling Dropouts
+
+```{r robustness_dropouts_revised, echo=FALSE, results='markup'}
+# Robustness Check: Dropouts (Unchanged, does not use fixed_effects_terms)
+# Assumes 'analysis_data' and 'dropped_after_condition' exist
+# Assumes a unique ID like 'ParticipantID' exists
+
+cat("\n--- Robustness Check: Dropout Analysis (H1 Base Model) ---\n")
+h1_formula_base <- list(
+  western = western_female ~ gender_feedback + western_participant,
+  eastern = eastern_female ~ gender_feedback + eastern_participant
+)
+
+run_dropout_analysis <- function(assumption_label, df_dropped_modified) {
+  cat("\nDropout Robustness: Assuming", assumption_label, "\n")
+  cols_to_keep <- c("ParticipantID", "western_female", "eastern_female", "gender_feedback", "western_participant", "eastern_participant", "country", "cond")
+
+  analysis_data_slim <- analysis_data %>% select(any_of(cols_to_keep))
+  df_dropped_slim <- df_dropped_modified %>% select(any_of(cols_to_keep))
+
+  analysis_data_slim <- analysis_data_slim %>% mutate(across(where(is.factor), as.character))
+  df_dropped_slim <- df_dropped_slim %>% mutate(across(where(is.factor), as.character))
+
+  combined_data <- bind_rows(analysis_data_slim, df_dropped_slim)
+
+  model_dropout <- systemfit(h1_formula_base, method = "SUR", data = combined_data)
+  wald_dropout <- linearHypothesis(model_dropout, "western_gender_feedback - eastern_gender_feedback = 0", test = "Chisq")
+  p_value <- wald_dropout$"Pr(>Chisq)"[2]
+  cat("Wald Test (H1 dropout -", assumption_label, "): p =", format.pval(p_value, digits=3, eps=0.001), "\n")
+}
+
+dropped_after_condition_prep <- dropped_after_condition %>%
+  mutate(
+    western_participant = ifelse(country %in% c("Italy", "Germany"), 1, 0),
+    eastern_participant = 1 - western_participant,
+    gender_feedback = ifelse(cond == "treat", 1, 0)
+    )
+
+dropped_male <- dropped_after_condition_prep %>% mutate(western_female = 0, eastern_female = 0)
+run_dropout_analysis("Male", dropped_male)
+
+dropped_eastern <- dropped_after_condition_prep %>% mutate(western_female = 0, eastern_female = 1)
+run_dropout_analysis("Eastern Female", dropped_eastern)
+
+dropped_western <- dropped_after_condition_prep %>% mutate(western_female = 1, eastern_female = 0)
+run_dropout_analysis("Western Female", dropped_western)
+
+```
+
+\newpage
+
+## Gender Recognition Analysis
+
+```{r gender_recognition_revised, echo=FALSE, results='markup'}
+# --- Gender Recognition Analysis (Code Unchanged) --- #
+
+cat("\n--- Gender Recognition Analysis ---\n")
+
+gr_cols <- paste0("Q33_", 1:24)
+prof_cols <- paste0("Professor", 1:24)
+
+# --- 1. Participant-Level Analysis (P_gender_unrecognized) ---
+cat("\n--- Participant-Level Recognition Analysis ---\n")
+
+ratings_long <- analysis_data %>%
+  select(ParticipantID, all_of(gr_cols)) %>%
+  pivot_longer(
+      cols = all_of(gr_cols), names_to = "Position_Str", values_to = "Gender_Rating"
+      ) %>%
+  mutate(Position = as.integer(stringr::str_extract(Position_Str, "\\d+$"))) %>%
+  filter(!is.na(Position)) %>%
+  mutate(
+    Gender_Rating_Lower = tolower(trimws(Gender_Rating)),
+    unrecognized_rating = case_when(
+      Gender_Rating_Lower %in% c("gender-neutral", "unknown") ~ 1,
+      Gender_Rating_Lower %in% c("female", "male") ~ 0,
+      TRUE ~ NA_integer_
+    )
+  ) %>%
+  select(ParticipantID, Position, Gender_Rating, unrecognized_rating)
+
+participant_gr_summary <- ratings_long %>%
+  filter(!is.na(unrecognized_rating)) %>%
+  group_by(ParticipantID) %>%
+  summarise(
+    n_ratings = n(),
+    n_unrecognized = sum(unrecognized_rating),
+    P_gender_unrecognized = ifelse(n_ratings > 0, n_unrecognized / n_ratings, NA_real_),
+    .groups = 'drop'
+  )
+
+analysis_data <- analysis_data %>%
+  left_join(participant_gr_summary %>% select(ParticipantID, P_gender_unrecognized), by = "ParticipantID")
+
+cat("Calculated and merged P_gender_unrecognized for", nrow(participant_gr_summary), "participants.\n")
+
+cat("\n--- Feedback Treatment Interaction with P_gender_unrecognized ---\n")
+
+model_gr_feedback_interaction <- lm(female_pick ~ gender_feedback * P_gender_unrecognized, data = analysis_data)
+cat("\nModel: female_pick ~ gender_feedback * P_gender_unrecognized (All Participants)\n")
+print(coeftest(model_gr_feedback_interaction, vcov. = vcovHC(model_gr_feedback_interaction, type = "HC3")))
+
+data_west_p <- filter(analysis_data, western_participant == 1)
+model_gr_feedback_interaction_west <- lm(female_pick ~ gender_feedback * P_gender_unrecognized, data = data_west_p)
+cat("\nModel (Western Participants Only)\n")
+print(coeftest(model_gr_feedback_interaction_west, vcov. = vcovHC(model_gr_feedback_interaction_west, type = "HC3")))
+
+data_east_p <- filter(analysis_data, western_participant == 0)
+model_gr_feedback_interaction_east <- lm(female_pick ~ gender_feedback * P_gender_unrecognized, data = data_east_p)
+cat("\nModel (Eastern Participants Only)\n")
+print(coeftest(model_gr_feedback_interaction_east, vcov. = vcovHC(model_gr_feedback_interaction_east, type = "HC3")))
+
+
+# --- 2. Name-Level Recognition Analysis (P_name_gender_unrecognized) ---
+cat("\n--- Name-Level Recognition Analysis ---\n")
+
+prof_names_long <- analysis_data %>%
+  select(ParticipantID, all_of(prof_cols)) %>%
+  pivot_longer(
+      cols = all_of(prof_cols), names_to = "Position_Str", values_to = "Scholar_Name"
+      ) %>%
+   mutate(Position = as.integer(stringr::str_extract(Position_Str, "\\d+$"))) %>%
+   filter(!is.na(Position)) %>%
+   select(ParticipantID, Position, Scholar_Name)
+
+long_data_full <- ratings_long %>%
+  inner_join(prof_names_long, by = c("ParticipantID", "Position")) %>%
+  left_join(scholar_lookup, by = c("Scholar_Name" = "First_name")) %>%
+  left_join(analysis_data %>% select(ParticipantID, western_participant), by="ParticipantID") %>%
+  filter(!is.na(unrecognized_rating), !is.na(Region), !is.na(western_participant)) %>%
+  mutate(
+      Eastern_name = ifelse(Region == "Eastern", 1, 0),
+      eastern_participant = 1 - western_participant
+      )
+
+cat("Created long dataset for name-level analysis with", nrow(long_data_full), "valid ratings.\n")
+
+name_level_summary <- long_data_full %>%
+  group_by(Scholar_Name, Region, Eastern_name) %>%
+  summarise(
+    P_name_gender_unrecognized = mean(unrecognized_rating, na.rm = TRUE),
+    N_ratings = n(),
+    .groups = 'drop'
+    )
+
+cat("Calculated name-level summary for", nrow(name_level_summary), "unique scholars.\n")
+
+cat("\n--- Comparison of Name Recognition Rates (Eastern vs. Western Names) ---\n")
+
+cat("\nT-test: P_name_gender_unrecognized ~ Region (All Participants - Name Level)\n")
+t_test_all <- t.test(P_name_gender_unrecognized ~ Region, data = name_level_summary)
+print(t_test_all)
+
+cat("\nOLS: P_name_gender_unrecognized ~ Eastern_name (All Participants - Name Level)\n")
+model_name_ols_all <- lm(P_name_gender_unrecognized ~ Eastern_name, data = name_level_summary)
+print(coeftest(model_name_ols_all, vcov. = vcovHC(model_name_ols_all, type="HC3")))
+
+name_level_summary_west_p <- long_data_full %>%
+    filter(western_participant == 1) %>%
+    group_by(Scholar_Name, Region, Eastern_name) %>%
+    summarise(P_name_gender_unrecognized = mean(unrecognized_rating, na.rm = TRUE), .groups = 'drop')
+cat("\n--- Comparisons for Western Participants Only (Name Level) ---\n")
+cat("T-test:\n"); print(t.test(P_name_gender_unrecognized ~ Region, data = name_level_summary_west_p))
+cat("\nOLS:\n"); model_name_ols_west <- lm(P_name_gender_unrecognized ~ Eastern_name, data = name_level_summary_west_p); print(coeftest(model_name_ols_west, vcov. = vcovHC(model_name_ols_west, type="HC3")))
+
+name_level_summary_east_p <- long_data_full %>%
+    filter(western_participant == 0) %>%
+    group_by(Scholar_Name, Region, Eastern_name) %>%
+    summarise(P_name_gender_unrecognized = mean(unrecognized_rating, na.rm = TRUE), .groups = 'drop')
+cat("\n--- Comparisons for Eastern Participants Only (Name Level) ---\n")
+cat("T-test:\n"); print(t.test(P_name_gender_unrecognized ~ Region, data = name_level_summary_east_p))
+cat("\nOLS:\n"); model_name_ols_east <- lm(P_name_gender_unrecognized ~ Eastern_name, data = name_level_summary_east_p); print(coeftest(model_name_ols_east, vcov. = vcovHC(model_name_ols_east, type="HC3")))
+
+cat("\n--- Interaction Model with Participant Fixed Effects ---\n")
+
+model_fe_fixest <- feols(unrecognized_rating ~ Eastern_name * eastern_participant | ParticipantID, data = long_data_full, cluster = ~ParticipantID)
+summary(model_fe_fixest)
+
+```
+
+\newpage
+
+## Figure
+
+```{r figure, echo=FALSE, fig.cap="Effect of Gender Feedback on Selecting Female Scholars"}
+
+
+# Calculate summary stats (check if higher_incentive affects means significantly first if desired)
+plot_data_summary <- analysis_data %>%
+  group_by(gender_feedback, western_participant) %>%
+  summarise(
+    mean_west_female = mean(western_female, na.rm = TRUE),
+    se_west_female = sd(western_female, na.rm = TRUE) / sqrt(n()),
+    mean_east_female = mean(eastern_female, na.rm = TRUE),
+    se_east_female = sd(eastern_female, na.rm = TRUE) / sqrt(n()),
+    n_group = n(),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    Feedback = factor(if_else(gender_feedback == 1, "Feedback provided", "No feedback"), levels = c("No feedback", "Feedback provided")),
+    Participant_Region = factor(if_else(western_participant == 1, "Western Participants", "Eastern Participants"), levels = c("Eastern Participants", "Western Participants"))
+  ) %>%
+  pivot_longer(
+    cols = starts_with("mean_") | starts_with("se_"),
+    names_to = c(".value", "Scholar_Region"),
+    names_pattern = "(mean|se)_(west|east)_female"
+  ) |>
+  mutate(
+    Scholar_Region = factor(case_when(Scholar_Region == "west" ~ "Western Scholar", Scholar_Region == "east" ~ "Eastern Scholar", TRUE ~ Scholar_Region), levels = c("Eastern Scholar", "Western Scholar")),
+    text_y = mean * 100 * 0.5, # Position for text inside bar
+    error_bar_top = (mean + se) * 100,
+    x_group_center = ifelse(Scholar_Region == "Eastern Scholar", 1, 2) # Center for bracket group
+  ) %>%
+  group_by(Participant_Region, Scholar_Region) %>%
+  mutate(bracket_y_base = max(error_bar_top, na.rm = TRUE) + 1.5) %>% # Base height for bracket
+  mutate(bracket_y_final = bracket_y_base + 2.0) %>% # Top height for bracket
+  ungroup()
+
+# Data frame for annotations (p-values for simple effects)
+annotation_data <- data.frame(
+    Participant_Region = factor(rep(c("Eastern Participants", "Western Participants"), each=2), levels=levels(plot_data_summary$Participant_Region)),
+    Scholar_Region = factor(rep(c("Eastern Scholar", "Western Scholar"), 2), levels=levels(plot_data_summary$Scholar_Region)),
+    # Uses p-values extracted after running H2 model
+    p_simple_effect = c(p_feedback_simple_eastP_eastS, p_feedback_simple_eastP_westS,
+                        p_feedback_simple_westP_eastS, p_feedback_simple_westP_westS)
+) %>%
+  mutate(stars = sapply(p_simple_effect, get_stars)) %>%
+  # Join bracket positions calculated earlier
+  left_join(plot_data_summary %>%
+              distinct(Participant_Region, Scholar_Region, bracket_y_final, bracket_y_base, x_group_center),
+            by = c("Participant_Region", "Scholar_Region")) %>%
+  mutate(
+      dodge_width = 0.9, # Matches geom_bar dodge width
+      x_pos_1 = x_group_center - dodge_width/4, # x position for left side of bracket
+      x_pos_2 = x_group_center + dodge_width/4  # x position for right side of bracket
+  )
+
+# Determine overall max y for plot limits
+plot_max_y <- max(c(plot_data_summary$error_bar_top, annotation_data$bracket_y_final), na.rm = TRUE) * 1.30 # Add buffer
+
+# Data frame for H1/H2 summary text annotations
+h_summary_text_data <- data.frame(
+    Participant_Region = factor(c("Eastern Participants"), levels = levels(annotation_data$Participant_Region)),
+    x_pos = 1.5, # Center between scholar regions
+    y_pos = plot_max_y * 0.97, # Position near top
+    # Uses p-values extracted after running H1 and H2 models
+    label = paste(
+                sprintf("H1 Wald (Effect Diff W vs E): %s %s", format_p_caption(p_wald_h1), get_stars(p_wald_h1)),
+                sprintf("H2 Wald (Interaction Diff.): %s %s", format_p_caption(p_wald_h2_comparison), get_stars(p_wald_h2_comparison)),
+                sep="\n")
+)
+
+# Create the final plot
+plot_final <- ggplot(plot_data_summary, aes(x = Scholar_Region, y = mean * 100, fill = Feedback)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9), width = 0.8, color="grey20", linewidth=0.3) +
+  geom_errorbar(aes(ymin = pmax(0, (mean - se) * 100), ymax = error_bar_top),
+                position = position_dodge(width = 0.9), width = 0.25, linewidth=0.7, color="gray30") +
+  geom_text(aes(label = sprintf("%.1f%%", mean * 100)), # Add percentages inside bars
+            position = position_dodge(width = 0.9),
+            vjust = 1.5, size = 3.5, color = "white", fontface="bold") +
+  facet_wrap(~ Participant_Region) + # Separate plots for Eastern and Western Participants
+  scale_fill_manual(values = c("No feedback" = "navyblue", "Feedback provided" = "firebrick"), name = "Gender Feedback:") +
+  scale_y_continuous(limits = c(0, plot_max_y), expand = expansion(mult = c(0, 0.05))) + # Set y limits
+
+  # Draw Brackets and Stars Manually
+  geom_segment(data = annotation_data, aes(x = x_pos_1, xend = x_pos_1, y = bracket_y_base, yend = bracket_y_final), inherit.aes = FALSE, linewidth=0.7, color="black") + # Left vertical
+  geom_segment(data = annotation_data, aes(x = x_pos_2, xend = x_pos_2, y = bracket_y_base, yend = bracket_y_final), inherit.aes = FALSE, linewidth=0.7, color="black") + # Right vertical
+  geom_segment(data = annotation_data, aes(x = x_pos_1, xend = x_pos_2, y = bracket_y_final, yend = bracket_y_final), inherit.aes = FALSE, linewidth=1, color="black") +   # Horizontal
+  geom_text(data = annotation_data, aes(x = (x_pos_1 + x_pos_2)/2, y = bracket_y_final, label = stars), # Add Stars
+            inherit.aes = FALSE, size = 7, vjust = -0.5, fontface="bold", color="black") +
+
+  # Add H1/H2 Summary Text Annotations
+  geom_text(data = h_summary_text_data, aes(x = x_pos, y = y_pos, label = label),
+            inherit.aes = FALSE, size = 3.8, hjust = 0.5, vjust = 1, fontface = "italic", lineheight=1.1, color="black") +
+
+  labs(
+    y = "Percentage Selecting Female Scholar (%)",
+    x = "Female Scholar Nationality" # Changed from Origin of Female Scholar Selected
+  ) +
+  theme_bw(base_size = 12) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color="black", linewidth = 0.5),
+    strip.background = element_rect(fill="grey90", color="black", linewidth = 0.5),
+    strip.text = element_text(face="bold", size=12),
+    legend.position = "top",
+    legend.title = element_text(size=11, face="bold"),
+    legend.text = element_text(size=10),
+    axis.title.x = element_text(size=12, face="bold", margin = margin(t = 15)),
+    axis.title.y = element_text(size=12, face="bold", margin = margin(r = 10)),
+    axis.text = element_text(color="black", size=11),
+    axis.ticks = element_line(color="black", linewidth=0.5),
+    plot.margin = margin(t = 15, r = 20, b = 20, l = 15)
+  )
+
+print(plot_final) # Display plot
+ggsave('study2.png', plot_final, width = 10, height = 6) # Adjusted size
+```
