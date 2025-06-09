@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 	warning = FALSE,
 	results = "hide"
 )
+library(ggbrace)
 library(dplyr)
 library(lmtest)
 library(sandwich)
@@ -377,8 +378,10 @@ kable(results_summary, digits = 3,
 
 ## Figure
 
-
 ```{r}
+# Load the package
+library(ggbrace)
+
 # Create data for Eastern women
 eastern_data <- d0 |> 
   group_by(gender_feedback) |> 
@@ -420,6 +423,20 @@ delta_data <- plot_data %>%
 delta_eastern_val <- delta_data$delta[delta_data$Region == "Eastern Women"]
 delta_western_val <- delta_data$delta[delta_data$Region == "Western Women"]
 
+# Get bar heights for brace positioning
+eastern_freqs <- plot_data$freq[plot_data$Region == "Eastern Women"][order(plot_data$Feedback[plot_data$Region == "Eastern Women"])] * 100
+western_freqs <- plot_data$freq[plot_data$Region == "Western Women"][order(plot_data$Feedback[plot_data$Region == "Western Women"])] * 100
+
+# Define explicit x-coordinates to place braces to the right of the bars
+x_brace_east <- 1.55
+x_text_east  <- 1.60
+x_brace_west <- 2.55
+x_text_west  <- 2.60
+
+# Create specific data frames for each brace
+brace_east_df <- data.frame(x = c(x_brace_east, x_brace_east), y = eastern_freqs)
+brace_west_df <- data.frame(x = c(x_brace_west, x_brace_west), y = western_freqs)
+
 
 # Create the final, comprehensive plot
 p1 <- ggplot(plot_data, aes(x = Region, y = freq * 100, fill = Feedback)) +
@@ -428,7 +445,7 @@ p1 <- ggplot(plot_data, aes(x = Region, y = freq * 100, fill = Feedback)) +
            width = 0.8) +
   geom_text(aes(label = sprintf("%.1f%%", freq * 100)),
             position = position_dodge(width = 0.9),
-            vjust = 3.5, # Place text inside the bars
+            vjust = 3.5,
             color = "white",
             size = 6,
             fontface = "bold") +
@@ -437,29 +454,30 @@ p1 <- ggplot(plot_data, aes(x = Region, y = freq * 100, fill = Feedback)) +
                 position = position_dodge(width = 0.9),
                 width = 0.2) +
   
-  # Level 1: Brackets and deltas for within-group comparisons
+  # 1. The original horizontal significance lines
   annotate("segment", x = 0.75, xend = 1.25, y = 15, yend = 15) +
   annotate("text", x = 1, y = 16.5, label = "n.s.", size = 4.5) +
-  annotate("text", x = 1, y = 19, label = sprintf("Δ = %.1f%%", delta_eastern_val), size = 6.5, fontface = "italic") +
   
   annotate("segment", x = 1.75, xend = 2.25, y = 25, yend = 25) +
   annotate("text", x = 2, y = 26.5, label = "***", size = 5.5) +
-  annotate("text", x = 2, y = 29, label = sprintf("Δ = %.1f%%", delta_western_val), size = 6.5, fontface = "italic") +
 
-  # Level 2: Overarching bracket for the interaction test
-  annotate("segment", x = 1, xend = 2, y = 35, yend = 35) +
-  annotate("segment", x = 1, xend = 1, y = 34, yend = 35) + # Left vertical line
-  annotate("segment", x = 2, xend = 2, y = 34, yend = 35) + # Right vertical line
-  annotate("text", x = 1.5, y = 36.5, 
-           label = expression(paste("Difference in ", Delta, "s: ", chi^2, "(1) = 4.40, ", italic("p"), " = 0.036")), 
-           size = 6.5) +
+  # 2. The independent vertical braces, correctly positioned and directed
+  stat_brace(data = brace_east_df, aes(x = x, y = y), inherit.aes = FALSE,
+             rotate = 270, width = 0.1) +
+  annotate("text", x = x_text_east, y = mean(eastern_freqs), label = sprintf("Δ = %.1f%%", delta_eastern_val),
+           size = 6.5, fontface = "italic", hjust = 0) +
+  
+  stat_brace(data = brace_west_df, aes(x = x, y = y), inherit.aes = FALSE,
+             rotate = 270, width = 0.1) +
+  annotate("text", x = x_text_west, y = mean(western_freqs), label = sprintf("Δ = %.1f%%", delta_western_val),
+           size = 6.5, fontface = "italic", hjust = 0) +
 
   # Styling
   scale_fill_manual(values = c(
     "No feedback" = "#011F5B",     
     "Feedback provided" = "#990000" 
   )) +
-  scale_y_continuous(limits = c(0, 40), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 42), expand = c(0, 0)) +
   labs(y = "% of Final Academics Selected who were Women") +
   theme_bw() +
   theme(
@@ -479,4 +497,5 @@ p1 <- ggplot(plot_data, aes(x = Region, y = freq * 100, fill = Feedback)) +
 # Print the plot
 p1
 ggsave('study3.png', p1, width = 9, height = 7)
+
 ```
